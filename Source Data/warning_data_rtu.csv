@@ -1,0 +1,329 @@
+Time,Main Warning,Sub Warning,Full Warning,Warning Text,WarnMsg,Value0
+30/04/2014 17:27:50,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+30/04/2014 17:27:50,0,0,0 : 0,RTU,FALSE,0
+01/05/2014 03:27:48,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+01/05/2014 03:27:48,0,0,0 : 0,RTU,FALSE,0
+01/05/2014 08:57:11,240,1,240 : 1,Remote control PC,FALSE,0
+01/05/2014 11:28:32,240,0,240 : 0,Remote control PC,FALSE,0
+01/05/2014 11:28:33,0,0,0 : 0,RTU,FALSE,0
+01/05/2014 13:27:46,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+01/05/2014 13:27:47,0,0,0 : 0,RTU,FALSE,0
+01/05/2014 23:27:44,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+01/05/2014 23:27:44,0,0,0 : 0,RTU,FALSE,0
+02/05/2014 09:27:42,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+02/05/2014 09:27:42,0,0,0 : 0,RTU,FALSE,0
+02/05/2014 19:27:40,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+02/05/2014 19:27:40,0,0,0 : 0,RTU,FALSE,0
+03/05/2014 05:27:38,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+03/05/2014 05:27:38,0,0,0 : 0,RTU,FALSE,0
+03/05/2014 15:27:36,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+03/05/2014 15:27:36,0,0,0 : 0,RTU,FALSE,0
+04/05/2014 01:27:33,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+04/05/2014 01:27:33,0,0,0 : 0,RTU,FALSE,0
+04/05/2014 11:27:31,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+04/05/2014 11:27:31,0,0,0 : 0,RTU,FALSE,0
+04/05/2014 21:27:29,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+04/05/2014 21:27:29,0,0,0 : 0,RTU,FALSE,0
+05/05/2014 07:27:27,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+05/05/2014 07:27:27,0,0,0 : 0,RTU,FALSE,0
+05/05/2014 11:16:29,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+05/05/2014 11:16:29,0,0,0 : 0,RTU,FALSE,0
+05/05/2014 17:27:25,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+05/05/2014 17:27:25,0,0,0 : 0,RTU,FALSE,0
+06/05/2014 03:27:22,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+06/05/2014 03:27:23,0,0,0 : 0,RTU,FALSE,0
+06/05/2014 13:27:20,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+06/05/2014 13:27:20,0,0,0 : 0,RTU,FALSE,0
+06/05/2014 23:27:18,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+06/05/2014 23:27:18,0,0,0 : 0,RTU,FALSE,0
+07/05/2014 09:27:16,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+07/05/2014 09:27:16,0,0,0 : 0,RTU,FALSE,0
+07/05/2014 19:27:14,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+07/05/2014 19:27:14,0,0,0 : 0,RTU,FALSE,0
+08/05/2014 05:00:58,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+08/05/2014 05:00:58,0,0,0 : 0,RTU,FALSE,0
+08/05/2014 05:27:11,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+08/05/2014 05:27:12,0,0,0 : 0,RTU,FALSE,0
+08/05/2014 15:27:09,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+08/05/2014 15:27:09,0,0,0 : 0,RTU,FALSE,0
+09/05/2014 01:27:07,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+09/05/2014 01:27:07,0,0,0 : 0,RTU,FALSE,0
+09/05/2014 11:27:05,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+09/05/2014 11:27:05,0,0,0 : 0,RTU,FALSE,0
+09/05/2014 21:27:03,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+09/05/2014 21:27:03,0,0,0 : 0,RTU,FALSE,0
+10/05/2014 07:27:01,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+10/05/2014 07:27:01,0,0,0 : 0,RTU,FALSE,0
+10/05/2014 17:26:58,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+10/05/2014 17:26:58,0,0,0 : 0,RTU,FALSE,0
+11/05/2014 03:26:56,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+11/05/2014 03:26:56,0,0,0 : 0,RTU,FALSE,0
+11/05/2014 13:26:54,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+11/05/2014 13:26:54,0,0,0 : 0,RTU,FALSE,0
+11/05/2014 23:26:52,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+11/05/2014 23:26:52,0,0,0 : 0,RTU,FALSE,0
+12/05/2014 09:26:50,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+12/05/2014 09:26:50,0,0,0 : 0,RTU,FALSE,0
+12/05/2014 19:26:47,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+12/05/2014 19:26:47,0,0,0 : 0,RTU,FALSE,0
+13/05/2014 05:26:45,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+13/05/2014 05:26:45,0,0,0 : 0,RTU,FALSE,0
+13/05/2014 15:26:43,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+13/05/2014 15:26:43,0,0,0 : 0,RTU,FALSE,0
+14/05/2014 01:26:41,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+14/05/2014 01:26:41,0,0,0 : 0,RTU,FALSE,0
+15/05/2014 09:41:38,240,1,240 : 1,Remote control PC,FALSE,0
+15/05/2014 11:43:10,240,0,240 : 0,Remote control PC,FALSE,0
+15/05/2014 11:43:11,0,0,0 : 0,RTU,FALSE,0
+19/05/2014 20:10:54,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+19/05/2014 20:10:54,0,0,0 : 0,RTU,FALSE,0
+20/05/2014 16:05:10,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+20/05/2014 16:05:10,0,0,0 : 0,RTU,FALSE,0
+20/05/2014 16:46:29,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+20/05/2014 16:46:29,0,0,0 : 0,RTU,FALSE,0
+22/05/2014 15:52:54,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+22/05/2014 15:52:55,0,0,0 : 0,RTU,FALSE,0
+22/05/2014 15:53:00,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+22/05/2014 15:53:00,0,0,0 : 0,RTU,FALSE,0
+24/05/2014 17:00:46,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+24/05/2014 17:00:46,0,0,0 : 0,RTU,FALSE,0
+27/05/2014 11:01:24,240,1,240 : 1,Remote control PC,FALSE,0
+27/05/2014 16:00:33,240,0,240 : 0,Remote control PC,FALSE,0
+27/05/2014 16:00:34,0,0,0 : 0,RTU,FALSE,0
+27/05/2014 18:12:31,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+27/05/2014 18:12:31,0,0,0 : 0,RTU,FALSE,0
+27/05/2014 21:19:47,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+27/05/2014 21:19:47,0,0,0 : 0,RTU,FALSE,0
+28/05/2014 04:12:28,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+28/05/2014 04:12:29,0,0,0 : 0,RTU,FALSE,0
+28/05/2014 14:12:26,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+28/05/2014 14:12:27,0,0,0 : 0,RTU,FALSE,0
+29/05/2014 00:12:24,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+29/05/2014 00:12:24,0,0,0 : 0,RTU,FALSE,0
+29/05/2014 10:12:22,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+29/05/2014 10:12:22,0,0,0 : 0,RTU,FALSE,0
+29/05/2014 20:12:20,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+29/05/2014 20:12:20,0,0,0 : 0,RTU,FALSE,0
+30/05/2014 06:12:17,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+30/05/2014 06:12:18,0,0,0 : 0,RTU,FALSE,0
+30/05/2014 16:12:15,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+30/05/2014 16:12:15,0,0,0 : 0,RTU,FALSE,0
+31/05/2014 02:12:13,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+31/05/2014 02:12:13,0,0,0 : 0,RTU,FALSE,0
+31/05/2014 12:12:11,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+31/05/2014 12:12:11,0,0,0 : 0,RTU,FALSE,0
+31/05/2014 22:12:08,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+31/05/2014 22:12:09,0,0,0 : 0,RTU,FALSE,0
+01/06/2014 08:12:06,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+01/06/2014 08:12:07,0,0,0 : 0,RTU,FALSE,0
+01/06/2014 18:12:04,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+01/06/2014 18:12:04,0,0,0 : 0,RTU,FALSE,0
+02/06/2014 04:12:02,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+02/06/2014 04:12:02,0,0,0 : 0,RTU,FALSE,0
+02/06/2014 14:11:59,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+02/06/2014 14:12:00,0,0,0 : 0,RTU,FALSE,0
+03/06/2014 00:11:57,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+03/06/2014 00:11:57,0,0,0 : 0,RTU,FALSE,0
+03/06/2014 06:05:26,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+03/06/2014 06:05:26,0,0,0 : 0,RTU,FALSE,0
+03/06/2014 10:11:55,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+03/06/2014 10:11:55,0,0,0 : 0,RTU,FALSE,0
+03/06/2014 20:11:53,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+03/06/2014 20:11:53,0,0,0 : 0,RTU,FALSE,0
+04/06/2014 06:11:50,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+04/06/2014 06:11:50,0,0,0 : 0,RTU,FALSE,0
+04/06/2014 08:20:34,240,1,240 : 1,Remote control PC,FALSE,0
+04/06/2014 16:55:44,240,0,240 : 0,Remote control PC,FALSE,0
+04/06/2014 16:55:45,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+04/06/2014 16:55:45,0,0,0 : 0,RTU,FALSE,0
+05/06/2014 02:11:47,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+05/06/2014 02:11:48,0,0,0 : 0,RTU,FALSE,0
+05/06/2014 12:11:45,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+05/06/2014 12:11:45,0,0,0 : 0,RTU,FALSE,0
+05/06/2014 14:15:33,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+05/06/2014 14:15:33,0,0,0 : 0,RTU,FALSE,0
+05/06/2014 15:56:05,240,1,240 : 1,Remote control PC,FALSE,0
+05/06/2014 17:33:14,240,0,240 : 0,Remote control PC,FALSE,0
+05/06/2014 17:33:15,0,0,0 : 0,RTU,FALSE,0
+05/06/2014 22:11:43,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+05/06/2014 22:11:43,0,0,0 : 0,RTU,FALSE,0
+06/06/2014 08:11:41,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+06/06/2014 08:11:41,0,0,0 : 0,RTU,FALSE,0
+06/06/2014 18:11:38,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+06/06/2014 18:11:39,0,0,0 : 0,RTU,FALSE,0
+07/06/2014 04:11:36,100,230,100 : 230,Set point active power : Power limitation (10h),TRUE,0
+07/06/2014 04:11:36,0,0,0 : 0,RTU,FALSE,0
+10/06/2014 14:52:30,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+10/06/2014 14:52:31,0,0,0 : 0,RTU,FALSE,0
+13/06/2014 10:57:12,240,1,240 : 1,Remote control PC,FALSE,0
+13/06/2014 12:45:53,240,0,240 : 0,Remote control PC,FALSE,0
+13/06/2014 12:45:54,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+13/06/2014 12:45:54,0,0,0 : 0,RTU,FALSE,0
+22/06/2014 11:24:20,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+22/06/2014 11:24:20,0,0,0 : 0,RTU,FALSE,0
+04/07/2014 06:33:13,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+04/07/2014 06:33:13,0,0,0 : 0,RTU,FALSE,0
+07/07/2014 14:56:40,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+07/07/2014 14:56:41,0,0,0 : 0,RTU,FALSE,0
+15/07/2014 23:17:36,20,53,20 : 53,Measurement Trancducer : Overfrequnce F,FALSE,0
+15/07/2014 23:17:36,0,0,0 : 0,RTU,FALSE,0
+17/07/2014 10:18:01,240,1,240 : 1,Remote control PC,FALSE,0
+17/07/2014 10:20:02,240,0,240 : 0,Remote control PC,FALSE,0
+17/07/2014 10:20:03,0,0,0 : 0,RTU,FALSE,0
+24/07/2014 16:03:20,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+24/07/2014 16:03:20,0,0,0 : 0,RTU,FALSE,0
+04/09/2014 15:41:37,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+04/09/2014 15:41:37,0,0,0 : 0,RTU,FALSE,0
+13/09/2014 22:06:24,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+13/09/2014 22:06:25,0,0,0 : 0,RTU,FALSE,0
+19/09/2014 05:56:44,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+19/09/2014 05:56:44,0,0,0 : 0,RTU,FALSE,0
+19/09/2014 05:59:50,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+19/09/2014 05:59:50,0,0,0 : 0,RTU,FALSE,0
+19/09/2014 09:55:06,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+19/09/2014 09:55:07,0,0,0 : 0,RTU,FALSE,0
+27/09/2014 16:33:04,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+27/09/2014 16:33:04,0,0,0 : 0,RTU,FALSE,0
+02/10/2014 15:03:09,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+02/10/2014 15:03:09,0,0,0 : 0,RTU,FALSE,0
+02/10/2014 16:10:14,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+02/10/2014 16:10:14,0,0,0 : 0,RTU,FALSE,0
+02/10/2014 17:34:32,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+02/10/2014 17:34:33,0,0,0 : 0,RTU,FALSE,0
+06/10/2014 15:16:09,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+06/10/2014 15:16:09,0,0,0 : 0,RTU,FALSE,0
+06/10/2014 15:39:47,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+06/10/2014 15:39:47,0,0,0 : 0,RTU,FALSE,0
+08/10/2014 05:26:27,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+08/10/2014 05:26:27,0,0,0 : 0,RTU,FALSE,0
+08/10/2014 07:03:07,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+08/10/2014 07:03:07,0,0,0 : 0,RTU,FALSE,0
+08/10/2014 13:36:33,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+08/10/2014 13:36:33,0,0,0 : 0,RTU,FALSE,0
+08/10/2014 14:56:25,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+08/10/2014 14:56:26,0,0,0 : 0,RTU,FALSE,0
+08/10/2014 16:38:16,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+08/10/2014 16:38:17,0,0,0 : 0,RTU,FALSE,0
+08/10/2014 18:03:21,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+08/10/2014 18:03:21,0,0,0 : 0,RTU,FALSE,0
+08/10/2014 19:04:03,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+08/10/2014 19:04:04,0,0,0 : 0,RTU,FALSE,0
+11/10/2014 17:15:05,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+11/10/2014 17:15:05,0,0,0 : 0,RTU,FALSE,0
+21/10/2014 20:13:35,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+21/10/2014 20:13:35,0,0,0 : 0,RTU,FALSE,0
+22/10/2014 18:06:39,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+22/10/2014 18:06:40,0,0,0 : 0,RTU,FALSE,0
+25/10/2014 07:48:56,240,1,240 : 1,Remote control PC,FALSE,0
+26/10/2014 18:03:59,240,0,240 : 0,Remote control PC,FALSE,0
+26/10/2014 18:04:00,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:01,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:01,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:01,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:01,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+26/10/2014 18:04:02,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:02,20,51,20 : 51,Measurement Trancducer : Overvoltage U,FALSE,0
+26/10/2014 18:04:02,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:02,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:02,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:03,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:03,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:03,20,51,20 : 51,Measurement Trancducer : Overvoltage U,FALSE,0
+26/10/2014 18:04:04,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:04,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:04,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:04,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:05,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:05,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:05,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:05,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:06,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:06,20,51,20 : 51,Measurement Trancducer : Overvoltage U,FALSE,0
+26/10/2014 18:04:06,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:06,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:07,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:07,20,51,20 : 51,Measurement Trancducer : Overvoltage U,FALSE,0
+26/10/2014 18:04:07,0,0,0 : 0,RTU,FALSE,0
+26/10/2014 18:04:07,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+26/10/2014 18:04:08,0,0,0 : 0,RTU,FALSE,0
+27/10/2014 01:55:42,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+27/10/2014 01:55:43,0,0,0 : 0,RTU,FALSE,0
+03/12/2014 17:47:12,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+03/12/2014 17:47:12,0,0,0 : 0,RTU,FALSE,0
+11/12/2014 01:37:10,20,53,20 : 53,Measurement Trancducer : Overfrequnce F,FALSE,0
+11/12/2014 01:37:10,0,0,0 : 0,RTU,FALSE,0
+26/12/2014 22:36:33,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+26/12/2014 22:36:33,0,0,0 : 0,RTU,FALSE,0
+06/01/2015 17:19:45,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+06/01/2015 17:19:46,0,0,0 : 0,RTU,FALSE,0
+07/01/2015 16:47:00,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+07/01/2015 16:47:00,0,0,0 : 0,RTU,FALSE,0
+09/01/2015 16:02:05,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+09/01/2015 16:02:05,0,0,0 : 0,RTU,FALSE,0
+12/01/2015 04:07:28,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+12/01/2015 04:07:28,0,0,0 : 0,RTU,FALSE,0
+15/01/2015 12:09:04,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+15/01/2015 12:09:05,0,0,0 : 0,RTU,FALSE,0
+19/01/2015 10:06:28,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 10:50:08,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 10:50:10,0,0,0 : 0,RTU,FALSE,0
+19/01/2015 10:52:44,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 15:06:17,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 15:06:19,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+19/01/2015 15:06:19,0,0,0 : 0,RTU,FALSE,0
+19/01/2015 15:11:00,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 15:14:31,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 15:14:33,0,0,0 : 0,RTU,FALSE,0
+19/01/2015 15:19:22,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+19/01/2015 15:19:22,0,0,0 : 0,RTU,FALSE,0
+19/01/2015 15:21:05,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 15:24:37,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 15:24:39,0,0,0 : 0,RTU,FALSE,0
+19/01/2015 15:58:36,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 16:00:37,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 16:00:38,0,0,0 : 0,RTU,FALSE,0
+21/01/2015 05:11:42,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+21/01/2015 05:11:42,0,0,0 : 0,RTU,FALSE,0
+22/01/2015 15:41:11,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+22/01/2015 15:41:12,0,0,0 : 0,RTU,FALSE,0
+02/02/2015 16:19:20,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+02/02/2015 16:19:20,0,0,0 : 0,RTU,FALSE,0
+05/02/2015 10:07:54,240,1,240 : 1,Remote control PC,FALSE,0
+05/02/2015 10:10:34,240,0,240 : 0,Remote control PC,FALSE,0
+05/02/2015 10:10:36,0,0,0 : 0,RTU,FALSE,0
+05/02/2015 10:22:26,240,1,240 : 1,Remote control PC,FALSE,0
+05/02/2015 10:25:09,240,0,240 : 0,Remote control PC,FALSE,0
+05/02/2015 10:25:10,0,0,0 : 0,RTU,FALSE,0
+10/02/2015 03:19:48,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+10/02/2015 03:19:48,0,0,0 : 0,RTU,FALSE,0
+10/02/2015 15:42:22,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+10/02/2015 15:42:23,0,0,0 : 0,RTU,FALSE,0
+12/02/2015 08:44:20,240,1,240 : 1,Remote control PC,FALSE,0
+12/02/2015 09:05:36,240,0,240 : 0,Remote control PC,FALSE,0
+12/02/2015 09:05:38,0,0,0 : 0,RTU,FALSE,0
+21/02/2015 12:28:27,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+21/02/2015 12:28:27,0,0,0 : 0,RTU,FALSE,0
+23/02/2015 23:07:07,20,50,20 : 50,Measurement Trancducer : Undervoltage U,FALSE,0
+23/02/2015 23:07:07,0,0,0 : 0,RTU,FALSE,0
+26/02/2015 20:25:59,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+26/02/2015 20:26:00,0,0,0 : 0,RTU,FALSE,0
+27/02/2015 07:06:03,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+27/02/2015 07:06:03,0,0,0 : 0,RTU,FALSE,0
+04/03/2015 10:16:43,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+04/03/2015 10:16:43,0,0,0 : 0,RTU,FALSE,0
+08/03/2015 22:55:21,20,53,20 : 53,Measurement Trancducer : Overfrequnce F,FALSE,0
+08/03/2015 22:55:21,0,0,0 : 0,RTU,FALSE,0
+11/03/2015 19:46:07,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+11/03/2015 19:46:07,0,0,0 : 0,RTU,FALSE,0
+13/03/2015 20:27:23,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+13/03/2015 20:27:23,0,0,0 : 0,RTU,FALSE,0
+14/03/2015 16:47:56,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+14/03/2015 16:47:56,0,0,0 : 0,RTU,FALSE,0
+18/03/2015 12:44:12,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+18/03/2015 12:44:12,0,0,0 : 0,RTU,FALSE,0
+25/03/2015 16:19:15,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+25/03/2015 16:19:16,0,0,0 : 0,RTU,FALSE,0
+27/03/2015 20:58:03,20,53,20 : 53,Measurement Trancducer : Overfrequnce F,FALSE,0
+27/03/2015 20:58:03,0,0,0 : 0,RTU,FALSE,0
+31/03/2015 16:06:02,20,52,20 : 52,Measurement Trancducer : Underfrequence F,FALSE,0
+31/03/2015 16:06:02,0,0,0 : 0,RTU,FALSE,0

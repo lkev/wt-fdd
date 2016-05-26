@@ -1,0 +1,1464 @@
+Time,Main Warning,Sub Warning,Full Warning,Warning Text,WarnMsg,Value0
+01/05/2014 08:57:11,240,1,240 : 1,Remote control PC,FALSE,0
+01/05/2014 11:28:32,240,0,240 : 0,Remote control PC,FALSE,0
+01/05/2014 11:28:33,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4
+14/05/2014 14:41:31,25,284,25 : 284,Faulty yaw inverter : Rotational speed error motor 8,FALSE,5.7
+14/05/2014 14:41:32,232,101,232 : 101,General information : Power curve stored,FALSE,5.9
+14/05/2014 14:41:32,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,5.9
+14/05/2014 14:41:32,232,1203,232 : 1203,General information,FALSE,5.8
+14/05/2014 14:41:33,25,281,25 : 281,Faulty yaw inverter : Rotational speed error motor 2,FALSE,5.8
+14/05/2014 14:41:33,29,12,29 : 12,Anemometer Interface : Timeout communication US-Sensor (4),TRUE,5.7
+14/05/2014 14:41:33,233,3,233 : 3,General warning message : Timeout maintenance (-),TRUE,5.7
+14/05/2014 14:41:33,0,10,0 : 10,Information / Warnings,FALSE,5.7
+14/05/2014 14:41:39,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.6
+14/05/2014 14:41:40,0,10,0 : 10,Information / Warnings,FALSE,5.6
+14/05/2014 17:25:44,0,10,0 : 10,Information / Warnings,FALSE,3.9
+14/05/2014 17:30:43,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.7
+14/05/2014 18:43:13,0,10,0 : 10,Information / Warnings,FALSE,2.4
+15/05/2014 05:59:59,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,1.9
+15/05/2014 05:59:59,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,1.9
+15/05/2014 05:59:59,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,1.9
+15/05/2014 06:00:00,0,10,0 : 10,Information / Warnings,FALSE,1.8
+15/05/2014 07:33:28,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.4
+15/05/2014 09:41:38,240,1,240 : 1,Remote control PC,FALSE,0
+15/05/2014 11:43:10,240,0,240 : 0,Remote control PC,FALSE,0
+15/05/2014 11:43:11,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.9
+15/05/2014 18:36:56,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2.9
+15/05/2014 18:36:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3
+15/05/2014 18:36:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3
+15/05/2014 18:36:57,0,10,0 : 10,Information / Warnings,FALSE,2.9
+16/05/2014 07:37:24,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.4
+16/05/2014 08:37:23,233,3,233 : 3,General warning message : Timeout maintenance (-),TRUE,2
+16/05/2014 08:37:24,0,10,0 : 10,Information / Warnings,FALSE,2.1
+16/05/2014 08:49:05,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.2
+16/05/2014 09:49:51,0,10,0 : 10,Information / Warnings,FALSE,1.9
+16/05/2014 19:30:15,230,104,230 : 104,Power limitation (10h) : SCADA (-),TRUE,6.4
+16/05/2014 19:30:15,0,10,0 : 10,Information / Warnings,FALSE,6.5
+16/05/2014 19:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,7.9
+16/05/2014 19:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,7.8
+16/05/2014 19:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,7.8
+16/05/2014 19:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.4
+17/05/2014 08:59:58,233,3,233 : 3,General warning message : Timeout maintenance (-),TRUE,2.9
+17/05/2014 08:59:59,0,10,0 : 10,Information / Warnings,FALSE,2.9
+17/05/2014 16:10:35,230,104,230 : 104,Power limitation (10h) : SCADA (-),TRUE,9.3
+17/05/2014 16:10:35,0,10,0 : 10,Information / Warnings,FALSE,9.1
+17/05/2014 19:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,7.9
+17/05/2014 19:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,7.9
+17/05/2014 19:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,7.5
+17/05/2014 19:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.5
+18/05/2014 03:57:25,230,104,230 : 104,Power limitation (10h) : SCADA (-),TRUE,8.1
+18/05/2014 03:57:25,0,10,0 : 10,Information / Warnings,FALSE,8.2
+18/05/2014 19:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,5.2
+18/05/2014 19:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,5.4
+18/05/2014 19:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,5.4
+18/05/2014 19:59:58,0,10,0 : 10,Information / Warnings,FALSE,5.3
+19/05/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,3.9
+19/05/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,3.9
+19/05/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5
+19/05/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,5.2
+19/05/2014 19:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,3.3
+19/05/2014 19:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3.3
+19/05/2014 19:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3.4
+19/05/2014 19:59:58,0,10,0 : 10,Information / Warnings,FALSE,3.4
+20/05/2014 19:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2.6
+20/05/2014 19:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2.6
+20/05/2014 19:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,2.7
+20/05/2014 19:59:57,0,10,0 : 10,Information / Warnings,FALSE,2.7
+21/05/2014 19:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2.9
+21/05/2014 19:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2.9
+21/05/2014 19:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,2.9
+21/05/2014 19:59:57,0,10,0 : 10,Information / Warnings,FALSE,2.9
+22/05/2014 00:59:46,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9.8
+22/05/2014 00:59:47,0,10,0 : 10,Information / Warnings,FALSE,9.8
+22/05/2014 14:17:05,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,6.7
+22/05/2014 14:17:05,0,10,0 : 10,Information / Warnings,FALSE,6.7
+22/05/2014 14:17:07,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,6.7
+22/05/2014 14:17:07,0,10,0 : 10,Information / Warnings,FALSE,6.7
+22/05/2014 14:17:09,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6.7
+22/05/2014 14:17:09,0,10,0 : 10,Information / Warnings,FALSE,6.9
+22/05/2014 15:52:55,25,131,25 : 131,Faulty yaw inverter : DC-link voltage instabil system 1,FALSE,7.4
+22/05/2014 15:52:55,25,231,25 : 231,Faulty yaw inverter : DC-link voltage instabil system 2,FALSE,7.6
+22/05/2014 15:52:55,0,10,0 : 10,Information / Warnings,FALSE,7.6
+23/05/2014 00:00:00,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.8
+23/05/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,6.8
+23/05/2014 07:05:43,230,104,230 : 104,Power limitation (10h) : SCADA (-),TRUE,9.6
+23/05/2014 07:05:43,0,10,0 : 10,Information / Warnings,FALSE,9.8
+23/05/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,11.5
+23/05/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,11.5
+23/05/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,11.4
+23/05/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,11.4
+23/05/2014 20:16:37,230,104,230 : 104,Power limitation (10h) : SCADA (-),TRUE,11.9
+23/05/2014 20:16:37,0,10,0 : 10,Information / Warnings,FALSE,11.8
+24/05/2014 00:00:00,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.5
+24/05/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,7.4
+24/05/2014 09:22:15,230,104,230 : 104,Power limitation (10h) : SCADA (-),TRUE,10
+24/05/2014 09:22:16,0,10,0 : 10,Information / Warnings,FALSE,9.8
+24/05/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,7.3
+24/05/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,7.2
+24/05/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,7.2
+24/05/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.9
+25/05/2014 00:00:00,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.6
+25/05/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,6.7
+25/05/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,6.8
+25/05/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,6.8
+25/05/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6.7
+25/05/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.7
+26/05/2014 00:00:00,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.6
+26/05/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,6.6
+26/05/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5.6
+26/05/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,5.6
+26/05/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.5
+26/05/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,5.4
+26/05/2014 09:48:26,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.2
+26/05/2014 10:13:17,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,0.8
+26/05/2014 10:13:18,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,0.8
+26/05/2014 10:13:18,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,1
+26/05/2014 10:13:18,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,1
+26/05/2014 10:13:19,0,10,0 : 10,Information / Warnings,FALSE,1.2
+26/05/2014 13:56:28,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,3.7
+26/05/2014 15:45:53,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,3.4
+26/05/2014 15:45:54,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3.4
+26/05/2014 15:45:54,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3.6
+26/05/2014 15:45:54,0,10,0 : 10,Information / Warnings,FALSE,3.6
+27/05/2014 11:01:24,240,1,240 : 1,Remote control PC,FALSE,0
+27/05/2014 16:00:33,240,0,240 : 0,Remote control PC,FALSE,0
+27/05/2014 16:00:34,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.3
+27/05/2014 16:07:09,0,10,0 : 10,Information / Warnings,FALSE,7.1
+27/05/2014 20:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,3.7
+27/05/2014 20:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3.8
+27/05/2014 20:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3.8
+27/05/2014 20:59:58,0,10,0 : 10,Information / Warnings,FALSE,3.8
+28/05/2014 16:05:48,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.9
+28/05/2014 17:43:52,0,10,0 : 10,Information / Warnings,FALSE,3.7
+28/05/2014 21:59:56,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,5.7
+28/05/2014 21:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,5.6
+28/05/2014 21:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,5.6
+28/05/2014 21:59:57,0,10,0 : 10,Information / Warnings,FALSE,5.7
+29/05/2014 21:59:56,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2.4
+29/05/2014 21:59:56,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2.4
+29/05/2014 21:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,2.5
+29/05/2014 21:59:57,0,10,0 : 10,Information / Warnings,FALSE,2.5
+29/05/2014 23:09:57,25,181,25 : 181,Faulty yaw inverter : Rotational speed error motor 1,FALSE,2.9
+29/05/2014 23:09:58,0,10,0 : 10,Information / Warnings,FALSE,2.9
+30/05/2014 21:59:56,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,3.8
+30/05/2014 21:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3.8
+30/05/2014 21:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3.8
+30/05/2014 21:59:57,0,10,0 : 10,Information / Warnings,FALSE,4
+31/05/2014 08:16:10,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.7
+31/05/2014 11:28:21,232,42,232 : 42,General information : Data of blade control stored,FALSE,5.4
+31/05/2014 11:28:22,0,10,0 : 10,Information / Warnings,FALSE,5.4
+31/05/2014 11:29:09,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,5.4
+31/05/2014 11:29:09,0,10,0 : 10,Information / Warnings,FALSE,5.5
+31/05/2014 11:29:11,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,5.4
+31/05/2014 11:29:11,0,10,0 : 10,Information / Warnings,FALSE,5.2
+31/05/2014 11:29:13,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,5.4
+31/05/2014 11:29:13,0,10,0 : 10,Information / Warnings,FALSE,5.3
+01/06/2014 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,6
+01/06/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,6
+01/06/2014 01:00:00,232,1203,232 : 1203,General information,FALSE,6.5
+01/06/2014 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,6.5
+01/06/2014 04:05:40,232,111,232 : 111,General information : Load spectrum stored,FALSE,5.5
+01/06/2014 04:05:41,0,10,0 : 10,Information / Warnings,FALSE,5.3
+01/06/2014 10:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,8.4
+01/06/2014 10:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,8.4
+01/06/2014 10:59:59,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,8.7
+01/06/2014 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,8.7
+01/06/2014 13:35:19,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,11.6
+01/06/2014 13:35:19,0,10,0 : 10,Information / Warnings,FALSE,11.6
+02/06/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5.7
+02/06/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,5.7
+02/06/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.5
+02/06/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,5.5
+02/06/2014 04:05:07,232,510,232 : 510,General information : R&D-Info 510,FALSE,5.4
+02/06/2014 04:05:07,0,10,0 : 10,Information / Warnings,FALSE,5.4
+02/06/2014 10:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,4.3
+02/06/2014 10:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,4.2
+02/06/2014 10:59:59,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,4.2
+02/06/2014 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,4
+02/06/2014 12:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,3.4
+02/06/2014 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,3.4
+03/06/2014 10:49:57,25,181,25 : 181,Faulty yaw inverter : Rotational speed error motor 1,FALSE,5.5
+03/06/2014 10:49:58,0,10,0 : 10,Information / Warnings,FALSE,5.6
+03/06/2014 10:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,6.2
+03/06/2014 10:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,6.2
+03/06/2014 10:59:59,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6.1
+03/06/2014 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,6.1
+03/06/2014 12:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.3
+03/06/2014 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.1
+04/06/2014 08:20:34,240,1,240 : 1,Remote control PC,FALSE,0
+04/06/2014 16:55:44,240,0,240 : 0,Remote control PC,FALSE,0
+04/06/2014 16:55:45,0,10,0 : 10,Information / Warnings,FALSE,5.8
+04/06/2014 17:15:33,230,107,230 : 107,Power limitation (10h) : Farm control (relative),FALSE,11.1
+04/06/2014 17:15:33,0,10,0 : 10,Information / Warnings,FALSE,11
+04/06/2014 18:59:59,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,8.9
+04/06/2014 18:59:59,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,8.9
+04/06/2014 18:59:59,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,8.9
+04/06/2014 18:59:59,0,10,0 : 10,Information / Warnings,FALSE,8.9
+04/06/2014 20:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.5
+04/06/2014 20:59:59,0,10,0 : 10,Information / Warnings,FALSE,7.6
+05/06/2014 15:56:05,240,1,240 : 1,Remote control PC,FALSE,0
+05/06/2014 17:33:14,240,0,240 : 0,Remote control PC,FALSE,0
+05/06/2014 17:33:15,0,10,0 : 10,Information / Warnings,FALSE,2.3
+05/06/2014 20:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,8.7
+05/06/2014 20:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,8.7
+05/06/2014 20:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,8.8
+05/06/2014 20:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.6
+05/06/2014 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,10.4
+05/06/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,10.4
+06/06/2014 09:08:56,230,107,230 : 107,Power limitation (10h) : Farm control (relative),FALSE,12.2
+06/06/2014 09:08:56,0,10,0 : 10,Information / Warnings,FALSE,12.1
+06/06/2014 20:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,12.5
+06/06/2014 20:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,12.2
+06/06/2014 20:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,12.2
+06/06/2014 20:59:58,0,10,0 : 10,Information / Warnings,FALSE,12
+06/06/2014 22:12:30,230,107,230 : 107,Power limitation (10h) : Farm control (relative),FALSE,11
+06/06/2014 22:12:30,0,10,0 : 10,Information / Warnings,FALSE,11.1
+06/06/2014 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.5
+06/06/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,8.8
+07/06/2014 20:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,10.2
+07/06/2014 20:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,10.2
+07/06/2014 20:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,10
+07/06/2014 20:59:58,0,10,0 : 10,Information / Warnings,FALSE,10
+07/06/2014 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,11.2
+07/06/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,11.2
+08/06/2014 20:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,8.9
+08/06/2014 20:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,8.9
+08/06/2014 20:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,8.8
+08/06/2014 20:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.8
+08/06/2014 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.9
+08/06/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,7.9
+09/06/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,12.1
+09/06/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,12.4
+09/06/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,11.6
+09/06/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,10.9
+09/06/2014 00:03:47,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,10
+09/06/2014 00:03:47,0,10,0 : 10,Information / Warnings,FALSE,10
+09/06/2014 20:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,4.9
+09/06/2014 20:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,4.9
+09/06/2014 20:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,5
+09/06/2014 20:59:58,0,10,0 : 10,Information / Warnings,FALSE,5
+09/06/2014 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.5
+09/06/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,8.3
+10/06/2014 00:02:56,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,8.9
+10/06/2014 00:02:57,0,10,0 : 10,Information / Warnings,FALSE,9.1
+10/06/2014 20:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,3.8
+10/06/2014 20:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3.8
+10/06/2014 20:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3.7
+10/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,3.7
+10/06/2014 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.7
+10/06/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,7.7
+11/06/2014 00:02:13,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,8.4
+11/06/2014 00:02:14,0,10,0 : 10,Information / Warnings,FALSE,7.9
+11/06/2014 00:02:26,232,42,232 : 42,General information : Data of blade control stored,FALSE,2.6
+11/06/2014 00:02:26,42,195,42 : 195,Pitch control error,FALSE,2.6
+11/06/2014 00:02:26,0,10,0 : 10,Information / Warnings,FALSE,2.8
+11/06/2014 20:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,4.2
+11/06/2014 20:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,4.2
+11/06/2014 20:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,4.2
+11/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,4.1
+11/06/2014 22:59:56,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,2.1
+11/06/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,2.3
+12/06/2014 00:03:21,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,3.7
+12/06/2014 00:03:21,0,10,0 : 10,Information / Warnings,FALSE,3.7
+12/06/2014 20:59:57,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,3.7
+12/06/2014 20:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3.7
+12/06/2014 20:59:57,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3.8
+12/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,3.8
+13/06/2014 10:57:12,240,1,240 : 1,Remote control PC,FALSE,0
+13/06/2014 12:45:53,240,0,240 : 0,Remote control PC,FALSE,0
+13/06/2014 12:45:54,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.6
+13/06/2014 15:04:48,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,5.5
+13/06/2014 15:04:48,0,10,0 : 10,Information / Warnings,FALSE,5.6
+13/06/2014 15:04:49,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,5.5
+13/06/2014 15:04:49,0,10,0 : 10,Information / Warnings,FALSE,5.4
+13/06/2014 15:04:51,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,5.7
+13/06/2014 15:04:51,0,10,0 : 10,Information / Warnings,FALSE,5.6
+14/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2.3
+14/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,2.3
+14/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2.3
+14/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,2.4
+15/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3.8
+15/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3.8
+15/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,3.8
+15/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,3.9
+16/06/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,0.5
+16/06/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,0.5
+16/06/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,0.5
+16/06/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,0.5
+16/06/2014 14:59:57,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2.4
+16/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,2.4
+16/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2.5
+16/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,2.5
+17/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,6.7
+17/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6.7
+17/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,6.7
+17/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.6
+18/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3.9
+18/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3.8
+18/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,3.8
+18/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,3.7
+18/06/2014 21:51:44,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,10.6
+18/06/2014 21:51:44,0,10,0 : 10,Information / Warnings,FALSE,10.6
+19/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,3
+19/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,3
+19/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,3
+19/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,3.1
+19/06/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6
+19/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,6.1
+20/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,6
+20/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6
+20/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,6.2
+20/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.2
+20/06/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,3.5
+20/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,3.6
+21/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,5.7
+21/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,5.7
+21/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,5.6
+21/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,5.6
+21/06/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,2.6
+21/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,2.6
+22/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,5
+22/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,5
+22/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,4.9
+22/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,4.9
+22/06/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,3.4
+22/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,3.4
+23/06/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,2.1
+23/06/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,2.1
+23/06/2014 00:03:08,232,102,232 : 102,General information : Blade angle curve stored,FALSE,2.1
+23/06/2014 00:03:08,0,10,0 : 10,Information / Warnings,FALSE,2.1
+23/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2.7
+23/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,2.7
+23/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2.8
+23/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,2.8
+23/06/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,2.3
+23/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,2.3
+24/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,4.4
+24/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,4.4
+24/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,4.4
+24/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,4.2
+24/06/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,2.8
+24/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,2.8
+25/06/2014 14:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,7.1
+25/06/2014 14:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,7.1
+25/06/2014 14:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,7.1
+25/06/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.9
+25/06/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.4
+25/06/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,8.5
+25/06/2014 22:05:38,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,6.7
+25/06/2014 22:05:38,0,10,0 : 10,Information / Warnings,FALSE,6.7
+25/06/2014 22:05:50,232,42,232 : 42,General information : Data of blade control stored,FALSE,2.3
+25/06/2014 22:05:50,42,195,42 : 195,Pitch control error,FALSE,2.6
+25/06/2014 22:05:50,0,10,0 : 10,Information / Warnings,FALSE,2.6
+26/06/2014 08:18:50,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,6.7
+26/06/2014 08:18:50,0,10,0 : 10,Information / Warnings,FALSE,6.5
+26/06/2014 08:18:52,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,6.6
+26/06/2014 08:18:52,0,10,0 : 10,Information / Warnings,FALSE,6.4
+26/06/2014 08:18:54,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6.5
+26/06/2014 08:18:54,0,10,0 : 10,Information / Warnings,FALSE,6.3
+26/06/2014 08:19:25,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.5
+26/06/2014 08:19:26,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,7.3
+26/06/2014 08:19:26,0,10,0 : 10,Information / Warnings,FALSE,7.3
+26/06/2014 08:19:27,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.5
+26/06/2014 08:19:29,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,6.9
+26/06/2014 08:19:30,0,10,0 : 10,Information / Warnings,FALSE,6.8
+26/06/2014 08:19:32,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,6.9
+26/06/2014 08:19:32,0,10,0 : 10,Information / Warnings,FALSE,6.8
+26/06/2014 08:19:34,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6.2
+26/06/2014 08:19:34,0,10,0 : 10,Information / Warnings,FALSE,6.2
+26/06/2014 08:19:36,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.2
+26/06/2014 08:19:36,0,10,0 : 10,Information / Warnings,FALSE,6.2
+26/06/2014 08:22:18,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,7.1
+26/06/2014 08:22:18,0,10,0 : 10,Information / Warnings,FALSE,7
+26/06/2014 08:22:20,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,7.1
+26/06/2014 08:22:20,0,10,0 : 10,Information / Warnings,FALSE,7
+26/06/2014 08:22:22,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,7.3
+26/06/2014 08:22:22,0,10,0 : 10,Information / Warnings,FALSE,7.2
+26/06/2014 10:16:05,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.2
+26/06/2014 10:16:06,0,10,0 : 10,Information / Warnings,FALSE,7.4
+26/06/2014 10:16:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.7
+26/06/2014 10:16:07,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,7
+26/06/2014 10:16:07,0,10,0 : 10,Information / Warnings,FALSE,7
+26/06/2014 10:16:08,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.2
+26/06/2014 10:16:09,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,7.6
+26/06/2014 10:16:10,0,10,0 : 10,Information / Warnings,FALSE,7.8
+26/06/2014 10:16:11,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,7.4
+26/06/2014 10:16:12,0,10,0 : 10,Information / Warnings,FALSE,7.6
+26/06/2014 10:16:13,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.6
+26/06/2014 10:16:13,0,10,0 : 10,Information / Warnings,FALSE,7.6
+26/06/2014 10:16:15,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,7.4
+26/06/2014 10:16:16,0,10,0 : 10,Information / Warnings,FALSE,7.4
+27/06/2014 09:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2.7
+27/06/2014 09:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,2.8
+27/06/2014 09:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,2.8
+27/06/2014 09:59:59,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2.9
+27/06/2014 09:59:59,0,10,0 : 10,Information / Warnings,FALSE,2.9
+28/06/2014 09:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2.6
+28/06/2014 09:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,2.7
+28/06/2014 09:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,2.7
+28/06/2014 09:59:59,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2.6
+28/06/2014 09:59:59,0,10,0 : 10,Information / Warnings,FALSE,2.7
+29/06/2014 09:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2
+29/06/2014 09:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,2
+29/06/2014 09:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,2
+29/06/2014 09:59:59,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2
+29/06/2014 09:59:59,0,10,0 : 10,Information / Warnings,FALSE,2
+30/06/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,4.9
+30/06/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,4.9
+30/06/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,4.6
+30/06/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,4.6
+30/06/2014 09:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,12.3
+30/06/2014 09:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,12.4
+30/06/2014 09:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,12.4
+30/06/2014 09:59:59,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,12.4
+30/06/2014 09:59:59,0,10,0 : 10,Information / Warnings,FALSE,12.5
+30/06/2014 10:35:27,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.7
+30/06/2014 10:41:23,0,10,0 : 10,Information / Warnings,FALSE,10.5
+30/06/2014 10:41:24,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.4
+30/06/2014 14:17:38,0,10,0 : 10,Information / Warnings,FALSE,9.8
+01/07/2014 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,7.2
+01/07/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,7.1
+01/07/2014 01:00:00,232,1203,232 : 1203,General information,FALSE,5.5
+01/07/2014 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,5.4
+01/07/2014 04:05:40,232,111,232 : 111,General information : Load spectrum stored,FALSE,5.4
+01/07/2014 04:05:41,0,10,0 : 10,Information / Warnings,FALSE,5.2
+01/07/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,6.1
+01/07/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6.1
+01/07/2014 13:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.1
+01/07/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,6.2
+01/07/2014 13:59:59,0,10,0 : 10,Information / Warnings,FALSE,6.1
+02/07/2014 13:38:30,25,285,25 : 285,Faulty yaw inverter : Rotational speed error motor 10,FALSE,10.2
+02/07/2014 13:38:30,0,10,0 : 10,Information / Warnings,FALSE,10.2
+02/07/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,7.5
+02/07/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,7.5
+02/07/2014 13:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.5
+02/07/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,7.2
+02/07/2014 13:59:59,0,10,0 : 10,Information / Warnings,FALSE,7.1
+02/07/2014 15:43:55,25,281,25 : 281,Faulty yaw inverter : Rotational speed error motor 2,FALSE,9.8
+02/07/2014 15:43:55,0,10,0 : 10,Information / Warnings,FALSE,9.8
+03/07/2014 06:52:20,25,281,25 : 281,Faulty yaw inverter : Rotational speed error motor 2,FALSE,7.2
+03/07/2014 06:52:20,0,10,0 : 10,Information / Warnings,FALSE,7.2
+03/07/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,8.3
+03/07/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,8.1
+03/07/2014 13:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.1
+03/07/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,8
+03/07/2014 13:59:59,0,10,0 : 10,Information / Warnings,FALSE,8
+03/07/2014 15:06:13,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,9.1
+03/07/2014 15:06:13,0,10,0 : 10,Information / Warnings,FALSE,9.3
+04/07/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,4
+04/07/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,4.1
+04/07/2014 13:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.1
+04/07/2014 13:59:59,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,4.2
+04/07/2014 13:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.2
+04/07/2014 14:23:31,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,3.8
+04/07/2014 14:23:31,0,10,0 : 10,Information / Warnings,FALSE,3.8
+04/07/2014 14:23:31,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,3.8
+04/07/2014 14:23:33,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,4.3
+04/07/2014 14:23:33,0,10,0 : 10,Information / Warnings,FALSE,4.3
+04/07/2014 14:23:35,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,4.2
+04/07/2014 14:23:35,0,10,0 : 10,Information / Warnings,FALSE,4.2
+04/07/2014 14:23:37,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,4
+04/07/2014 14:23:37,0,10,0 : 10,Information / Warnings,FALSE,4
+04/07/2014 14:23:39,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.3
+04/07/2014 14:23:39,0,10,0 : 10,Information / Warnings,FALSE,4.2
+05/07/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,4.7
+05/07/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,4.6
+05/07/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,4.6
+05/07/2014 13:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.8
+05/07/2014 13:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.8
+06/07/2014 10:14:05,25,186,25 : 186,Faulty yaw inverter : Rotational speed error motor 11,FALSE,6.1
+06/07/2014 10:14:05,0,10,0 : 10,Information / Warnings,FALSE,6.1
+06/07/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,2
+06/07/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,2
+06/07/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,1.9
+06/07/2014 13:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,1.9
+06/07/2014 13:59:59,0,10,0 : 10,Information / Warnings,FALSE,2
+07/07/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5.6
+07/07/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,5.6
+07/07/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.1
+07/07/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,5
+07/07/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,6
+07/07/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,6
+07/07/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6
+07/07/2014 13:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,5.8
+07/07/2014 13:59:59,0,10,0 : 10,Information / Warnings,FALSE,6
+08/07/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,9.8
+08/07/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,9.8
+08/07/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,10
+08/07/2014 13:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,10
+08/07/2014 13:59:59,0,10,0 : 10,Information / Warnings,FALSE,9.9
+09/07/2014 13:59:58,49,193,49 : 193,Fault blade load control : Blade load curve A too low (28),TRUE,4.6
+09/07/2014 13:59:58,49,293,49 : 293,Fault blade load control : Blade load curve B too low (28),TRUE,4.6
+09/07/2014 13:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,4.8
+09/07/2014 13:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.8
+09/07/2014 13:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.9
+09/07/2014 23:04:16,25,186,25 : 186,Faulty yaw inverter : Rotational speed error motor 11,FALSE,4
+09/07/2014 23:04:16,0,10,0 : 10,Information / Warnings,FALSE,3.8
+10/07/2014 09:17:10,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,3.3
+10/07/2014 16:10:36,42,195,42 : 195,Pitch control error,FALSE,5.7
+10/07/2014 16:10:36,233,62,233 : 62,General warning message : To few inverters activated (-),TRUE,5.8
+10/07/2014 16:10:36,0,10,0 : 10,Information / Warnings,FALSE,5.8
+10/07/2014 16:12:48,233,62,233 : 62,General warning message : To few inverters activated (-),TRUE,6.1
+10/07/2014 16:12:48,0,10,0 : 10,Information / Warnings,FALSE,6.1
+10/07/2014 16:12:50,233,62,233 : 62,General warning message : To few inverters activated (-),TRUE,5.2
+10/07/2014 16:12:50,0,10,0 : 10,Information / Warnings,FALSE,5.6
+10/07/2014 16:22:35,233,62,233 : 62,General warning message : To few inverters activated (-),TRUE,5.4
+10/07/2014 16:22:35,0,10,0 : 10,Information / Warnings,FALSE,5.4
+10/07/2014 16:22:37,233,62,233 : 62,General warning message : To few inverters activated (-),TRUE,5.6
+10/07/2014 16:22:37,0,10,0 : 10,Information / Warnings,FALSE,5.6
+14/07/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,7.2
+14/07/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.2
+14/07/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,6.8
+14/07/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.5
+14/07/2014 06:33:29,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.6
+14/07/2014 06:33:29,0,10,0 : 10,Information / Warnings,FALSE,8.6
+15/07/2014 05:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,3.3
+15/07/2014 05:59:59,0,10,0 : 10,Information / Warnings,FALSE,3.5
+16/07/2014 05:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.4
+16/07/2014 05:59:59,0,10,0 : 10,Information / Warnings,FALSE,6.4
+17/07/2014 05:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,1.2
+17/07/2014 05:59:59,0,10,0 : 10,Information / Warnings,FALSE,1.1
+17/07/2014 10:18:01,240,1,240 : 1,Remote control PC,FALSE,0
+17/07/2014 10:20:02,240,0,240 : 0,Remote control PC,FALSE,0
+17/07/2014 10:20:03,0,10,0 : 10,Information / Warnings,FALSE,6.7
+18/07/2014 05:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.4
+18/07/2014 05:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.4
+19/07/2014 05:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,2.8
+19/07/2014 05:59:59,0,10,0 : 10,Information / Warnings,FALSE,2.8
+20/07/2014 05:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,5.7
+20/07/2014 05:59:59,0,10,0 : 10,Information / Warnings,FALSE,5.8
+21/07/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,3.7
+21/07/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,3.7
+21/07/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,3.7
+21/07/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,3.6
+21/07/2014 05:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,3.5
+21/07/2014 05:59:59,0,10,0 : 10,Information / Warnings,FALSE,3.6
+21/07/2014 07:15:31,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,4.1
+21/07/2014 07:15:31,0,10,0 : 10,Information / Warnings,FALSE,4.1
+21/07/2014 12:20:38,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,7
+21/07/2014 12:20:38,0,10,0 : 10,Information / Warnings,FALSE,7
+22/07/2014 05:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,2.7
+22/07/2014 05:59:59,0,10,0 : 10,Information / Warnings,FALSE,2.7
+22/07/2014 07:03:13,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,2
+22/07/2014 07:03:13,0,10,0 : 10,Information / Warnings,FALSE,2
+23/07/2014 05:59:59,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.5
+26/07/2014 21:46:17,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,11.1
+26/07/2014 21:46:17,0,10,0 : 10,Information / Warnings,FALSE,10.9
+27/07/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.6
+27/07/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,8.6
+28/07/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,10.7
+28/07/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,10.7
+28/07/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,11.1
+28/07/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,11.1
+28/07/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.5
+28/07/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,4.5
+29/07/2014 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4
+29/07/2014 20:59:57,0,10,0 : 10,Information / Warnings,FALSE,4
+30/07/2014 07:37:40,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.4
+30/07/2014 13:22:55,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.2
+30/07/2014 13:22:55,0,10,0 : 10,Information / Warnings,FALSE,4.1
+31/07/2014 12:59:58,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.4
+31/07/2014 16:24:46,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.8
+31/07/2014 16:24:46,0,10,0 : 10,Information / Warnings,FALSE,9
+01/08/2014 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,4.5
+01/08/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,4.5
+01/08/2014 00:59:59,232,1203,232 : 1203,General information,FALSE,3.6
+01/08/2014 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,3.4
+01/08/2014 04:05:41,232,111,232 : 111,General information : Load spectrum stored,FALSE,5.1
+01/08/2014 04:05:41,0,10,0 : 10,Information / Warnings,FALSE,5
+01/08/2014 15:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.9
+01/08/2014 15:59:58,0,10,0 : 10,Information / Warnings,FALSE,4.9
+01/08/2014 18:25:04,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,4.2
+01/08/2014 18:25:04,0,10,0 : 10,Information / Warnings,FALSE,4.2
+02/08/2014 15:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9
+02/08/2014 15:59:58,0,10,0 : 10,Information / Warnings,FALSE,9
+03/08/2014 15:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8
+03/08/2014 15:59:58,0,10,0 : 10,Information / Warnings,FALSE,8
+04/08/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,2.7
+04/08/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,2.8
+04/08/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,2.9
+04/08/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,2.9
+04/08/2014 15:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.6
+04/08/2014 15:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.7
+05/08/2014 15:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.9
+05/08/2014 15:59:58,0,10,0 : 10,Information / Warnings,FALSE,5
+06/08/2014 15:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.4
+06/08/2014 15:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.5
+07/08/2014 15:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.6
+07/08/2014 15:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.6
+07/08/2014 17:03:12,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,7.6
+07/08/2014 17:03:12,0,10,0 : 10,Information / Warnings,FALSE,7.6
+08/08/2014 11:04:47,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,3.3
+08/08/2014 19:33:21,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,10.7
+08/08/2014 19:33:21,0,10,0 : 10,Information / Warnings,FALSE,10.7
+09/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,3.6
+09/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,3.5
+09/08/2014 23:12:11,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,10.6
+09/08/2014 23:12:12,0,10,0 : 10,Information / Warnings,FALSE,10.6
+10/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9.8
+10/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,9.7
+10/08/2014 22:59:57,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,9.1
+10/08/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,9.1
+11/08/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,6.8
+11/08/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,6.8
+11/08/2014 00:03:08,232,102,232 : 102,General information : Blade angle curve stored,FALSE,7.2
+11/08/2014 00:03:09,0,10,0 : 10,Information / Warnings,FALSE,7.2
+11/08/2014 13:58:19,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,12.2
+11/08/2014 13:58:19,0,10,0 : 10,Information / Warnings,FALSE,12
+11/08/2014 16:26:21,230,111,230 : 111,Power limitation (10h) : Stator temperature (-),TRUE,15.4
+11/08/2014 16:26:21,0,10,0 : 10,Information / Warnings,FALSE,15.3
+11/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,10.9
+11/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,10.9
+11/08/2014 22:59:57,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,7.9
+11/08/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,7.9
+12/08/2014 12:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,11.1
+12/08/2014 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,11.1
+12/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9.7
+12/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,9.9
+12/08/2014 22:59:57,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,5.5
+12/08/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,5.5
+13/08/2014 12:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,8.3
+13/08/2014 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.5
+13/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.7
+13/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,8.7
+13/08/2014 22:59:57,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,5.9
+13/08/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,5.9
+14/08/2014 12:15:08,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,5.6
+14/08/2014 12:15:08,0,10,0 : 10,Information / Warnings,FALSE,5.7
+14/08/2014 12:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,6.9
+14/08/2014 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.1
+14/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,4.4
+14/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,4.4
+14/08/2014 22:59:57,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,7.3
+14/08/2014 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,7.3
+15/08/2014 12:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,8.2
+15/08/2014 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.1
+15/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,5.5
+15/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,5.5
+15/08/2014 20:13:55,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,9.3
+15/08/2014 20:13:55,0,10,0 : 10,Information / Warnings,FALSE,9.4
+16/08/2014 13:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,7.1
+16/08/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.1
+16/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.4
+16/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,7.4
+16/08/2014 20:03:11,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,7.8
+16/08/2014 20:03:12,0,10,0 : 10,Information / Warnings,FALSE,7.9
+16/08/2014 20:04:22,25,140,25 : 140,Faulty yaw inverter : Feedback mains contactor faulty (-),TRUE,3.1
+16/08/2014 20:04:22,0,10,0 : 10,Information / Warnings,FALSE,3.1
+17/08/2014 13:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,6.4
+17/08/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.4
+17/08/2014 15:18:19,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,10.8
+17/08/2014 15:18:19,0,10,0 : 10,Information / Warnings,FALSE,10.6
+17/08/2014 15:54:24,101,3,101 : 3,Fault water cooling : Cooling system or filter clogged (7),TRUE,12.1
+17/08/2014 15:54:24,0,10,0 : 10,Information / Warnings,FALSE,12.1
+17/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,11.4
+17/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,11.4
+17/08/2014 19:59:57,25,140,25 : 140,Faulty yaw inverter : Feedback mains contactor faulty (-),TRUE,11
+17/08/2014 19:59:57,0,10,0 : 10,Information / Warnings,FALSE,10.9
+17/08/2014 20:02:26,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,10.4
+17/08/2014 20:02:26,0,10,0 : 10,Information / Warnings,FALSE,10.5
+18/08/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,7.7
+18/08/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,7.7
+18/08/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,8.9
+18/08/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,9
+18/08/2014 13:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,7.7
+18/08/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.8
+18/08/2014 14:59:58,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,9.1
+18/08/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.8
+18/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6
+18/08/2014 18:59:58,0,10,0 : 10,Information / Warnings,FALSE,5.8
+18/08/2014 20:03:24,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,9.3
+18/08/2014 20:03:25,0,10,0 : 10,Information / Warnings,FALSE,9.3
+19/08/2014 13:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,5.3
+19/08/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,5.3
+19/08/2014 15:59:57,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,8.3
+19/08/2014 15:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.2
+19/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.9
+19/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,6.7
+19/08/2014 20:07:38,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,9.4
+19/08/2014 20:07:38,0,10,0 : 10,Information / Warnings,FALSE,9.5
+20/08/2014 13:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,2.7
+20/08/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,2.7
+20/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,3.5
+20/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,3.4
+20/08/2014 20:05:41,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,4.9
+20/08/2014 20:05:41,0,10,0 : 10,Information / Warnings,FALSE,5.1
+21/08/2014 13:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,7.3
+21/08/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.3
+21/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.8
+21/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,9
+21/08/2014 20:04:06,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,8
+21/08/2014 20:04:06,0,10,0 : 10,Information / Warnings,FALSE,8
+22/08/2014 13:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,3.9
+22/08/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,3.9
+22/08/2014 18:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.6
+22/08/2014 18:59:57,0,10,0 : 10,Information / Warnings,FALSE,7.5
+22/08/2014 20:05:01,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,7.7
+22/08/2014 20:05:01,0,10,0 : 10,Information / Warnings,FALSE,7.3
+23/08/2014 13:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,2.8
+23/08/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,2.8
+24/08/2014 03:41:59,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,2.1
+24/08/2014 03:41:59,0,10,0 : 10,Information / Warnings,FALSE,2.1
+24/08/2014 09:46:43,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.8
+24/08/2014 09:46:44,0,10,0 : 10,Information / Warnings,FALSE,8.8
+24/08/2014 14:59:57,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,8.5
+24/08/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.5
+25/08/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,4.8
+25/08/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,4.8
+25/08/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.3
+25/08/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,5.5
+25/08/2014 02:59:59,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,6.2
+25/08/2014 02:59:59,0,10,0 : 10,Information / Warnings,FALSE,6.1
+25/08/2014 08:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,13.8
+25/08/2014 08:59:59,0,10,0 : 10,Information / Warnings,FALSE,13.7
+25/08/2014 14:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,9.3
+25/08/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,9.3
+25/08/2014 18:44:30,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,4.5
+25/08/2014 18:44:30,0,10,0 : 10,Information / Warnings,FALSE,4.7
+26/08/2014 02:59:59,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,8.2
+26/08/2014 03:00:00,0,10,0 : 10,Information / Warnings,FALSE,8.4
+26/08/2014 07:55:18,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.3
+26/08/2014 07:55:18,0,10,0 : 10,Information / Warnings,FALSE,6.3
+26/08/2014 14:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,11
+26/08/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,11
+26/08/2014 15:20:27,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,9.4
+26/08/2014 15:20:27,0,10,0 : 10,Information / Warnings,FALSE,9.4
+27/08/2014 06:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,11.8
+27/08/2014 06:59:59,0,10,0 : 10,Information / Warnings,FALSE,11.8
+27/08/2014 07:12:06,230,111,230 : 111,Power limitation (10h) : Stator temperature (-),TRUE,11.6
+27/08/2014 07:12:06,0,10,0 : 10,Information / Warnings,FALSE,11.6
+27/08/2014 14:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,16.5
+27/08/2014 14:59:58,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,16.5
+27/08/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,16.1
+28/08/2014 06:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.1
+28/08/2014 06:59:59,0,10,0 : 10,Information / Warnings,FALSE,8
+28/08/2014 09:50:57,230,111,230 : 111,Power limitation (10h) : Stator temperature (-),TRUE,14.2
+28/08/2014 09:50:58,0,10,0 : 10,Information / Warnings,FALSE,14.4
+28/08/2014 14:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,15.1
+28/08/2014 14:59:58,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,15.1
+28/08/2014 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,15
+28/08/2014 21:05:17,230,111,230 : 111,Power limitation (10h) : Stator temperature (-),TRUE,13.3
+28/08/2014 21:05:17,0,10,0 : 10,Information / Warnings,FALSE,13.3
+29/08/2014 06:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,5.6
+29/08/2014 06:59:59,0,10,0 : 10,Information / Warnings,FALSE,5.6
+29/08/2014 10:18:50,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.5
+29/08/2014 12:35:27,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9.2
+29/08/2014 12:35:27,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,9.2
+29/08/2014 12:35:27,0,10,0 : 10,Information / Warnings,FALSE,9
+30/08/2014 09:38:27,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.4
+30/08/2014 13:16:42,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,8.1
+30/08/2014 13:16:43,0,10,0 : 10,Information / Warnings,FALSE,8.3
+31/08/2014 12:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,6.8
+31/08/2014 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.8
+31/08/2014 18:34:52,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.8
+31/08/2014 18:34:52,0,10,0 : 10,Information / Warnings,FALSE,7.8
+31/08/2014 18:34:58,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,8.2
+31/08/2014 18:34:58,0,10,0 : 10,Information / Warnings,FALSE,8.1
+01/09/2014 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,7.6
+01/09/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,7.6
+01/09/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,7
+01/09/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,7.1
+01/09/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,7.7
+01/09/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,7.3
+01/09/2014 01:00:00,232,1203,232 : 1203,General information,FALSE,4.3
+01/09/2014 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,4.3
+01/09/2014 04:05:40,232,111,232 : 111,General information : Load spectrum stored,FALSE,5.4
+01/09/2014 04:05:40,0,10,0 : 10,Information / Warnings,FALSE,5.3
+01/09/2014 12:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,4.1
+01/09/2014 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,4.1
+01/09/2014 17:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,3.1
+01/09/2014 17:59:57,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,3.1
+01/09/2014 17:59:58,0,10,0 : 10,Information / Warnings,FALSE,3
+02/09/2014 12:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,4.9
+02/09/2014 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,4.9
+02/09/2014 17:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,5.5
+02/09/2014 17:59:57,0,10,0 : 10,Information / Warnings,FALSE,5.5
+03/09/2014 12:21:28,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5
+04/09/2014 14:30:48,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,4
+04/09/2014 14:30:48,0,10,0 : 10,Information / Warnings,FALSE,4
+05/09/2014 13:59:58,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,2.2
+05/09/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,2.3
+06/09/2014 13:59:58,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,0.9
+08/09/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,1.7
+08/09/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.6
+08/09/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,1.5
+08/09/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.5
+11/09/2014 11:04:53,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9.6
+11/09/2014 11:04:53,0,10,0 : 10,Information / Warnings,FALSE,9.6
+12/09/2014 10:27:37,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,9.8
+12/09/2014 10:27:38,0,10,0 : 10,Information / Warnings,FALSE,9.7
+12/09/2014 10:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9.5
+12/09/2014 10:59:58,0,10,0 : 10,Information / Warnings,FALSE,9.4
+13/09/2014 09:59:58,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,5.8
+13/09/2014 09:59:59,0,10,0 : 10,Information / Warnings,FALSE,5.8
+13/09/2014 10:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.1
+13/09/2014 10:59:58,0,10,0 : 10,Information / Warnings,FALSE,8
+14/09/2014 10:13:26,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,10.8
+14/09/2014 10:13:26,0,10,0 : 10,Information / Warnings,FALSE,10.7
+14/09/2014 10:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,11.3
+14/09/2014 10:59:58,0,10,0 : 10,Information / Warnings,FALSE,11.5
+15/09/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,6.6
+15/09/2014 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,6.6
+15/09/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,6.5
+15/09/2014 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,6.5
+15/09/2014 09:59:58,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,8.1
+15/09/2014 09:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.3
+15/09/2014 10:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.2
+15/09/2014 10:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.1
+16/09/2014 10:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.1
+16/09/2014 10:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.1
+16/09/2014 22:03:56,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,11.5
+16/09/2014 22:03:56,0,10,0 : 10,Information / Warnings,FALSE,11.4
+17/09/2014 10:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,11.9
+17/09/2014 10:59:58,0,10,0 : 10,Information / Warnings,FALSE,11.9
+17/09/2014 17:58:48,230,111,230 : 111,Power limitation (10h) : Stator temperature (-),TRUE,12.1
+17/09/2014 17:58:49,0,10,0 : 10,Information / Warnings,FALSE,12.1
+17/09/2014 21:59:57,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,11.3
+17/09/2014 21:59:57,0,10,0 : 10,Information / Warnings,FALSE,11.3
+18/09/2014 10:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9
+18/09/2014 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,9
+18/09/2014 12:04:47,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,14
+18/09/2014 12:04:47,0,10,0 : 10,Information / Warnings,FALSE,14
+18/09/2014 21:59:57,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,7
+18/09/2014 21:59:57,0,10,0 : 10,Information / Warnings,FALSE,7
+19/09/2014 09:04:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.8
+19/09/2014 14:05:16,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,5.2
+19/09/2014 14:05:16,0,10,0 : 10,Information / Warnings,FALSE,5.1
+20/09/2014 13:59:58,101,5,101 : 5,Fault water cooling : No flow rate (7),TRUE,6.5
+20/09/2014 13:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.5
+21/09/2014 13:59:58,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.1
+21/09/2014 16:27:08,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,6.1
+21/09/2014 16:27:08,0,10,0 : 10,Information / Warnings,FALSE,6
+21/09/2014 16:29:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.9
+22/09/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,1.4
+22/09/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.5
+22/09/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,1.5
+22/09/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.5
+24/09/2014 14:19:31,233,3,233 : 3,General warning message : Timeout maintenance (-),TRUE,5.6
+24/09/2014 14:19:32,0,10,0 : 10,Information / Warnings,FALSE,5.6
+25/09/2014 17:24:00,26,335,26 : 335,Malfunction fan-inverter,TRUE,6.7
+25/09/2014 17:24:01,0,10,0 : 10,Information / Warnings,FALSE,6.7
+25/09/2014 18:23:33,100,101,100 : 101,Fault air cooling : Actual value of fan to low,FALSE,7.1
+25/09/2014 18:23:33,0,10,0 : 10,Information / Warnings,FALSE,7.1
+25/09/2014 18:48:50,100,1,100 : 1,Fault air cooling : No signal pressure-sensor (7),TRUE,9.2
+25/09/2014 18:48:50,0,10,0 : 10,Information / Warnings,FALSE,9.1
+26/09/2014 07:46:12,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.9
+26/09/2014 17:01:08,0,10,0 : 10,Information / Warnings,FALSE,4.7
+27/09/2014 02:59:59,26,335,26 : 335,Malfunction fan-inverter,TRUE,4.8
+27/09/2014 02:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.8
+27/09/2014 03:59:59,100,101,100 : 101,Fault air cooling : Actual value of fan to low,FALSE,4.2
+27/09/2014 03:59:59,100,1,100 : 1,Fault air cooling : No signal pressure-sensor (7),TRUE,4
+27/09/2014 04:00:00,0,10,0 : 10,Information / Warnings,FALSE,3.9
+27/09/2014 07:38:51,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.9
+29/09/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,0.5
+29/09/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,0.6
+29/09/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,0.6
+29/09/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,0.6
+01/10/2014 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,3.7
+01/10/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,3.7
+01/10/2014 00:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,3.5
+01/10/2014 01:00:00,232,1203,232 : 1203,General information,FALSE,4.7
+01/10/2014 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,4.7
+01/10/2014 01:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.2
+01/10/2014 04:05:40,232,111,232 : 111,General information : Load spectrum stored,FALSE,5.5
+01/10/2014 04:05:40,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.6
+02/10/2014 04:05:06,232,510,232 : 510,General information : R&D-Info 510,FALSE,2.3
+02/10/2014 04:05:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.3
+02/10/2014 11:42:15,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,5.7
+02/10/2014 11:42:15,0,10,0 : 10,Information / Warnings,FALSE,5.6
+02/10/2014 11:44:14,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.5
+06/10/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,15.8
+06/10/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,15.5
+06/10/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,14.8
+06/10/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,14.8
+08/10/2014 13:36:32,25,131,25 : 131,Faulty yaw inverter : DC-link voltage instabil system 1,FALSE,15
+08/10/2014 13:36:33,25,231,25 : 231,Faulty yaw inverter : DC-link voltage instabil system 2,FALSE,15
+08/10/2014 13:36:33,26,331,26 : 331,Malfunction fan-inverter : DC-link voltage instable system 3,FALSE,14.6
+08/10/2014 13:36:33,0,10,0 : 10,Information / Warnings,FALSE,14.6
+08/10/2014 13:38:34,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,16.3
+08/10/2014 18:03:21,25,131,25 : 131,Faulty yaw inverter : DC-link voltage instabil system 1,FALSE,10.6
+08/10/2014 18:03:21,25,231,25 : 231,Faulty yaw inverter : DC-link voltage instabil system 2,FALSE,10.5
+08/10/2014 18:03:22,26,331,26 : 331,Malfunction fan-inverter : DC-link voltage instable system 3,FALSE,10.5
+08/10/2014 18:03:22,0,10,0 : 10,Information / Warnings,FALSE,10.4
+08/10/2014 18:05:22,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.6
+08/10/2014 19:04:03,25,131,25 : 131,Faulty yaw inverter : DC-link voltage instabil system 1,FALSE,11.4
+08/10/2014 19:04:04,25,231,25 : 231,Faulty yaw inverter : DC-link voltage instabil system 2,FALSE,11.4
+08/10/2014 19:04:04,26,331,26 : 331,Malfunction fan-inverter : DC-link voltage instable system 3,FALSE,11.4
+08/10/2014 19:04:04,0,10,0 : 10,Information / Warnings,FALSE,11.4
+08/10/2014 19:06:04,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.1
+13/10/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5.3
+13/10/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.3
+13/10/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.2
+13/10/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.1
+16/10/2014 22:56:27,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,5.2
+16/10/2014 22:56:27,0,10,0 : 10,Information / Warnings,FALSE,5.2
+16/10/2014 22:58:27,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.3
+20/10/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,8
+20/10/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.2
+20/10/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,7.7
+20/10/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.7
+25/10/2014 07:48:56,240,1,240 : 1,Remote control PC,FALSE,0
+26/10/2014 18:03:59,240,0,240 : 0,Remote control PC,FALSE,0
+26/10/2014 18:04:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.6
+01/11/2014 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,6.1
+01/11/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,6.1
+01/11/2014 00:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.1
+01/11/2014 01:00:00,232,1203,232 : 1203,General information,FALSE,9.4
+01/11/2014 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,9
+01/11/2014 01:01:59,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.6
+01/11/2014 04:05:40,232,111,232 : 111,General information : Load spectrum stored,FALSE,8.5
+01/11/2014 04:05:40,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.5
+02/11/2014 19:45:23,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,5.1
+02/11/2014 19:45:23,0,10,0 : 10,Information / Warnings,FALSE,5.1
+02/11/2014 19:47:22,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5
+03/11/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,9.2
+03/11/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.2
+03/11/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,8.9
+03/11/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.1
+10/11/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5
+10/11/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5
+10/11/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.2
+10/11/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.4
+17/11/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5.6
+17/11/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.6
+17/11/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.7
+17/11/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.7
+21/11/2014 20:48:44,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,5.3
+21/11/2014 20:48:44,0,10,0 : 10,Information / Warnings,FALSE,5.5
+21/11/2014 20:50:44,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.7
+24/11/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,3
+24/11/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,3
+24/11/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,3.2
+24/11/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,3.1
+27/11/2014 06:42:02,62,1110,62 : 1110,Feeding fault : P-balancing outside tolerance inv. 10,FALSE,10.7
+27/11/2014 06:42:02,0,10,0 : 10,Information / Warnings,FALSE,10.7
+28/11/2014 05:59:59,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,13
+01/12/2014 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,1.7
+01/12/2014 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,1.8
+01/12/2014 00:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.9
+01/12/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,1.8
+01/12/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.8
+01/12/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,1.8
+01/12/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.8
+01/12/2014 01:00:00,232,1203,232 : 1203,General information,FALSE,1.5
+01/12/2014 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,1.5
+01/12/2014 01:01:59,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.8
+01/12/2014 04:05:40,232,111,232 : 111,General information : Load spectrum stored,FALSE,1.5
+01/12/2014 04:05:40,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,1.5
+05/12/2014 06:12:11,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,5.2
+05/12/2014 06:12:11,0,10,0 : 10,Information / Warnings,FALSE,5.4
+05/12/2014 06:14:11,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.7
+08/12/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,7.8
+08/12/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.8
+08/12/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,9.7
+08/12/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.9
+15/12/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,7
+15/12/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7
+15/12/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,6.6
+15/12/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.5
+20/12/2014 19:50:46,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,4.4
+20/12/2014 19:50:46,0,10,0 : 10,Information / Warnings,FALSE,4.3
+20/12/2014 19:52:45,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.3
+22/12/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,11.6
+22/12/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.6
+22/12/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,10.1
+22/12/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.1
+29/12/2014 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,2
+29/12/2014 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2
+29/12/2014 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,1.9
+29/12/2014 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.1
+01/01/2015 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,6.9
+01/01/2015 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,7.2
+01/01/2015 00:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.1
+01/01/2015 01:00:00,232,1203,232 : 1203,General information,FALSE,8.5
+01/01/2015 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,8.5
+01/01/2015 01:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.1
+01/01/2015 04:05:40,232,111,232 : 111,General information : Load spectrum stored,FALSE,11.9
+01/01/2015 04:05:40,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,12
+01/01/2015 11:10:21,72,99,72 : 99,Air gap monitoring : Sensor actuated (-),TRUE,19
+01/01/2015 11:10:21,0,10,0 : 10,Information / Warnings,FALSE,18.9
+01/01/2015 11:12:21,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,22.4
+05/01/2015 12:41:38,101,1,101 : 1,Fault water cooling : Pressure to low (7),TRUE,3.5
+05/01/2015 12:41:38,233,62,233 : 62,General warning message : To few inverters activated (-),TRUE,3.5
+05/01/2015 12:41:38,0,10,0 : 10,Information / Warnings,FALSE,3.9
+07/01/2015 23:45:05,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9.9
+07/01/2015 23:45:05,0,10,0 : 10,Information / Warnings,FALSE,9.9
+08/01/2015 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,13.9
+08/01/2015 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,14.1
+09/01/2015 22:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,13.9
+09/01/2015 22:59:58,0,10,0 : 10,Information / Warnings,FALSE,13.9
+10/01/2015 22:59:58,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.5
+10/01/2015 22:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.4
+11/01/2015 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,13.7
+11/01/2015 22:59:58,0,10,0 : 10,Information / Warnings,FALSE,13.5
+12/01/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,15
+12/01/2015 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,15
+12/01/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,13.2
+12/01/2015 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,13.2
+12/01/2015 13:11:35,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,4.8
+12/01/2015 13:11:36,0,10,0 : 10,Information / Warnings,FALSE,4.8
+12/01/2015 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,8.2
+12/01/2015 22:59:58,0,10,0 : 10,Information / Warnings,FALSE,8.2
+13/01/2015 12:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,6.4
+13/01/2015 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.3
+13/01/2015 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,5.7
+13/01/2015 22:59:57,0,10,0 : 10,Information / Warnings,FALSE,5.8
+14/01/2015 12:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,26.2
+14/01/2015 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,26.2
+14/01/2015 19:13:44,49,331,49 : 331,Fault blade load control,FALSE,32.8
+14/01/2015 19:13:44,0,10,0 : 10,Information / Warnings,FALSE,32.8
+14/01/2015 19:13:45,49,231,49 : 231,Fault blade load control,FALSE,32.2
+14/01/2015 19:13:45,0,10,0 : 10,Information / Warnings,FALSE,32.2
+14/01/2015 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,23
+14/01/2015 22:59:58,0,10,0 : 10,Information / Warnings,FALSE,22.8
+15/01/2015 00:07:36,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,19.6
+15/01/2015 00:07:36,0,10,0 : 10,Information / Warnings,FALSE,19.4
+15/01/2015 00:16:30,26,316,26 : 316,Malfunction fan-inverter : Circuit breaker nacelle fan tripped,TRUE,15.6
+15/01/2015 00:16:30,0,10,0 : 10,Information / Warnings,FALSE,15.6
+15/01/2015 08:07:51,230,111,230 : 111,Power limitation (10h) : Stator temperature (-),TRUE,11.3
+15/01/2015 08:07:51,0,10,0 : 10,Information / Warnings,FALSE,10.9
+15/01/2015 12:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,15.6
+15/01/2015 12:59:59,0,10,0 : 10,Information / Warnings,FALSE,15.1
+15/01/2015 18:42:20,230,111,230 : 111,Power limitation (10h) : Stator temperature (-),TRUE,9.6
+15/01/2015 18:42:20,0,10,0 : 10,Information / Warnings,FALSE,9.6
+15/01/2015 18:59:58,49,331,49 : 331,Fault blade load control,FALSE,9.6
+15/01/2015 18:59:58,49,231,49 : 231,Fault blade load control,FALSE,9.5
+15/01/2015 18:59:58,0,10,0 : 10,Information / Warnings,FALSE,9.5
+15/01/2015 22:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.5
+15/01/2015 22:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.5
+16/01/2015 00:00:00,26,316,26 : 316,Malfunction fan-inverter : Circuit breaker nacelle fan tripped,TRUE,8.3
+16/01/2015 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,8.3
+16/01/2015 00:06:21,222,92,222 : 92,Turbine reset : Scada System: Not allowed ! (-),TRUE,7.3
+16/01/2015 00:06:21,0,10,0 : 10,Information / Warnings,FALSE,7.6
+16/01/2015 02:54:30,49,391,49 : 391,Fault blade load control : Blade load curve C under tolerance,FALSE,4.5
+16/01/2015 02:54:31,0,10,0 : 10,Information / Warnings,FALSE,4.5
+16/01/2015 12:59:58,49,393,49 : 393,Fault blade load control : Blade load curve C too low (28),TRUE,4.6
+16/01/2015 12:59:58,0,10,0 : 10,Information / Warnings,FALSE,4.5
+16/01/2015 13:17:28,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.6
+16/01/2015 15:17:11,26,316,26 : 316,Malfunction fan-inverter : Circuit breaker nacelle fan tripped,TRUE,5.3
+16/01/2015 15:17:11,0,10,0 : 10,Information / Warnings,FALSE,5.3
+16/01/2015 21:31:42,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,10.9
+16/01/2015 21:31:42,0,10,0 : 10,Information / Warnings,FALSE,10.7
+17/01/2015 14:59:58,26,316,26 : 316,Malfunction fan-inverter : Circuit breaker nacelle fan tripped,TRUE,5.1
+17/01/2015 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,5.1
+17/01/2015 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,6.5
+17/01/2015 20:59:58,0,10,0 : 10,Information / Warnings,FALSE,6.4
+18/01/2015 14:59:58,26,316,26 : 316,Malfunction fan-inverter : Circuit breaker nacelle fan tripped,TRUE,11.2
+18/01/2015 14:59:58,0,10,0 : 10,Information / Warnings,FALSE,11
+18/01/2015 20:59:57,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,7.4
+18/01/2015 20:59:58,0,10,0 : 10,Information / Warnings,FALSE,7.3
+19/01/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,3.9
+19/01/2015 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,4
+19/01/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,3.7
+19/01/2015 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,3.7
+19/01/2015 10:06:28,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 10:50:08,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 10:52:44,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 15:06:17,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 15:06:19,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,12
+19/01/2015 15:11:00,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 15:14:31,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 15:14:33,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.5
+19/01/2015 15:21:05,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 15:24:37,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 15:24:39,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.3
+19/01/2015 15:58:36,240,1,240 : 1,Remote control PC,FALSE,0
+19/01/2015 16:00:37,240,0,240 : 0,Remote control PC,FALSE,0
+19/01/2015 16:00:38,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.8
+19/01/2015 16:13:48,0,10,0 : 10,Information / Warnings,FALSE,9.6
+19/01/2015 21:59:58,26,316,26 : 316,Malfunction fan-inverter : Circuit breaker nacelle fan tripped,TRUE,12.9
+19/01/2015 21:59:58,0,10,0 : 10,Information / Warnings,FALSE,12.9
+20/01/2015 03:59:59,100,11,100 : 11,Fault air cooling : Generator  pressure to low (7),TRUE,9.3
+20/01/2015 04:00:00,0,10,0 : 10,Information / Warnings,FALSE,9.2
+20/01/2015 07:14:37,230,111,230 : 111,Power limitation (10h) : Stator temperature (-),TRUE,11.7
+20/01/2015 07:14:37,0,10,0 : 10,Information / Warnings,FALSE,11.7
+20/01/2015 09:07:13,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.6
+24/01/2015 19:10:12,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,4.9
+24/01/2015 19:10:12,0,10,0 : 10,Information / Warnings,FALSE,4.9
+24/01/2015 19:12:11,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,3.8
+26/01/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,6.7
+26/01/2015 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.7
+26/01/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,6.6
+26/01/2015 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.7
+01/02/2015 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,9.4
+01/02/2015 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,9.4
+01/02/2015 00:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.3
+01/02/2015 01:00:00,232,1203,232 : 1203,General information,FALSE,8.4
+01/02/2015 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,8.5
+01/02/2015 01:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7
+01/02/2015 04:05:40,232,111,232 : 111,General information : Load spectrum stored,FALSE,6.3
+01/02/2015 04:05:41,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.1
+02/02/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,2.6
+02/02/2015 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.8
+02/02/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,2.8
+02/02/2015 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.8
+02/02/2015 04:05:07,232,510,232 : 510,General information : R&D-Info 510,FALSE,2.7
+02/02/2015 04:05:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,2.6
+05/02/2015 10:07:54,240,1,240 : 1,Remote control PC,FALSE,0
+05/02/2015 10:10:34,240,0,240 : 0,Remote control PC,FALSE,0
+05/02/2015 10:10:36,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.4
+05/02/2015 10:22:26,240,1,240 : 1,Remote control PC,FALSE,0
+05/02/2015 10:25:09,240,0,240 : 0,Remote control PC,FALSE,0
+05/02/2015 10:25:10,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8
+09/02/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,6
+09/02/2015 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6
+09/02/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,6.4
+09/02/2015 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.3
+09/02/2015 00:35:01,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,6.7
+09/02/2015 00:35:02,0,10,0 : 10,Information / Warnings,FALSE,6.5
+09/02/2015 00:37:01,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.7
+12/02/2015 08:44:20,240,1,240 : 1,Remote control PC,FALSE,0
+12/02/2015 09:05:36,240,0,240 : 0,Remote control PC,FALSE,0
+12/02/2015 09:05:38,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.8
+14/02/2015 01:04:01,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.6
+14/02/2015 01:04:02,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.4
+15/02/2015 18:23:37,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.7
+15/02/2015 18:23:37,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.7
+16/02/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5.7
+16/02/2015 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.7
+16/02/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,6.2
+16/02/2015 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.2
+16/02/2015 10:17:03,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,11.4
+16/02/2015 10:17:04,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.2
+17/02/2015 02:02:43,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.6
+17/02/2015 02:02:44,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.5
+17/02/2015 17:59:09,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,9.3
+17/02/2015 17:59:09,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.3
+18/02/2015 06:21:33,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,9.5
+18/02/2015 06:21:33,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.5
+18/02/2015 20:20:24,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,13.6
+18/02/2015 20:20:24,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,13.9
+19/02/2015 00:05:56,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,9.8
+19/02/2015 00:05:56,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.8
+19/02/2015 11:27:20,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.8
+19/02/2015 11:27:21,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.8
+20/02/2015 23:06:31,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,10.8
+20/02/2015 23:06:31,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.8
+21/02/2015 14:29:28,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,11.5
+21/02/2015 14:29:28,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.6
+21/02/2015 15:44:03,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,11.4
+21/02/2015 15:44:03,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.4
+21/02/2015 23:53:33,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,4.3
+21/02/2015 23:53:33,0,10,0 : 10,Information / Warnings,FALSE,4.3
+21/02/2015 23:55:33,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,4.3
+22/02/2015 14:27:08,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,10.1
+22/02/2015 14:27:08,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.1
+23/02/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,9
+23/02/2015 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.1
+23/02/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,7.8
+23/02/2015 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.6
+23/02/2015 06:49:01,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,11.9
+23/02/2015 06:49:01,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,12.2
+23/02/2015 07:28:00,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,9
+23/02/2015 07:28:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9
+23/02/2015 22:37:17,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,15.1
+23/02/2015 22:37:17,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,15.1
+24/02/2015 13:50:41,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,11.5
+24/02/2015 13:50:42,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.9
+24/02/2015 15:10:36,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,10
+24/02/2015 15:10:36,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10
+25/02/2015 05:03:37,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.1
+25/02/2015 05:03:38,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7
+25/02/2015 17:19:39,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,10.5
+25/02/2015 17:19:39,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.8
+26/02/2015 09:53:48,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,11.7
+26/02/2015 09:53:48,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.7
+26/02/2015 15:11:18,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,9.7
+26/02/2015 15:11:18,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,9.7
+27/02/2015 04:11:15,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.3
+27/02/2015 04:11:15,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.3
+27/02/2015 21:24:06,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.1
+27/02/2015 21:24:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.1
+28/02/2015 15:01:23,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,23.7
+28/02/2015 15:01:23,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,23.7
+01/03/2015 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,11.2
+01/03/2015 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,11.2
+01/03/2015 00:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.1
+01/03/2015 01:00:00,232,1203,232 : 1203,General information,FALSE,8.5
+01/03/2015 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,8.5
+01/03/2015 01:02:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,12.3
+01/03/2015 04:05:41,232,111,232 : 111,General information : Load spectrum stored,FALSE,8
+01/03/2015 04:05:41,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8
+01/03/2015 04:37:09,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,10.3
+01/03/2015 04:37:09,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.3
+01/03/2015 09:36:20,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,16.3
+01/03/2015 09:36:20,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,16.3
+01/03/2015 19:57:34,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.2
+01/03/2015 19:57:34,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.2
+02/03/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,6.6
+02/03/2015 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.8
+02/03/2015 00:03:10,232,102,232 : 102,General information : Blade angle curve stored,FALSE,6.7
+02/03/2015 00:03:10,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.5
+02/03/2015 10:46:13,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.7
+02/03/2015 10:46:13,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.7
+03/03/2015 01:14:15,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.9
+03/03/2015 01:14:15,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.9
+03/03/2015 16:39:51,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.5
+03/03/2015 16:39:51,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.6
+03/03/2015 21:30:31,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,12.3
+03/03/2015 21:30:31,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,12.2
+04/03/2015 05:49:39,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.7
+04/03/2015 05:49:40,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.7
+05/03/2015 01:22:43,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.7
+05/03/2015 01:22:43,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.7
+05/03/2015 12:07:01,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,11.2
+05/03/2015 12:07:01,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,11.2
+06/03/2015 00:09:03,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.6
+06/03/2015 00:09:03,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.5
+06/03/2015 15:50:56,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,14.5
+06/03/2015 15:50:56,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,14.5
+07/03/2015 02:55:54,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,10.9
+07/03/2015 02:55:55,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.6
+07/03/2015 06:05:27,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,12.6
+07/03/2015 06:05:28,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,12.7
+07/03/2015 21:34:39,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,13.7
+07/03/2015 21:34:39,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,13.7
+08/03/2015 08:12:44,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8
+08/03/2015 08:12:44,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8
+08/03/2015 11:49:50,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,3.9
+08/03/2015 11:49:50,0,10,0 : 10,Information / Warnings,FALSE,3.8
+08/03/2015 11:51:49,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,10.7
+09/03/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,8.4
+09/03/2015 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.4
+09/03/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,8.9
+09/03/2015 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,8.7
+09/03/2015 06:46:44,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,14.4
+09/03/2015 06:46:44,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,14.2
+09/03/2015 21:31:47,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.3
+09/03/2015 21:31:48,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.3
+10/03/2015 20:42:43,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,12.5
+10/03/2015 20:42:43,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,12.2
+11/03/2015 07:24:55,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,16.8
+11/03/2015 07:24:55,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,16.8
+11/03/2015 12:09:09,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.4
+11/03/2015 12:09:10,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,7.4
+12/03/2015 06:57:46,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,17.6
+12/03/2015 06:57:47,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,18
+14/03/2015 19:00:40,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.8
+14/03/2015 19:00:40,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.6
+15/03/2015 22:46:27,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.7
+15/03/2015 22:46:28,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,6.9
+16/03/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5.2
+16/03/2015 00:03:00,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.2
+16/03/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.4
+16/03/2015 00:03:07,0,0,0 : 0,unknown (possibly maintenance?) Need to get clarification from Enercon,FALSE,5.4
+16/03/2015 11:11:50,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,8.8
+16/03/2015 11:11:50,0,10,0 : 10,Information / Warnings,FALSE,8.8
+16/03/2015 19:19:13,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.1
+16/03/2015 19:19:13,0,10,0 : 10,Information / Warnings,FALSE,7.2
+17/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,3
+17/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,3
+18/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,0.9
+18/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,0.8
+19/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,1.6
+19/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,1.6
+20/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,4.9
+20/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.9
+20/03/2015 22:47:24,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.6
+20/03/2015 22:47:25,0,10,0 : 10,Information / Warnings,FALSE,8.5
+21/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,4.9
+21/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.9
+22/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,3
+22/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,3
+23/03/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,6.4
+23/03/2015 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,6.4
+23/03/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,6.2
+23/03/2015 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,6.2
+23/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,8.2
+23/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,8.2
+23/03/2015 11:19:49,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,5.9
+23/03/2015 11:19:49,0,10,0 : 10,Information / Warnings,FALSE,5.9
+23/03/2015 23:49:35,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.3
+23/03/2015 23:49:36,0,10,0 : 10,Information / Warnings,FALSE,8.1
+24/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,13.1
+24/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,13
+24/03/2015 13:43:51,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.3
+24/03/2015 13:43:52,0,10,0 : 10,Information / Warnings,FALSE,8.4
+25/03/2015 02:34:59,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.8
+25/03/2015 02:35:00,0,10,0 : 10,Information / Warnings,FALSE,8
+25/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,4.6
+25/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.7
+26/03/2015 00:08:14,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,9.7
+26/03/2015 00:08:15,0,10,0 : 10,Information / Warnings,FALSE,9.7
+26/03/2015 04:00:28,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,12.5
+26/03/2015 04:00:28,0,10,0 : 10,Information / Warnings,FALSE,12.5
+26/03/2015 10:59:59,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,16.1
+26/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,15.5
+26/03/2015 16:45:29,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,11.6
+26/03/2015 16:45:29,0,10,0 : 10,Information / Warnings,FALSE,11.6
+27/03/2015 10:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,7.1
+27/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,6.8
+28/03/2015 06:23:54,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,16
+28/03/2015 06:23:54,0,10,0 : 10,Information / Warnings,FALSE,15.7
+28/03/2015 10:59:59,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,11.8
+28/03/2015 10:59:59,0,10,0 : 10,Information / Warnings,FALSE,11.8
+28/03/2015 17:56:26,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,10.8
+28/03/2015 17:56:26,0,10,0 : 10,Information / Warnings,FALSE,10.5
+28/03/2015 22:32:46,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,10.6
+28/03/2015 22:32:46,0,10,0 : 10,Information / Warnings,FALSE,10.4
+29/03/2015 11:33:55,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,22.6
+29/03/2015 11:33:55,0,10,0 : 10,Information / Warnings,FALSE,22.5
+29/03/2015 11:59:59,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,18.1
+29/03/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,17.6
+30/03/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,7.7
+30/03/2015 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,7.8
+30/03/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,7.9
+30/03/2015 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,8
+30/03/2015 02:38:46,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.6
+30/03/2015 02:38:47,0,10,0 : 10,Information / Warnings,FALSE,8.6
+30/03/2015 09:58:45,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,6.4
+30/03/2015 09:58:45,0,10,0 : 10,Information / Warnings,FALSE,6.4
+30/03/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,9.1
+30/03/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,9.1
+30/03/2015 17:48:43,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,11.3
+30/03/2015 17:48:43,0,10,0 : 10,Information / Warnings,FALSE,11.5
+31/03/2015 04:15:32,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,25.6
+31/03/2015 04:15:32,0,10,0 : 10,Information / Warnings,FALSE,25.5
+31/03/2015 11:59:59,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,9.8
+31/03/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,9.9
+31/03/2015 15:47:04,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,13
+31/03/2015 15:47:04,0,10,0 : 10,Information / Warnings,FALSE,13.1
+31/03/2015 23:19:22,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.1
+31/03/2015 23:19:22,0,10,0 : 10,Information / Warnings,FALSE,7.1
+01/04/2015 00:00:00,22,200,22 : 200,Yaw control fault : TWK NOCN installed,FALSE,8.4
+01/04/2015 00:00:00,0,10,0 : 10,Information / Warnings,FALSE,8.3
+01/04/2015 01:00:00,232,1203,232 : 1203,General information,FALSE,9.7
+01/04/2015 01:00:00,0,10,0 : 10,Information / Warnings,FALSE,9.7
+01/04/2015 04:05:40,232,111,232 : 111,General information : Load spectrum stored,FALSE,6.3
+01/04/2015 04:05:41,0,10,0 : 10,Information / Warnings,FALSE,6.5
+01/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,6.1
+01/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,6.3
+01/04/2015 16:18:41,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.4
+01/04/2015 16:18:42,0,10,0 : 10,Information / Warnings,FALSE,8.5
+02/04/2015 03:44:11,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.4
+02/04/2015 03:44:11,0,10,0 : 10,Information / Warnings,FALSE,8.3
+02/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,6.8
+02/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,6.8
+02/04/2015 17:38:00,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.7
+02/04/2015 17:38:00,0,10,0 : 10,Information / Warnings,FALSE,6.5
+03/04/2015 06:18:32,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,16
+03/04/2015 06:18:32,0,10,0 : 10,Information / Warnings,FALSE,16
+03/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,13.1
+03/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,13.1
+03/04/2015 17:48:30,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,12.5
+03/04/2015 17:48:30,0,10,0 : 10,Information / Warnings,FALSE,12.5
+03/04/2015 18:54:53,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,9.5
+03/04/2015 18:54:54,0,10,0 : 10,Information / Warnings,FALSE,9.6
+04/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,4.7
+04/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.6
+05/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,5.7
+05/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,5.6
+06/04/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,1.6
+06/04/2015 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,1.6
+06/04/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,1.6
+06/04/2015 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,1.6
+06/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,1.5
+06/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,1.5
+07/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,2
+07/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,2
+08/04/2015 11:59:59,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,4.1
+08/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.1
+09/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,3.5
+09/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,3.6
+10/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,3.8
+10/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,3.8
+10/04/2015 21:07:13,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,9.1
+10/04/2015 21:07:13,0,10,0 : 10,Information / Warnings,FALSE,9.2
+11/04/2015 09:08:04,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.6
+11/04/2015 09:08:04,0,10,0 : 10,Information / Warnings,FALSE,6.6
+11/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,10.9
+11/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,10.9
+11/04/2015 23:36:54,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.8
+11/04/2015 23:36:54,0,10,0 : 10,Information / Warnings,FALSE,9
+12/04/2015 04:40:49,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,17.4
+12/04/2015 04:40:49,0,10,0 : 10,Information / Warnings,FALSE,17.4
+12/04/2015 11:59:59,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,7.4
+12/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,7.4
+13/04/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5.1
+13/04/2015 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,5.1
+13/04/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.2
+13/04/2015 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,5.1
+13/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,6.7
+13/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,6.8
+13/04/2015 17:18:52,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.7
+13/04/2015 17:18:52,0,10,0 : 10,Information / Warnings,FALSE,7.6
+14/04/2015 06:51:47,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.7
+14/04/2015 06:51:47,0,10,0 : 10,Information / Warnings,FALSE,7.8
+14/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,5
+14/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.9
+14/04/2015 19:35:18,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,4.6
+14/04/2015 19:35:18,0,10,0 : 10,Information / Warnings,FALSE,4.6
+15/04/2015 02:00:48,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.9
+15/04/2015 02:00:48,0,10,0 : 10,Information / Warnings,FALSE,7.1
+15/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,4.4
+15/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.3
+16/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,11.8
+16/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,11.8
+16/04/2015 20:36:19,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.6
+16/04/2015 20:36:19,0,10,0 : 10,Information / Warnings,FALSE,8.6
+17/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,5
+17/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,5
+18/04/2015 00:43:18,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.7
+18/04/2015 00:43:18,0,10,0 : 10,Information / Warnings,FALSE,6.9
+18/04/2015 10:50:00,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,10.7
+18/04/2015 10:50:00,0,10,0 : 10,Information / Warnings,FALSE,10.5
+18/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,13.1
+18/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,13.1
+18/04/2015 21:13:49,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.1
+18/04/2015 21:13:49,0,10,0 : 10,Information / Warnings,FALSE,8.1
+19/04/2015 08:46:57,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.1
+19/04/2015 08:46:57,0,10,0 : 10,Information / Warnings,FALSE,6.1
+19/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,8
+19/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,8
+20/04/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,5.5
+20/04/2015 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,5.6
+20/04/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,5.5
+20/04/2015 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,5.5
+20/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,5.7
+20/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,5.6
+21/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,10.4
+21/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,10.4
+21/04/2015 14:37:29,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,10.9
+21/04/2015 14:37:29,0,10,0 : 10,Information / Warnings,FALSE,10.9
+22/04/2015 06:33:13,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.6
+22/04/2015 06:33:13,0,10,0 : 10,Information / Warnings,FALSE,8.6
+22/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,9.2
+22/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,9.3
+22/04/2015 17:12:37,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,9.5
+22/04/2015 17:12:37,0,10,0 : 10,Information / Warnings,FALSE,9.7
+23/04/2015 10:44:52,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.8
+23/04/2015 10:44:52,0,10,0 : 10,Information / Warnings,FALSE,7
+23/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,5.7
+23/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,5.8
+24/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,9.8
+24/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,9.9
+24/04/2015 16:52:40,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.3
+24/04/2015 16:52:41,0,10,0 : 10,Information / Warnings,FALSE,8.3
+25/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,5
+25/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,5
+25/04/2015 20:54:42,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,6.9
+25/04/2015 20:54:42,0,10,0 : 10,Information / Warnings,FALSE,6.9
+26/04/2015 11:59:59,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,4.2
+26/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,4.2
+26/04/2015 19:46:03,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.8
+26/04/2015 19:46:03,0,10,0 : 10,Information / Warnings,FALSE,7.8
+27/04/2015 00:03:00,232,101,232 : 101,General information : Power curve stored,FALSE,7.7
+27/04/2015 00:03:00,0,10,0 : 10,Information / Warnings,FALSE,7.8
+27/04/2015 00:03:07,232,102,232 : 102,General information : Blade angle curve stored,FALSE,8
+27/04/2015 00:03:07,0,10,0 : 10,Information / Warnings,FALSE,8
+27/04/2015 10:51:51,31,32,31 : 32,Tower oscillation : Longitudinal oscill. (low wind speed),FALSE,4.1
+27/04/2015 10:51:51,0,10,0 : 10,Information / Warnings,FALSE,4.1
+27/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,8.5
+27/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,8.5
+27/04/2015 19:35:26,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,10.6
+27/04/2015 19:35:26,0,10,0 : 10,Information / Warnings,FALSE,10.4
+28/04/2015 07:08:03,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,8.1
+28/04/2015 07:08:04,0,10,0 : 10,Information / Warnings,FALSE,7.8
+28/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,7.9
+28/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,7.8
+28/04/2015 16:17:36,230,101,230 : 101,Power limitation (10h) : Noise optimation,FALSE,11.7
+28/04/2015 16:17:36,0,10,0 : 10,Information / Warnings,FALSE,11.7
+29/04/2015 03:22:22,230,128,230 : 128,Power limitation (10h) : Noise optimisation (blade angle),FALSE,7.2
+29/04/2015 03:22:23,0,10,0 : 10,Information / Warnings,FALSE,7.1
+29/04/2015 11:59:58,58,1,58 : 1,Fault lubrication system : Grease reservoir empty (rotor) (90),TRUE,7.6
+29/04/2015 11:59:59,0,10,0 : 10,Information / Warnings,FALSE,7.8

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="urn:schemas-microsoft-com:office:spreadsheet">
+<Styles>
+
+<Style ss:ID="GeneralDate">
+<NumberFormat ss:Format="General Date"/>
+</Style>
+</Styles>
+<Worksheet ss:Name="Worksheet1">
+<Table>
+<Column ss:Width="109"></Column><Column ss:Width="110"></Column><Column ss:Width="188"></Column><Column ss:Width="139"></Column><Column ss:Width="289"></Column><Row>
+<Cell ss:Index="1" ><Data ss:Type="String">Serial number</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">Order number</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Date</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Order type</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">Short text</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093377778</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, May 1, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">LADDER ADJUSTMENT</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093376155</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, May 1, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">GREASE CLEANING IN SPINNER</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093296269</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, April 30, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:58/1</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093259219</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, April 30, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(Grid)Install MV locks on cable panels</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093248178</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, February 13, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E) - UPDATE OPERATING PARAMETERS</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093099973</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, February 12, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(GO) OIL SAMPLE NEEDED FROM TRANSFORMER</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093221945</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 28, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">INVESTIGATE NOISE REPORTED BY CUSTOMER</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093198520</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:49/393</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093191951</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:100/11</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093203592</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:230/111</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093203599</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:26/316</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092945861</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">TD-ESC-08-GER-GER-13-062</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093008145</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A)MISSING ITEMS NACELLE</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093213655</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">REP AIR GAP SWITCH BLADE B</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092983035</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A) CORROSION TREATMENT SPINNER</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093213651</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">CLEANING GREASE IN SPINNER/REAR BEARING</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093168953</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 21, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Maintenance plan order</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">Elektr. Wartung / Electrical maintenance</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093211680</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, January 20, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">VENTILLATION HOSE REPLACEMENT</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093051869</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, January 20, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E)(M) -REPLACING LEAKING EXPANSION TANK</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093209928</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, January 19, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">EARTH RESISTANCE TEST</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093209924</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, January 19, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">TRANSFORMER TORQUE CHECK</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093210528</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, January 19, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">DICONNECT AND RECONNECT INCOMER</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092776269</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, January 19, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(GRID)INSTALL SINGLE LINE DIAGRAM</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093174317</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, January 19, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(GRID)CHANGE TRANSFORMER TAP POSITION</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093116180</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, January 19, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">Repl. Pulsotronic earth flt. cur. Trnsf</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093209695</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, January 19, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">OP: difference in operating parameters</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093201628</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, January 16, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(BT)THOROUGH VISUAL INSPECTION BLADES</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093184947</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 7, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:62/519 W:0/0</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093188243</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, January 7, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:301/81 W:101/1</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093188442</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, January 6, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E) - UPDATE OPERATING PARAMETERS</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093184949</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, January 6, 2015</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">S:62/519 - HARDWARERESET WITHOUT SUCCESS</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093153661</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, December 10, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:62:701 BRING SAP 44302 X 2</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093151919</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, December 8, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:62/701 W:0/0</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093140635</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, December 2, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E) - UPDATE TO I/O 1 NACELLE V3.79</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093143242</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, December 2, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">CHECK TRANS/BOLTS ON ROTOR LOCK</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093128063</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, December 2, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E)-REMOVE R239 ON EXCITATION PCB 510469</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093140639</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, December 2, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">OP: difference in operating parameters</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093070906</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, November 18, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">Connecting leading-out wires</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093101741</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, November 11, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E) - UPDATE WITH NEW SOFTWARE</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093106941</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, November 11, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E) - INVESTIGATE STATUS 62:3 &amp; 80:21</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093099279</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, November 11, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E) - DISCONNECT 7 CAPACITORS FROM FILTE</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093101739</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, November 11, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">OP: difference in operating parameters</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093076616</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, October 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">CLEANING AND HOOVERING</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092983053</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, October 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A) FIT CABLE CLAMPS 100572 W/COOLING</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092969563</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, October 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Maintenance plan order</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">Fettwartung / Grease maintenance</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093029299</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, October 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">Equipotential Ultrasonic 2D Anemometer</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093050595</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, October 16, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:233/3</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092983086</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, October 16, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">Lifting eyes x 2 missing on cabinet 067</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093065332</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, October 8, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A) INVESTIGATE STATUS 62:3</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093053655</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, September 29, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:100/1</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092945993</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, September 29, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:100/11</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093009830</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, September 29, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(RT)(SNAG) - SECURE DOOR HANDLE</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093009837</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, September 29, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(RT)(SNAG) - SEAL REAR ACCESS HATCH</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093009836</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, September 29, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(RT)(SNAG) - RUSTING SCREWS IN EYES</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092945607</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, September 29, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">G2 upgrade package for E-101</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093053182</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Saturday, September 27, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A) TD-ESC-01-XXX-XXX-14-016</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093017813</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, September 26, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:101/5</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093013720</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, September 26, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:230/111</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092945845</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, September 26, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E/M)CHECKING HEART BOLT CONNECTIONS</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092983045</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, September 26, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A)EDGE PROTECTION REQUIRED NAC/SPINNER</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092927153</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, September 26, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">Retrofitting platform hatch rubber bands</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092983048</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, September 19, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A)GREASE CLEANING NACELLE /SPINNEER</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092875445</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Tuesday, September 9, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Maintenance plan order</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">Sichtwartung  / Visual maintenance</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092993420</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, September 3, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:58/1</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000093009647</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, September 3, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">OP: difference in operating parameters</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092991727</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Saturday, August 30, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:101/1</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092999794</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, August 29, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:101/3</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092998954</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, August 29, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:2/1 W:25/140</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092945841</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, July 30, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A) -INSTALL STICKERS 138801 &amp; 127949</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092945848</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, July 30, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(RT)-2X COVER PLATES FOR SOCKET</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092855451</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, July 30, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E)CHECK EARTH RESISITANCE MEASUREMENT</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092926356</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, July 30, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(RT) PAINTING WORKS AROUND ENTRANCE DOOR</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092941944</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, July 30, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">retrofit weights winch hatch E-101</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092921351</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Wednesday, July 30, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">OP: difference in operating parameters</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092780458</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:49/393</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092780466</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:49/193</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092780468</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:49/293</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092847690</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:100/11</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092814171</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">TD-ESC-08-GER-GER-13-062</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092881210</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A) -INSTALL STICKERS 138801 &amp; 127949</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092833888</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(RT)-2X COVER PLATES FOR SOCKET</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092879015</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">INSTALL 2 X CABLE SEALING GASKETS</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092737402</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(E/M)CHECKING HEART BOLT CONNECTIONS</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092834997</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, July 17, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SWITCH OUT FOR INSTALL OF CABLE GROMMETT</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092921105</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, July 11, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S 202/106</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092864158</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Sunday, June 1, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">REMAINING WORKS</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092841001</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Monday, May 26, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">CHECK GENERATOR AFTER REPAIR</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092810157</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, May 16, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:71/104 W:0/10</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092778377</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, May 2, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:101/1</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092798733</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, May 2, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:100/11</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092809359</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, May 2, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A)COMPLETE REMAINING TASKS</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092817478</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, May 2, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">RETROFIT 5KG WEIGHTS HATCH DOOR</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092809399</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Friday, May 2, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">(A)INVESTICATE PLATFORM BRACKET ISSUE</Data></Cell></Row>
+<Row>
+<Cell ss:Index="1" ><Data ss:Type="String">1010646</Data></Cell><Cell ss:Index="2" ><Data ss:Type="String">000092794912</Data></Cell><Cell ss:Index="3" ><Data ss:Type="String">Thursday, May 1, 2014</Data></Cell><Cell ss:Index="4" ><Data ss:Type="String">Service/Repair</Data></Cell><Cell ss:Index="5" ><Data ss:Type="String">SCADA S:0/0 W:29/12</Data></Cell></Row>
+</Table>
+<AutoFilter x:Range="R1C1:R1C5" xmlns="urn:schemas-microsoft-com:office:excel"></AutoFilter>
+</Worksheet>
+</Workbook>
