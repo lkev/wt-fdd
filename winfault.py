@@ -72,8 +72,8 @@ class WT_data(object):
 
         Notes
         -----
-        Both status_data_wec.csv & status_data_rtu.csv originally come from
-        pes_extrainfo.csv, filtered according to their plant number.
+        Both status_data_wec.csv & status_data_rtu.csv originally come
+        from pes_extrainfo.csv, filtered according to their plant number.
 
         SCADA_data.csv contains the wsd, 03d and 04d data files all
         combined together.
@@ -234,7 +234,7 @@ class WT_data(object):
             'Full_Warning'
         filter_type : string, optional (default='fault_free')
             Must be one of 'fault_free', 'fault_case_1', 'fault_case_2'
-            or 'fault_case_3'
+            or 'fault_case_3':
 
             - If 'fault_free', the function will return indices of
               `scada_data` which fall between `time_delta_1` after the
@@ -281,6 +281,7 @@ class WT_data(object):
               or equal to `time_delta_2`.
 
         time_delta_2: integer, optional (default=7200)
+
             - If `filter_type` = 'fault_free', it's the time BEFORE normal
               operation ENDS from which to include `scada_data` indices
             - If `filter_type` = 'fault_case_1', AFTER faulty operation
@@ -289,15 +290,14 @@ class WT_data(object):
               refers to the time AFTER faulty operation begins from
               which to stop including `scada_data` indices. Must be less
               than `time_delta_1`
+
         *sw_codes: array of str or int
             The set of codes to be filtered. Can be a single value or an
             array.
-
             If `sw_column_name` is 'Full_Status' or
             'Full_Warning', then it must be a set of strings referring
             to the statuses/warnings (e.g. full status '0 : 0' for
             nominal operation).
-
             If `sw_column_name` is 'Main_Status' or
             'Main_Warning', then it must be a set of integers referring
             to the statuses/warnings (e.g. main status 62 for feeding
