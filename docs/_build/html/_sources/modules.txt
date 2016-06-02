@@ -1,8 +1,0 @@
-wt-fdd
-======
-
-.. toctree::
-   :maxdepth: 4
-
-   example
-   winfault
