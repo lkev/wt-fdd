@@ -1,0 +1,1034 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>winfault &mdash; WinFault 1.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WinFault 1.0 documentation" href="../index.html"/>
+        <link rel="up" title="Module code" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="../index.html" class="fa fa-home"> WinFault</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <!-- Local TOC -->
+              <div class="local-toc"></div>
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">WinFault</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Module code</a> &raquo;</li>
+      
+    <li>winfault</li>
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <h1>Source code for winfault</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy.lib.recfunctions</span> <span class="kn">as</span> <span class="nn">rec</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span> <span class="k">as</span> <span class="n">prep</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">cross_validation</span> <span class="k">as</span> <span class="n">cval</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">utils</span>
+
+
+<div class="viewcode-block" id="WT_data"><a class="viewcode-back" href="../index.html#winfault.WT_data">[docs]</a><span class="k">class</span> <span class="nc">WT_data</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Import and manipulate wind turbine data.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="WT_data.__init__"><a class="viewcode-back" href="../index.html#winfault.WT_data.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">scada_data_file</span><span class="o">=</span><span class="s1">&#39;Source Data/SCADA_data.csv&#39;</span><span class="p">,</span>
+            <span class="n">status_data_wec_file</span><span class="o">=</span><span class="s1">&#39;Source Data/status_data_wec.csv&#39;</span><span class="p">,</span>
+            <span class="n">status_data_rtu_file</span><span class="o">=</span><span class="s1">&#39;Source Data/status_data_rtu.csv&#39;</span><span class="p">,</span>
+            <span class="n">warning_data_wec_file</span><span class="o">=</span><span class="s1">&#39;Source Data/warning_data_wec.csv&#39;</span><span class="p">,</span>
+            <span class="n">warning_data_rtu_file</span><span class="o">=</span><span class="s1">&#39;Source Data/warning_data_rtu.csv&#39;</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Initialises the class instance.</span>
+
+<span class="sd">        Imports the data and returns arrays of SCADA &amp; status data by</span>
+<span class="sd">        calling `import_data()`.</span>
+
+<span class="sd">        Returns an array of fault-free SCADA data by calling</span>
+<span class="sd">        `fault_free_scada_data()`.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        scada_data_file: str, optional</span>
+<span class="sd">            The raw SCADA data csv file.</span>
+<span class="sd">        status_data_wec_file: str, optional</span>
+<span class="sd">            The status/fault csv file for the WEC</span>
+<span class="sd">        status_data_rtu_file: str, optional</span>
+<span class="sd">            The status/fault csv file for the RTU</span>
+<span class="sd">        warning_data_wec_file: str, optional</span>
+<span class="sd">            The warning/information csv file for the WEC</span>
+<span class="sd">        warning_data_rtu_file: str, optional</span>
+<span class="sd">            The warning/information csv file for the RTU</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        scada_data: ndarray</span>
+<span class="sd">            The imported and correctly formatted SCADA data</span>
+<span class="sd">        status_data_wec: ndarray</span>
+<span class="sd">            The imported and correctly formatted WEC status data</span>
+<span class="sd">        status_data_rtu: ndarray</span>
+<span class="sd">            The imported and correctly formatted RTU status data</span>
+<span class="sd">        warning_data_wec: ndarray</span>
+<span class="sd">            The imported and correctly formatted WEC warning data</span>
+<span class="sd">        warning_data_rtu: ndarray</span>
+<span class="sd">            The imported and correctly formatted RTU warning data</span>
+<span class="sd">        fault_free_scada_data: ndarray</span>
+<span class="sd">            The fault free scada data. Filtered according to the</span>
+<span class="sd">            following rules:</span>
+
+<span class="sd">            - selects only data according to certain &quot;good&quot; wec statuses</span>
+<span class="sd">              (shown below). Note it selects only data 1800s after a</span>
+<span class="sd">              change to a &quot;good&quot; wec status, and 7200s before a change</span>
+<span class="sd">              to any other wec status</span>
+
+<span class="sd">            - selects only data according to a single &quot;good&quot; rtu status.</span>
+<span class="sd">              Note it selects only data 600s after a change to the</span>
+<span class="sd">              &quot;good&quot; rtu status, and 600s before a change to any other</span>
+<span class="sd">              rtu status</span>
+
+<span class="sd">            - Finally, it filters out the 10h warning data. This is an</span>
+<span class="sd">              rtu_warning with a &#39;Main_Warning&#39; of 230. It&#39;s an</span>
+<span class="sd">              ambiguous warning which I estimate to mean that there may</span>
+<span class="sd">              or may not be curtailment (for a variety of reasons) in</span>
+<span class="sd">              the 10 hours following when this status comes into play.</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        Both status_data_wec.csv &amp; status_data_rtu.csv originally come from</span>
+<span class="sd">        pes_extrainfo.csv, filtered according to their plant number.</span>
+
+<span class="sd">        SCADA_data.csv contains the wsd, 03d and 04d data files all</span>
+<span class="sd">        combined together.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scada_data_file</span> <span class="o">=</span> <span class="n">scada_data_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec_file</span> <span class="o">=</span> <span class="n">status_data_wec_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_data_rtu_file</span> <span class="o">=</span> <span class="n">status_data_rtu_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">warning_data_wec_file</span> <span class="o">=</span> <span class="n">warning_data_wec_file</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">warning_data_rtu_file</span> <span class="o">=</span> <span class="n">warning_data_rtu_file</span>
+
+        <span class="c1"># Import the data using the default folder structure above</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__import_data</span><span class="p">()</span>
+
+        <span class="c1"># Filter out and extract the fault-free data from the imported</span>
+        <span class="c1"># SCADA data</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">__get_fault_free_scada_data</span><span class="p">()</span></div>
+
+    <span class="k">def</span> <span class="nf">__import_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns imported SCADA, status &amp; warning data as numpy array.</span>
+
+<span class="sd">        This imports the data, and returns arrays of SCADA, status &amp;</span>
+<span class="sd">        warning data. Dates are converted to unix time, and strings are</span>
+<span class="sd">        encoded in the correct format (unicode). Two new fields,</span>
+<span class="sd">        &#39;Inverter_averages&#39; and &#39;Inverter_std_dev&#39;, are also added to</span>
+<span class="sd">        the SCADA data. These are the average and standard deviation of</span>
+<span class="sd">        all Inverter Temperature fields.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        scada_data: ndarray</span>
+<span class="sd">            The imported and correctly formatted SCADA data</span>
+<span class="sd">        status_data_wec: ndarray</span>
+<span class="sd">            The imported and correctly formatted WEC status data</span>
+<span class="sd">        status_data_rtu: ndarray</span>
+<span class="sd">            The imported and correctly formatted RTU status data</span>
+<span class="sd">        warning_data_wec: ndarray</span>
+<span class="sd">            The imported and correctly formatted WEC warning data</span>
+<span class="sd">        warning_data_rtu: ndarray</span>
+<span class="sd">            The imported and correctly formatted RTU warning data</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">scada_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">scada_data_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">(</span>
+                <span class="s1">&#39;&lt;U19&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">),</span>
+            <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="n">status_data_wec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">(</span>
+                <span class="s1">&#39;&lt;U19&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;U9&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;U63&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;|b1&#39;</span><span class="p">,</span> <span class="s1">&#39;|b1&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;&lt;f4&#39;</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="n">status_data_rtu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">status_data_rtu_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">(</span>
+                <span class="s1">&#39;&lt;U19&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;U9&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;U63&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;|b1&#39;</span><span class="p">,</span> <span class="s1">&#39;|b1&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;&lt;f4&#39;</span><span class="p">),</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="n">warning_data_wec</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">warning_data_wec_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">(</span>
+                <span class="s1">&#39;&lt;U19&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;U9&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;U63&#39;</span><span class="p">,</span> <span class="s1">&#39;|b1&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">),</span>
+            <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="n">warning_data_rtu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span>
+            <span class="nb">open</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">warning_data_rtu_file</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="p">(</span>
+                <span class="s1">&#39;&lt;U19&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;i4&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;U9&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;U63&#39;</span><span class="p">,</span> <span class="s1">&#39;|b1&#39;</span><span class="p">,</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">),</span>
+            <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">,</span> <span class="n">names</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="n">data_files</span> <span class="o">=</span> <span class="p">(</span><span class="n">scada_data</span><span class="p">,</span> <span class="n">status_data_rtu</span><span class="p">,</span> <span class="n">status_data_wec</span><span class="p">,</span>
+                      <span class="n">warning_data_rtu</span><span class="p">,</span> <span class="n">warning_data_wec</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">data_file</span> <span class="ow">in</span> <span class="n">data_files</span><span class="p">:</span>
+            <span class="c1"># Convert datetimes to Unix timestamps (as strings)</span>
+            <span class="n">time</span> <span class="o">=</span> <span class="n">data_file</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">time</span><span class="p">)):</span>
+                <span class="n">t</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s2">&quot;</span><span class="si">%d</span><span class="s2">/%m/%Y %H:%M:%S&quot;</span><span class="p">)</span>
+                <span class="n">t</span> <span class="o">=</span> <span class="p">(</span><span class="n">t</span> <span class="o">-</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromtimestamp</span><span class="p">(</span><span class="mi">3600</span><span class="p">))</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+                <span class="n">time</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">t</span>
+
+        <span class="c1"># convert Unix timestamp string to float (for some reason this</span>
+        <span class="c1"># doesn&#39;t work when in the loop above):</span>
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">scada_data</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">descr</span>
+        <span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">)</span>
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+        <span class="n">scada_data</span> <span class="o">=</span> <span class="n">scada_data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">status_data_wec</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">descr</span>
+        <span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">)</span>
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec</span> <span class="o">=</span> <span class="n">status_data_wec</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">status_data_rtu</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">descr</span>
+        <span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">)</span>
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">status_data_rtu</span> <span class="o">=</span> <span class="n">status_data_rtu</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">warning_data_wec</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">descr</span>
+        <span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">)</span>
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">warning_data_wec</span> <span class="o">=</span> <span class="n">warning_data_wec</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">warning_data_rtu</span><span class="o">.</span><span class="n">dtype</span><span class="o">.</span><span class="n">descr</span>
+        <span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">dtlist</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="s1">&#39;&lt;f4&#39;</span><span class="p">)</span>
+        <span class="n">dtlist</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">warning_data_rtu</span> <span class="o">=</span> <span class="n">warning_data_rtu</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">dtlist</span><span class="p">)</span>
+
+        <span class="c1"># Add 2 extra columns to scada - Inverter_averages and</span>
+        <span class="c1"># Inverter_std_dev, as features</span>
+        <span class="n">inverters</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span>
+            <span class="s1">&#39;CS101__Sys_1_inverter_1_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_1_inverter_2_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_1_inverter_3_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_1_inverter_4_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_1_inverter_5_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_1_inverter_6_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_1_inverter_7_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_2_inverter_1_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_2_inverter_2_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_2_inverter_3_cabinet_temp&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;CS101__Sys_2_inverter_4_cabinet_temp&#39;</span><span class="p">])</span>
+        <span class="n">means</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="n">inverters</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="n">stds</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="n">inverters</span><span class="p">])</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">scada_data</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">append_fields</span><span class="p">(</span><span class="n">scada_data</span><span class="p">,</span> <span class="p">[</span>
+            <span class="s1">&#39;Inverter_averages&#39;</span><span class="p">,</span> <span class="s1">&#39;Inverter_std_dev&#39;</span><span class="p">],</span>
+            <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">means</span><span class="p">,</span> <span class="n">stds</span><span class="p">],</span> <span class="n">usemask</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<div class="viewcode-block" id="WT_data.filter"><a class="viewcode-back" href="../index.html#winfault.WT_data.filter">[docs]</a>    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_column_name</span><span class="p">,</span>
+            <span class="n">filter_type</span><span class="o">=</span><span class="s1">&#39;fault_free&#39;</span><span class="p">,</span> <span class="n">return_inverse</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+            <span class="n">time_delta_1</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="o">=</span><span class="mi">7200</span><span class="p">,</span> <span class="o">*</span><span class="n">sw_codes</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns SCADA data which correspond to certain times around</span>
+<span class="sd">        when certain statuses or warnings came into effect on the</span>
+<span class="sd">        turbine.</span>
+
+<span class="sd">        This function takes the scada data obtained in import_data,</span>
+<span class="sd">        or a subset of that data, and filters it corresponding to</span>
+<span class="sd">        certain status or warning codes in the status or warning data.</span>
+
+<span class="sd">        Depending on `filter_type`, indices returned may refer to times of</span>
+<span class="sd">        fault-free or faulty operation, or times leading up to faulty</span>
+<span class="sd">        operation. See the `filter_type` parameter description for</span>
+<span class="sd">        details.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        scada_data : ndarray</span>
+<span class="sd">            SCADA data to be filtered. Must be the scada data obtained</span>
+<span class="sd">            from `import_data()`, or a subset of that data.</span>
+<span class="sd">        sw_data : ndarray</span>
+<span class="sd">            Status/Warning data to be used for reference timestamps.</span>
+<span class="sd">            One of: `warning_data_rtu`, `warning_data_wec`, `status_data_rtu`,</span>
+<span class="sd">            `status_data_wec`.</span>
+<span class="sd">        sw_column_name : string</span>
+<span class="sd">            Refers to the column being filtered. Must be one of</span>
+<span class="sd">            &#39;Main_Status&#39;, &#39;Main_warning&#39;, &#39;Full_Status&#39; or</span>
+<span class="sd">            &#39;Full_Warning&#39;</span>
+<span class="sd">        filter_type : string, optional (default=&#39;fault_free&#39;)</span>
+<span class="sd">            Must be one of &#39;fault_free&#39;, &#39;fault_case_1&#39;, &#39;fault_case_2&#39;</span>
+<span class="sd">            or &#39;fault_case_3&#39;</span>
+
+<span class="sd">            - If &#39;fault_free&#39;, the function will return indices of</span>
+<span class="sd">              `scada_data` which fall between `time_delta_1` after the</span>
+<span class="sd">              start of each passed `sw_code` when it appears in the</span>
+<span class="sd">              `sw_data`, and `time_delta_2` before it ends.</span>
+
+<span class="sd">            - If &#39;fault_case_1&#39;, the function gets a timestamp of</span>
+<span class="sd">              `time_delta_1` before the start of a certain status/warning</span>
+<span class="sd">              which corresponds to faulty operation, and `time_delta_2`</span>
+<span class="sd">              after the status/warning ends. It returns indices of</span>
+<span class="sd">              scada_data which fall between these time stamps.</span>
+
+<span class="sd">            - If &#39;fault_case_2&#39;, the function gets timestamps for the</span>
+<span class="sd">              times between `time_delta_1` and `time_delta_2` before the</span>
+<span class="sd">              start of a certain status/warning which corresponds to the</span>
+<span class="sd">              start of faulty operation. It returns indices of</span>
+<span class="sd">              `scada_data` which fall between these time stamps.</span>
+
+<span class="sd">            - If &#39;fault_case_3&#39; The function gets timestamps for the</span>
+<span class="sd">              times between `time_delta_1` and `time_delta_2` before a</span>
+<span class="sd">              certain fault starts. It returns indices of `scada_data`</span>
+<span class="sd">              which fall between these time stamps, but ONLY IF no other</span>
+<span class="sd">              instance of the same fault occured during this period.</span>
+<span class="sd">              Therefore, it contains only data which led up to the</span>
+<span class="sd">              fault. Used for fault prediction purposes.</span>
+<span class="sd">        return_inverse: boolean, optional (default=False)</span>
+<span class="sd">            If True, the function will return the indices of filtered</span>
+<span class="sd">            SCADA data which DON&#39;T correspond to what this function</span>
+<span class="sd">            would normally return. I.e. the function would select all</span>
+<span class="sd">            the indices of SCADA data as normal, and then instead return</span>
+<span class="sd">            all OTHER indices. E.g. the function could find indices of</span>
+<span class="sd">            when the turbine was in fault-free operation, and then</span>
+<span class="sd">            return all OTHER indices instead.</span>
+<span class="sd">        time_delta_1: integer, optional (default=3600)</span>
+
+<span class="sd">            - If `filter_type` = &#39;fault_free&#39;, it&#39;s the time AFTER normal</span>
+<span class="sd">              operation begins from which to include `scada_data` indices</span>
+<span class="sd">            - If `filter_type` = &#39;fault_case_1&#39;, this is the amount of</span>
+<span class="sd">              time before the fault from which to include the returned</span>
+<span class="sd">              scada fault data.</span>
+<span class="sd">            - If `filter_type` = &#39;fault_case_2&#39; or &#39;fault_case_3&#39;, this</span>
+<span class="sd">              refers to the time BEFORE faulty operation begins from</span>
+<span class="sd">              which to include scada_data indices. Must be greater than</span>
+<span class="sd">              or equal to `time_delta_2`.</span>
+
+<span class="sd">        time_delta_2: integer, optional (default=7200)</span>
+<span class="sd">            - If `filter_type` = &#39;fault_free&#39;, it&#39;s the time BEFORE normal</span>
+<span class="sd">              operation ENDS from which to include `scada_data` indices</span>
+<span class="sd">            - If `filter_type` = &#39;fault_case_1&#39;, AFTER faulty operation</span>
+<span class="sd">              ends from which to include `scada_data` indices</span>
+<span class="sd">            - If `filter_type` = &#39;fault_case_2&#39; or &#39;fault_case_3&#39;, this</span>
+<span class="sd">              refers to the time AFTER faulty operation begins from</span>
+<span class="sd">              which to stop including `scada_data` indices. Must be less</span>
+<span class="sd">              than `time_delta_1`</span>
+<span class="sd">        *sw_codes: array of str or int</span>
+<span class="sd">            The set of codes to be filtered. Can be a single value or an</span>
+<span class="sd">            array.</span>
+
+<span class="sd">            If `sw_column_name` is &#39;Full_Status&#39; or</span>
+<span class="sd">            &#39;Full_Warning&#39;, then it must be a set of strings referring</span>
+<span class="sd">            to the statuses/warnings (e.g. full status &#39;0 : 0&#39; for</span>
+<span class="sd">            nominal operation).</span>
+
+<span class="sd">            If `sw_column_name` is &#39;Main_Status&#39; or</span>
+<span class="sd">            &#39;Main_Warning&#39;, then it must be a set of integers referring</span>
+<span class="sd">            to the statuses/warnings (e.g. main status 62 for feeding</span>
+<span class="sd">            faults)</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        filtered_scada_data: ndarray</span>
+<span class="sd">            If `filter_type` = &#39;fault_free&#39;, `filtered_scada_data`</span>
+<span class="sd">            should be data strictly corresponding to fault-free data.</span>
+<span class="sd">            If `filter_type` is &#39;fault_case_1&#39;, &#39;fault_case_2&#39; or</span>
+<span class="sd">            &#39;fault_case_3&#39;, `filtered_scada_data` is data strictly</span>
+<span class="sd">            corresponding to fault data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Aggregate all the indices of sw_data from the passed sw_codes</span>
+        <span class="c1"># together:</span>
+        <span class="n">sw_data_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">sw_code</span> <span class="ow">in</span> <span class="n">sw_codes</span><span class="p">:</span>
+            <span class="n">sw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span>
+                <span class="n">sw_data</span><span class="p">[</span><span class="n">sw_column_name</span><span class="p">]</span> <span class="o">==</span> <span class="n">sw_code</span><span class="p">))</span>
+            <span class="n">sw_data_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span>
+                <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">((</span><span class="n">sw_data_indices</span><span class="p">,</span> <span class="n">sw</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+
+        <span class="k">if</span> <span class="n">filter_type</span> <span class="o">==</span> <span class="s1">&#39;fault_free&#39;</span><span class="p">:</span>
+            <span class="n">filtered_scada_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__fault_free_filter</span><span class="p">(</span>
+                <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_data_indices</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span>
+                <span class="n">time_delta_2</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">filter_type</span> <span class="o">==</span> <span class="s1">&#39;fault_case_1&#39;</span><span class="p">:</span>
+            <span class="n">filtered_scada_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__fault_case_1_filter</span><span class="p">(</span>
+                <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_data_indices</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span>
+                <span class="n">time_delta_2</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">filter_type</span> <span class="o">==</span> <span class="s1">&#39;fault_case_2&#39;</span><span class="p">:</span>
+            <span class="n">filtered_scada_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__fault_case_2_filter</span><span class="p">(</span>
+                <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_data_indices</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span>
+                <span class="n">time_delta_2</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">filter_type</span> <span class="o">==</span> <span class="s1">&#39;fault_case_3&#39;</span><span class="p">:</span>
+            <span class="n">filtered_scada_indices</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">__fault_case_3_filter</span><span class="p">(</span>
+                <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_data_indices</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span>
+                <span class="n">time_delta_2</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+                <span class="s1">&#39;filter_type must be one of </span><span class="se">\&#39;</span><span class="s1">fault_free</span><span class="se">\&#39;</span><span class="s1">, &#39;</span>
+                <span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">fault_case_1</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">fault_case_2</span><span class="se">\&#39;</span><span class="s1"> or </span><span class="se">\&#39;</span><span class="s1">fault_case_3</span><span class="se">\&#39;</span><span class="s1">.&#39;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">return_inverse</span> <span class="ow">is</span> <span class="bp">False</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">scada_data</span><span class="p">[</span><span class="n">filtered_scada_indices</span><span class="p">]</span>
+        <span class="k">elif</span> <span class="n">return_inverse</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="c1"># using a mask is the simplest way I know to get the inverse</span>
+            <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="bp">True</span><span class="p">])</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">scada_data</span><span class="p">))</span>
+            <span class="n">mask</span><span class="p">[</span><span class="n">filtered_scada_indices</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
+            <span class="k">return</span> <span class="n">scada_data</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;return_inverse must be True or False&#39;</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">__fault_free_filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_data_indices</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span>
+            <span class="n">time_delta_2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns indices of fault-free SCADA data.</span>
+
+<span class="sd">        The function gets a timestamp of time_delta_1 after the start of</span>
+<span class="sd">        each status/warning which correspond to fault-free operation, and</span>
+<span class="sd">        time_delta_2 before the status/warning ends. It returns indices</span>
+<span class="sd">        of scada_data which fall between these time stamps.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        scada_data: ndarray</span>
+<span class="sd">            SCADA data to be filtered. Must be the scada data obtained</span>
+<span class="sd">            from import_data(), or a subset of that data.</span>
+<span class="sd">        sw_data: ndarray</span>
+<span class="sd">            Status/Warning data to be used for reference timestamps. One</span>
+<span class="sd">            of: warning_data_rtu, warning_data_wec, status_data_rtu,</span>
+<span class="sd">            status_data_wec.</span>
+<span class="sd">        sw_data_indices: ndarray</span>
+<span class="sd">            Indices of the sw_data whose timestamps will be used</span>
+<span class="sd">            to match up with scada_data. Should be obtained from</span>
+<span class="sd">            WT_data.filter() function.</span>
+<span class="sd">        time_delta_1: integer</span>
+<span class="sd">            Time AFTER normal operation begins from which to include</span>
+<span class="sd">            scada_data indices</span>
+<span class="sd">        time_delta_2: integer</span>
+<span class="sd">            Time BEFORE normal operation ENDS from which to include</span>
+<span class="sd">            scada_data indices</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fault_free_scada_indices: ndarray</span>
+<span class="sd">            indices of scada_data which correspond to fault-free</span>
+<span class="sd">            operation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">fault_free_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">sw_data_index</span> <span class="ow">in</span> <span class="n">sw_data_indices</span><span class="p">:</span>
+            <span class="c1"># fault_free_scada_indices for fault-free data are normally</span>
+            <span class="c1"># between time_delta_1 AFTER each instance of</span>
+            <span class="c1"># sw_data_indices, and time_delta_2 BEFORE the next general</span>
+            <span class="c1"># entry of sw_data (i.e. sw_data_indices + 1):</span>
+            <span class="k">if</span> <span class="n">sw_data</span><span class="p">[</span><span class="n">sw_data_index</span><span class="p">]</span> <span class="o">!=</span> <span class="n">sw_data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">sf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span>
+                        <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_index</span><span class="p">]</span> <span class="o">+</span> <span class="n">time_delta_1</span><span class="p">)</span> <span class="o">&amp;</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;</span>
+                        <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">time_delta_2</span><span class="p">))</span>
+            <span class="c1"># However, if the current sw_data_index represents sw_data[</span>
+            <span class="c1"># -1], then we use time_delta_2 before scada_data[&#39;Time&#39;][</span>
+            <span class="c1"># -1] as the upper time limit for finding</span>
+            <span class="c1"># fault_free_scada_indices. This is because sw_data[</span>
+            <span class="c1"># sw_data_index + 1] does not exist, and we don&#39;t know if</span>
+            <span class="c1"># the sw_code will change after scada_data[&#39;Time&#39;][-1]:</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span>
+                        <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_index</span><span class="p">]</span> <span class="o">+</span> <span class="n">time_delta_1</span><span class="p">)</span> <span class="o">&amp;</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;</span>
+                        <span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">time_delta_2</span><span class="p">))</span>
+
+            <span class="n">fault_free_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">fault_free_scada_indices</span><span class="p">,</span> <span class="n">sf</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">fault_free_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">fault_free_scada_indices</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fault_free_scada_indices</span>
+
+    <span class="k">def</span> <span class="nf">__fault_case_1_filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_data_indices</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span>
+            <span class="n">time_delta_2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns indices of SCADA data corresponding to faulty</span>
+<span class="sd">        operation under a certain fault, according to &#39;case_1&#39; option of</span>
+<span class="sd">        the `filter_type` parameter in `filter()`.</span>
+
+<span class="sd">        See `filter()` for details.</span>
+
+<span class="sd">        The function gets a timestamp of time_delta_1 before the start</span>
+<span class="sd">        of a certain status/warning which corresponds to faulty</span>
+<span class="sd">        operation, and time_delta_2 after the status/warning ends. It</span>
+<span class="sd">        returns indices of scada_data which fall between these time</span>
+<span class="sd">        stamps.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        scada_data: ndarray</span>
+<span class="sd">            SCADA data to be filtered. Must be the scada data obtained</span>
+<span class="sd">            from import_data(), or a subset of that data.</span>
+<span class="sd">        sw_data: ndarray</span>
+<span class="sd">            Status/Warning data to be used for reference timestamps. One</span>
+<span class="sd">            of: warning_data_rtu, warning_data_wec, status_data_rtu,</span>
+<span class="sd">            status_data_wec.</span>
+<span class="sd">        sw_data_indices: ndarray</span>
+<span class="sd">            Indices of the sw_data whose timestamps will be used</span>
+<span class="sd">            to match up with scada_data. Should be obtained from</span>
+<span class="sd">            WT_data.filter() function.</span>
+<span class="sd">        time_delta_1: integer</span>
+<span class="sd">            Time BEFORE faulty operation begins from which to include</span>
+<span class="sd">            scada_data indices</span>
+<span class="sd">        time_delta_2: integer</span>
+<span class="sd">            Time AFTER faulty operation ends from which to include</span>
+<span class="sd">            scada_data indices</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fault_scada_indices: ndarray</span>
+<span class="sd">            indices of scada_data which correspond to fault-free</span>
+<span class="sd">            operation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">sw_data_index</span> <span class="ow">in</span> <span class="n">sw_data_indices</span><span class="p">:</span>
+            <span class="c1"># fault_scada_indices for fault data are normally</span>
+            <span class="c1"># between time_delta_1 BEFORE each instance of</span>
+            <span class="c1"># sw_data_indices, and time_delta_2 AFTER the next general</span>
+            <span class="c1"># entry of sw_data (i.e. sw_data_indices + 1):</span>
+            <span class="k">if</span> <span class="n">sw_data</span><span class="p">[</span><span class="n">sw_data_index</span><span class="p">]</span> <span class="o">!=</span> <span class="n">sw_data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="n">sf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span>
+                        <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_index</span><span class="p">]</span> <span class="o">-</span> <span class="n">time_delta_1</span><span class="p">)</span> <span class="o">&amp;</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;</span>
+                        <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">time_delta_2</span><span class="p">))</span>
+            <span class="c1"># However, if the current sw_data_index represents sw_data[</span>
+            <span class="c1"># -1], then we use time_delta_2 before scada_data[&#39;Time&#39;][-1]</span>
+            <span class="c1"># as the upper time limit for finding</span>
+            <span class="c1"># fault_scada_indices. This is because sw_data[</span>
+            <span class="c1"># sw_data_index + 1] does not exist, and we don&#39;t know if</span>
+            <span class="c1"># the sw_code will change after scada_data[&#39;Time&#39;][-1]:</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">sf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span>
+                        <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_index</span><span class="p">]</span> <span class="o">-</span> <span class="n">time_delta_1</span><span class="p">)</span> <span class="o">&amp;</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;</span>
+                        <span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span>
+
+            <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">fault_scada_indices</span><span class="p">,</span> <span class="n">sf</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">fault_scada_indices</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fault_scada_indices</span>
+
+    <span class="k">def</span> <span class="nf">__fault_case_2_filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_data_indices</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span>
+            <span class="n">time_delta_2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns indices of SCADA data leading up to a certain fault,</span>
+<span class="sd">        according to &#39;case_2&#39; option of the `filter_type` parameter in</span>
+<span class="sd">        `filter()`.</span>
+
+<span class="sd">        See `filter()` for details.</span>
+
+<span class="sd">        The function gets timestamps for the times between time_delta_1</span>
+<span class="sd">        and time_delta_2 before the start of a certain status/warning</span>
+<span class="sd">        which corresponds to the start of faulty operation. It returns</span>
+<span class="sd">        indices of scada_data which fall between these time stamps.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        scada_data: ndarray</span>
+<span class="sd">            SCADA data to be filtered. Must be the scada data obtained</span>
+<span class="sd">            from import_data(), or a subset of that data.</span>
+<span class="sd">        sw_data: ndarray</span>
+<span class="sd">            Status/Warning data to be used for reference timestamps. One</span>
+<span class="sd">            of: warning_data_rtu, warning_data_wec, status_data_rtu,</span>
+<span class="sd">            status_data_wec.</span>
+<span class="sd">        sw_data_indices: ndarray</span>
+<span class="sd">            Indices of the sw_data whose timestamps will be used</span>
+<span class="sd">            to match up with scada_data. Should be obtained from</span>
+<span class="sd">            WT_data.filter() function.</span>
+<span class="sd">        time_delta_1: integer</span>
+<span class="sd">            Time BEFORE faulty operation begins from which to include</span>
+<span class="sd">            scada_data indices. Must be greater than or equal to</span>
+<span class="sd">            time_delta_2</span>
+<span class="sd">        time_delta_2: integer</span>
+<span class="sd">            Time before faulty operation begins from which to stop</span>
+<span class="sd">            including scada_data indices. Must be less than time_delta_1</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fault_scada_indices: ndarray</span>
+<span class="sd">            indices of scada_data which correspond to fault-free</span>
+<span class="sd">            operation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">time_delta_1</span> <span class="o">&lt;</span> <span class="n">time_delta_2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;time_delta_1 must be greater than or equal to &quot;</span>
+                             <span class="s2">&quot;time_delta_2!&quot;</span><span class="p">)</span>
+        <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+        <span class="c1"># fault_scada_indices for fault data are between time_delta_1</span>
+        <span class="c1"># and time_delta_2 before each instance of sw_data_indices:</span>
+        <span class="k">for</span> <span class="n">sw_data_index</span> <span class="ow">in</span> <span class="n">sw_data_indices</span><span class="p">:</span>
+            <span class="n">sf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span>
+                    <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_index</span><span class="p">]</span> <span class="o">-</span> <span class="n">time_delta_1</span><span class="p">)</span> <span class="o">&amp;</span>
+                <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;</span>
+                    <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_index</span><span class="p">]</span> <span class="o">-</span> <span class="n">time_delta_2</span><span class="p">))</span>
+
+            <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+                <span class="p">(</span><span class="n">fault_scada_indices</span><span class="p">,</span> <span class="n">sf</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">fault_scada_indices</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fault_scada_indices</span>
+
+    <span class="k">def</span> <span class="nf">__fault_case_3_filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_data_indices</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span>
+            <span class="n">time_delta_2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns indices of SCADA data leading up to a certain fault,</span>
+<span class="sd">        according to &#39;case_3&#39; option of the `filter_type` parameter in</span>
+<span class="sd">        `filter()`.</span>
+
+<span class="sd">        See `filter()` for details.</span>
+
+<span class="sd">        The function gets timestamps for the times between `time_delta_1`</span>
+<span class="sd">        and `time_delta_2` before a certain fault starts. It returns</span>
+<span class="sd">        indices of scada_data which fall between these time stamps,</span>
+<span class="sd">        but ONLY IF no other instance of this fault occured during this</span>
+<span class="sd">        period. Therefore, it contains only data of normal operation</span>
+<span class="sd">        (or possibly under faulty operation, but of a different fault)</span>
+<span class="sd">        which led up to the fault.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        scada_data: ndarray</span>
+<span class="sd">            SCADA data to be filtered. Must be the scada data obtained</span>
+<span class="sd">            from `import_data()`, or a subset of that data.</span>
+<span class="sd">        sw_data: ndarray</span>
+<span class="sd">            Status/Warning data to be used for reference timestamps. One</span>
+<span class="sd">            of: `warning_data_rtu`, `warning_data_wec`, `status_data_rtu`,</span>
+<span class="sd">            `status_data_wec`.</span>
+<span class="sd">        sw_data_indices: ndarray</span>
+<span class="sd">            Indices of the sw_data whose timestamps will be used</span>
+<span class="sd">            to match up with scada_data. Should be obtained from</span>
+<span class="sd">            WT_data.filter() function.</span>
+<span class="sd">        time_delta_1: integer</span>
+<span class="sd">            Time BEFORE faulty operation begins from which to include</span>
+<span class="sd">            `scada_data` indices. Must be greater than or equal to</span>
+<span class="sd">            `time_delta_2`</span>
+<span class="sd">        time_delta_2: integer</span>
+<span class="sd">            Time before faulty operation begins from which to stop</span>
+<span class="sd">            including scada_data indices. Must be less than `time_delta_1`</span>
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fault_scada_indices: ndarray</span>
+<span class="sd">            indices of `scada_data` which correspond to fault-free</span>
+<span class="sd">            operation</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">time_delta_1</span> <span class="o">&lt;</span> <span class="n">time_delta_2</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;time_delta_1 must be greater than or equal to &quot;</span>
+                             <span class="s2">&quot;time_delta_2!&quot;</span><span class="p">)</span>
+        <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([],</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;i&#39;</span><span class="p">)</span>
+        <span class="c1"># `filtered_scada_instances` for fault data are only returned</span>
+        <span class="c1"># between `time_delta_1` and `time_delta_2` before a fault, if the</span>
+        <span class="c1"># same type of fault does not occur in that period.</span>
+
+        <span class="c1"># the first fault instance (or, if there&#39;s only one fault</span>
+        <span class="c1"># instance) will no overlap with a previous one, so selecting</span>
+        <span class="c1"># these indices is straighforward:</span>
+        <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+            <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="n">sw_data</span><span class="p">[</span><span class="n">sw_data_indices</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">-</span>
+                <span class="n">time_delta_1</span><span class="p">)</span> <span class="o">&amp;</span>
+            <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">sw_data</span><span class="p">[</span><span class="n">sw_data_indices</span><span class="p">[</span><span class="mi">0</span><span class="p">]][</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">-</span>
+                <span class="n">time_delta_2</span><span class="p">))[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># The rest of the indices must be picked from times when the</span>
+        <span class="c1"># previous fault instance does not overlap with the current</span>
+        <span class="c1"># fault instance - time_delta_1:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">sw_data_indices</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">sw_data</span><span class="p">[</span><span class="n">sw_data_indices</span><span class="p">[</span><span class="n">i</span><span class="p">]][</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">time_delta_1</span> <span class="o">&gt;=</span>
+                    <span class="n">sw_data</span><span class="p">[</span><span class="n">sw_data_indices</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span><span class="p">][</span><span class="s1">&#39;Time&#39;</span><span class="p">]):</span>
+                <span class="n">sf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span>
+                        <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_indices</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">-</span> <span class="n">time_delta_1</span><span class="p">)</span> <span class="o">&amp;</span>
+                    <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;</span>
+                        <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_indices</span><span class="p">[</span><span class="n">i</span><span class="p">]]</span> <span class="o">-</span> <span class="n">time_delta_2</span><span class="p">))</span>
+
+                <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+                    <span class="p">(</span><span class="n">fault_scada_indices</span><span class="p">,</span> <span class="n">sf</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+
+        <span class="n">fault_scada_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">fault_scada_indices</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">fault_scada_indices</span>
+
+    <span class="k">def</span> <span class="nf">__get_fault_free_scada_data</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Uses `WT_data.filter()` to get fault free data, according to</span>
+<span class="sd">        certain criteria (described below).</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        fault_free_scada_data: ndarray</span>
+<span class="sd">            The fault free scada data. Filtered according to the</span>
+<span class="sd">            following rules:</span>
+
+<span class="sd">            - selects only data according to certain &quot;good&quot; wec statuses</span>
+<span class="sd">            (shown below). Note it selects only data 1800s after a</span>
+<span class="sd">            change to a &quot;good&quot; wec status, and 7200s before a change to</span>
+<span class="sd">            any other wec status</span>
+<span class="sd">            - selects only data according to a single &quot;good&quot; rtu status.</span>
+<span class="sd">            Note it selects only data 600s after a change to the &quot;good&quot;</span>
+<span class="sd">            rtu status, and 600s before a change to any other rtu status</span>
+<span class="sd">            - Finally, it filters out the 10h warning data. This is an</span>
+<span class="sd">            rtu_warning with a &#39;Main_Warning&#39; of 230. It&#39;s an ambiguous</span>
+<span class="sd">            warning which I estimate to mean that there may or may not</span>
+<span class="sd">            be curtailment (for a variety of reasons) in the 10 hours</span>
+<span class="sd">            following when this status comes into play.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># These are the statuses that correspond to nominal wec operation:</span>
+        <span class="n">statuses</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;0 : 0&#39;</span><span class="p">,</span> <span class="s1">&#39;2 : 1&#39;</span><span class="p">,</span> <span class="s1">&#39;2 : 2&#39;</span><span class="p">,</span> <span class="s1">&#39;3 : 12&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Filtering to only include the above statuses.</span>
+        <span class="n">scada_good_wec</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scada_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec</span><span class="p">,</span> <span class="s1">&#39;Full_Status&#39;</span><span class="p">,</span> <span class="s1">&#39;fault_free&#39;</span><span class="p">,</span>
+            <span class="bp">False</span><span class="p">,</span> <span class="mi">1800</span><span class="p">,</span> <span class="mi">7200</span><span class="p">,</span> <span class="o">*</span><span class="n">statuses</span><span class="p">)</span>
+
+        <span class="c1"># Further filtering to only include good rtu statuses:</span>
+        <span class="n">scada_good_status</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="n">scada_good_wec</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status_data_rtu</span><span class="p">,</span> <span class="s1">&#39;Full_Status&#39;</span><span class="p">,</span> <span class="s1">&#39;fault_free&#39;</span><span class="p">,</span>
+            <span class="bp">False</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="s1">&#39;0 : 0&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Final filtering to not include the 230 main warning (see method</span>
+        <span class="c1"># docstring for details):</span>
+        <span class="n">scada_good_status_10h</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="n">scada_good_status</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">warning_data_wec</span><span class="p">,</span> <span class="s1">&#39;Main_Warning&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;fault_case_1&#39;</span><span class="p">,</span> <span class="bp">True</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">36700</span><span class="p">,</span> <span class="mi">230</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">fault_free_scada_data</span> <span class="o">=</span> <span class="n">scada_good_status_10h</span>
+
+<div class="viewcode-block" id="WT_data.get_all_fault_data"><a class="viewcode-back" href="../index.html#winfault.WT_data.get_all_fault_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_fault_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_type</span><span class="o">=</span><span class="s1">&#39;fault_case_1&#39;</span><span class="p">,</span>
+                           <span class="n">time_delta_1</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="o">=</span><span class="mi">600</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;This function is a shortcut to get a list of faults using the</span>
+<span class="sd">        `filter()` function. The faults that are included are the</span>
+<span class="sd">        most frequently occuring faults in the enercon Ringaskiddy data</span>
+<span class="sd">        up to end March 2015.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        filter_type: string, optional (default=&#39;fault_case_1&#39;)</span>
+<span class="sd">            The `filter_type` to be passed to the `filter()`</span>
+<span class="sd">            function. Must be one of &#39;fault_case_1&#39;, &#39;fault_case_2&#39; or</span>
+<span class="sd">            &#39;fault_case_3&#39;. See the `filter()` function for</span>
+<span class="sd">            details</span>
+<span class="sd">        time_delta_1: integer</span>
+<span class="sd">            The `time_delta_1` to be passed to the `filter()`</span>
+<span class="sd">            function. If `filter_type` = &#39;fault_case_2&#39; or &#39;fault_case_3&#39;,</span>
+<span class="sd">            `time_delta_1` must be greater than or equal to `time_delta_2`.</span>
+<span class="sd">            See the `filter()` function for details</span>
+<span class="sd">        time_delta_2: integer</span>
+<span class="sd">            The `time_delta_2` to be passed to the `filter()`</span>
+<span class="sd">            function. If `filter_type` = &#39;fault_case_2&#39; or &#39;fault_case_3&#39;,</span>
+<span class="sd">            `time_delta_2` must be less than time_delta_1. See the</span>
+<span class="sd">            `filter()` function for details</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        all_faults_scada_data: ndarray</span>
+<span class="sd">            An array of all SCADA data corresponding to fault times</span>
+<span class="sd">        feeding_fault_scada_data: ndarray</span>
+<span class="sd">            An array of SCADA data corresponding to feeding faults</span>
+<span class="sd">        aircooling_fault_scada_data: ndarray</span>
+<span class="sd">            An array of SCADA data corresponding to aircooling faults</span>
+<span class="sd">        excitation_fault_scada_data: ndarray</span>
+<span class="sd">            An array of SCADA data corresponding to excitation faults</span>
+<span class="sd">        generator_heating_fault_scada_data: ndarray</span>
+<span class="sd">            An array of SCADA data corresponding to generator heating</span>
+<span class="sd">            faults</span>
+<span class="sd">        mains_failure_fault_scada_data: ndarray</span>
+<span class="sd">            An array of SCADA data corresponding to mains failure faults</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="c1"># Main status of the faults to be included:</span>
+        <span class="n">faults</span> <span class="o">=</span> <span class="p">(</span><span class="mi">80</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">228</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">filter_type</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">(</span><span class="s1">&#39;fault_case_1&#39;</span><span class="p">,</span> <span class="s1">&#39;fault_case_2&#39;</span><span class="p">,</span> <span class="s1">&#39;fault_case_3&#39;</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;filter_type must be one of </span><span class="se">\&#39;</span><span class="s1">fault_case_1</span><span class="se">\&#39;</span><span class="s1">, &#39;</span>
+                             <span class="s1">&#39;</span><span class="se">\&#39;</span><span class="s1">fault_case_2</span><span class="se">\&#39;</span><span class="s1"> or </span><span class="se">\&#39;</span><span class="s1">fault_case_3</span><span class="se">\&#39;</span><span class="s1">.&#39;</span><span class="p">)</span>
+
+        <span class="n">all_faults_scada_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scada_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec</span><span class="p">,</span> <span class="s2">&quot;Main_Status&quot;</span><span class="p">,</span> <span class="n">filter_type</span><span class="p">,</span>
+            <span class="bp">False</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="p">,</span> <span class="o">*</span><span class="n">faults</span><span class="p">)</span>
+        <span class="n">feeding_fault_scada_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scada_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec</span><span class="p">,</span> <span class="s2">&quot;Main_Status&quot;</span><span class="p">,</span> <span class="n">filter_type</span><span class="p">,</span>
+            <span class="bp">False</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="p">,</span> <span class="mi">62</span><span class="p">)</span>
+        <span class="n">mains_failure_fault_scada_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scada_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec</span><span class="p">,</span> <span class="s2">&quot;Main_Status&quot;</span><span class="p">,</span> <span class="n">filter_type</span><span class="p">,</span>
+            <span class="bp">False</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+        <span class="n">aircooling_fault_scada_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scada_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec</span><span class="p">,</span> <span class="s2">&quot;Main_Status&quot;</span><span class="p">,</span> <span class="n">filter_type</span><span class="p">,</span>
+            <span class="bp">False</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="p">,</span> <span class="mi">228</span><span class="p">)</span>
+        <span class="n">excitation_fault_scada_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scada_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec</span><span class="p">,</span> <span class="s2">&quot;Main_Status&quot;</span><span class="p">,</span> <span class="n">filter_type</span><span class="p">,</span>
+            <span class="bp">False</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="p">,</span> <span class="mi">80</span><span class="p">)</span>
+        <span class="n">generator_heating_fault_scada_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">scada_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">status_data_wec</span><span class="p">,</span> <span class="s2">&quot;Main_Status&quot;</span><span class="p">,</span> <span class="n">filter_type</span><span class="p">,</span>
+            <span class="bp">False</span><span class="p">,</span> <span class="n">time_delta_1</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">all_faults_scada_data</span><span class="p">,</span> <span class="n">feeding_fault_scada_data</span><span class="p">,</span> \
+            <span class="n">mains_failure_fault_scada_data</span><span class="p">,</span> <span class="n">aircooling_fault_scada_data</span><span class="p">,</span> \
+            <span class="n">excitation_fault_scada_data</span><span class="p">,</span> <span class="n">generator_heating_fault_scada_data</span></div>
+
+<div class="viewcode-block" id="WT_data.get_test_train_data"><a class="viewcode-back" href="../index.html#winfault.WT_data.get_test_train_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_test_train_data</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">fault_data_sets</span><span class="p">,</span> <span class="n">fault_free_scada_data_set</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
+            <span class="n">normalize</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Generate labels for the SCADA data.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        features: list of strings</span>
+<span class="sd">            A list of `scada_data` column names to be included in the</span>
+<span class="sd">            test and training data as features, e.g. &#39;WEC_ava_power&#39;,</span>
+<span class="sd">            &#39;CS101__Ambient_temp&#39;, etc.</span>
+<span class="sd">        fault_data_sets: list of ndarrays</span>
+<span class="sd">            list of  arrays of subsets of fault data obtained using the</span>
+<span class="sd">            `filter()` function.</span>
+<span class="sd">            Example 1:</span>
+
+<span class="sd">            &gt;&gt;&gt; fault_data_sets = [feeding_fault_scada_data,</span>
+<span class="sd">                                   aircooling_fault_scada_data,</span>
+<span class="sd">                                   excitation_fault_scada_data]</span>
+
+<span class="sd">            Example 2:</span>
+
+<span class="sd">            &gt;&gt;&gt; fault_data_sets = [feeding_fault_scada_data]</span>
+
+<span class="sd">        fault_free_scada_data_set: ndarray (default=None)</span>
+<span class="sd">            Array of fault-free data obtained using the `filter()`</span>
+<span class="sd">            function. If the default `None` is selected, this value will</span>
+<span class="sd">            be set to `self.fault_free_scada_data` (obtained during</span>
+<span class="sd">            initialisation).</span>
+<span class="sd">        normalize: Boolean, optional (default=True)</span>
+<span class="sd">            Whether or not to normalize the training data.</span>
+<span class="sd">        split: float, optional (default=0.2)</span>
+<span class="sd">            The ratio of testing : training data to use.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        X_train: ndarray</span>
+<span class="sd">            Training data samples</span>
+<span class="sd">        y_train: ndarray</span>
+<span class="sd">            Training data labels</span>
+<span class="sd">        X_test: ndarray</span>
+<span class="sd">            Testing data samples</span>
+<span class="sd">        y_test: ndarray</span>
+<span class="sd">            Testing data labels</span>
+<span class="sd">        X_train_bal: ndarray</span>
+<span class="sd">            Balanced training data samples (i.e. no. of fault-free</span>
+<span class="sd">            samples = sum of no. of each fault class samples)</span>
+<span class="sd">        y_train_bal: ndarray</span>
+<span class="sd">            Balanced training data labels (i.e. no. of fault-free</span>
+<span class="sd">            samples = sum of no. of each fault class samples)</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">fault_data_sets</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">list</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span>
+                <span class="s2">&quot;fault_data_sets must be a list of arrays of fault data. &quot;</span>
+                <span class="s2">&quot;Examples:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;Example 1:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;&gt;&gt;&gt; fault_data_sets = [feeding_fault_scada_data,</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;                       aircooling_fault_scada_data,</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;                       excitation_fault_scada_data]</span><span class="se">\n\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;Example 2:</span><span class="se">\n</span><span class="s2">&quot;</span>
+                <span class="s2">&quot;&gt;&gt;&gt; fault_data_sets = [feeding_fault_scada_data]&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">features</span><span class="p">)</span> <span class="ow">is</span> <span class="ow">not</span> <span class="nb">list</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s2">&quot;features must contain a list of &quot;</span>
+                            <span class="s2">&quot;scada_data column names as strings&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">fault_free_scada_data_set</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">fault_free_scada_data_set</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fault_free_scada_data</span>
+
+        <span class="n">fault_free_labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fault_free_scada_data_set</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+        <span class="c1"># we create the final_data_set array which will eventually</span>
+        <span class="c1"># contain both fault and fault-free data, anbd their labels. We</span>
+        <span class="c1"># need them with their labels in the same array because when we</span>
+        <span class="c1"># shuffle it all up we want the labels to remain correct</span>
+        <span class="n">final_data_set</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">append_fields</span><span class="p">(</span>
+            <span class="n">fault_free_scada_data_set</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span>
+            <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">fault_free_labels</span><span class="p">],</span> <span class="n">usemask</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+        <span class="c1"># append the &quot;fault&quot; data set(s) to the final_data_set</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">fault_data_set</span> <span class="ow">in</span> <span class="n">fault_data_sets</span><span class="p">:</span>
+            <span class="n">labels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">i</span><span class="p">])</span><span class="o">.</span><span class="n">repeat</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fault_data_set</span><span class="p">))</span>
+            <span class="n">fault_data_set</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">append_fields</span><span class="p">(</span>
+                <span class="n">fault_data_set</span><span class="p">[</span><span class="n">features</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">labels</span><span class="p">],</span>
+                <span class="n">usemask</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+            <span class="n">final_data_set</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">final_data_set</span><span class="p">,</span> <span class="n">fault_data_set</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="c1"># shuffle it all up to make it totez random lolz</span>
+        <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">final_data_set</span><span class="p">)</span>
+
+        <span class="c1"># here we&#39;re just separating out the labels from the data for,</span>
+        <span class="c1"># cos that&#39;s what sklearn wants from us.</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">final_data_set</span><span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">]</span>
+        <span class="c1"># drop that extra field since it&#39;s no longer needed</span>
+        <span class="n">X</span> <span class="o">=</span> <span class="n">rec</span><span class="o">.</span><span class="n">drop_fields</span><span class="p">(</span><span class="n">final_data_set</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;label&#39;</span><span class="p">],</span> <span class="bp">False</span><span class="p">)</span><span class="o">.</span><span class="n">view</span><span class="p">(</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">final_data_set</span><span class="p">),</span>
+                                <span class="nb">len</span><span class="p">(</span><span class="n">final_data_set</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="c1"># finally, we get to create that training and test data!</span>
+        <span class="k">if</span> <span class="n">normalize</span> <span class="ow">is</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">X_norm</span> <span class="o">=</span> <span class="n">prep</span><span class="o">.</span><span class="n">normalize</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+            <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">cval</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span>
+                <span class="n">X_norm</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">split</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">cval</span><span class="o">.</span><span class="n">train_test_split</span><span class="p">(</span>
+                <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="n">split</span><span class="p">)</span>
+
+        <span class="c1"># shuffle again for the balanced training data, i.e. when no. fault</span>
+        <span class="c1"># examples = no. fault-free examples, in case we want to</span>
+        <span class="c1"># compare against the unbalanced performance. URRDAY I&#39;M SHUFFLIN&#39;</span>
+        <span class="n">X_train_bal</span><span class="p">,</span> <span class="n">y_train_bal</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+        <span class="c1"># Create the balanced training sets</span>
+        <span class="n">X_train_bad_bal</span> <span class="o">=</span> <span class="n">X_train_bal</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y_train_bal</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)]</span>
+        <span class="n">y_train_bad_bal</span> <span class="o">=</span> <span class="n">y_train_bal</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y_train_bal</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)]</span>
+        <span class="n">X_train_good_bal</span> <span class="o">=</span> <span class="n">X_train_bal</span><span class="p">[</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y_train_bal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)][</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train_bad_bal</span><span class="p">)]</span>
+        <span class="n">y_train_good_bal</span> <span class="o">=</span> <span class="n">y_train_bal</span><span class="p">[</span>
+            <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y_train_bal</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)][</span><span class="mi">0</span><span class="p">:</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train_bad_bal</span><span class="p">)]</span>
+
+        <span class="n">X_train_bal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">X_train_good_bal</span><span class="p">,</span> <span class="n">X_train_bad_bal</span><span class="p">])</span>
+        <span class="n">y_train_bal</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">([</span><span class="n">y_train_good_bal</span><span class="p">,</span> <span class="n">y_train_bad_bal</span><span class="p">])</span>
+
+        <span class="n">X_train_bal</span><span class="p">,</span> <span class="n">y_train_bal</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">X_train_bal</span><span class="p">,</span> <span class="n">y_train_bal</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">X_train_bal</span><span class="p">,</span> <span class="n">y_train_bal</span></div></div>
+</pre></div>
+
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Kevin Leahy.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
