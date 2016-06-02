@@ -1,6 +1,6 @@
-import wt_fdd
+import winfault
 
-Enercon = wt_fdd.WT_data()
+Enercon = winfault.WT_data()
 
 all_faults_scada_data, feeding_fault_scada_data, \
     mains_failure_fault_scada_data, aircooling_fault_scada_data, \
@@ -44,8 +44,7 @@ features = ['WEC_ava_windspeed',
 fault_data_sets = [feeding_fault_scada_data]
 
 X_train, X_test, y_train, y_test, X_train_bal, y_train_bal = \
-    Enercon.get_test_train_data(Enercon.fault_free_scada_data, features,
-                                fault_data_sets, False, 0.2)
+    Enercon.get_test_train_data(features, fault_data_sets)
 
 a = len(X_train) + len(X_test)
 b = len(Enercon.fault_free_scada_data)

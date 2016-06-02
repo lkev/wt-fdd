@@ -31,9 +31,9 @@
 # 'CS101__Transformer_temp'
 #     ]
 
-import wt_fdd
+import winfault
 
-Enercon = wt_fdd.WT_data()
+Enercon = winfault.WT_data()
 
 # -------------The following tests the filtering function:---------------------
 statuses = ('0 : 0', '2 : 1', '2 : 2', '3 : 12')
