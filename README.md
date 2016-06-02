@@ -7,7 +7,7 @@ This is then labelled as such and split into training and testing data for fault
 classification and prediction.
 
 ## API
-API can be found at:
+API can be found at: http://wt-fdd.readthedocs.io/en/latest/
 
 ## Usage Example
 
