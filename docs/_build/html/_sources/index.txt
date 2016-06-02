@@ -4,7 +4,7 @@
    contain the root `toctree` directive.
 
 WinFault documentation
-====================================
+======================
 
 This module includes the `WT_data` class, which enables you to import wind
 turbine SCADA data. From there, the fault-free SCADA data can be extracted, as
@@ -48,6 +48,15 @@ Generate training and testing data for fault-free, feeding fault and mains failu
 	X_train, X_test, y_train, y_test, X_train_bal, y_train_bal = \
     Turbine.get_test_train_data(features, fault_data_sets, fault_free_data,
                                 True, 0.2)
+
+
+API Reference
+-------------
+
+.. automodule:: winfault
+	:members:
+	:special-members: __init__
+
 
 Note on the SCADA, status and warning data
 ------------------------------------------
@@ -104,18 +113,8 @@ The warning data is also split into WEC and RTU warning data:
 * WEC warning data ("Source Data\\warning_data_wec.csv")
 * RTU warning data ("Source Data\\warning_data_rtu.csv")
 
-
-API Reference
--------------
-
-.. automodule:: winfault
-	:members:
-	:special-members: __init__
-
-
-
 Indices and tables
-==================
+------------------
 
 * :ref:`genindex`
 * :ref:`modindex`
