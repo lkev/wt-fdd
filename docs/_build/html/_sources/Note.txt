@@ -1,4 +1,4 @@
-Note on the SCADA, status and warning data
+Note on the SCADA, Status and Warning Data
 ------------------------------------------
 
 SCADA Data

@@ -6,7 +6,7 @@
 WinFault documentation
 ======================
 
-This module includes the `WT_data` class, which enables you to import wind
+This is a module which introduces the `WT_data` class, which enables you to import wind
 turbine SCADA data. From there, the fault-free SCADA data can be extracted, as
 well as various types of faults, according to separate status and warning data.
 This is then labelled as such and split into training and testing data for fault
@@ -22,10 +22,5 @@ Contents
    winfault
    example
 
-Indices and tables
-------------------
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+:ref:`genindex`
 
