@@ -1,0 +1,226 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Note on the SCADA, status and warning data &mdash; WinFault 1.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WinFault 1.0 documentation" href="index.html"/>
+        <link rel="next" title="winfault module" href="winfault.html"/>
+        <link rel="prev" title="WinFault documentation" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> WinFault</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Note on the SCADA, status and warning data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#scada-data">SCADA Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#status-data">Status Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#warning-data">Warning Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="winfault.html">winfault module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Usage Example</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WinFault</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Note on the SCADA, status and warning data</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/Note.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="note-on-the-scada-status-and-warning-data">
+<h1>Note on the SCADA, status and warning data<a class="headerlink" href="#note-on-the-scada-status-and-warning-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="scada-data">
+<h2>SCADA Data<a class="headerlink" href="#scada-data" title="Permalink to this headline">¶</a></h2>
+<p>The CSV file for this data is located at &#8220;Source Data\SCADA_data.csv&#8221;. It
+contains time-stamped operational data for the turbine. The timestamps are at 10
+minute intervals which represent the average of the sensor readings over that
+period.</p>
+</div>
+<div class="section" id="status-data">
+<h2>Status Data<a class="headerlink" href="#status-data" title="Permalink to this headline">¶</a></h2>
+<p>There are a number of normal operating states for the turbine. For example, when
+the turbine is producing power normally, when the wind speed is below cut-in, or when the turbine is in “storm” mode, i.e., when the wind speeds are too high for normal generation.</p>
+<p>There are also a large number of statuses for when the turbine is in abnormal or
+faulty operation. These are all tracked by status messages, contained within the “Status”
+data. This is split into two different sets:</p>
+<ul class="simple">
+<li>WEC status data (&#8220;Source Data\status_data_wec.csv&#8221;)</li>
+<li>RTU status data (&#8220;Source Data\status_data_rtu.csv&#8221;)</li>
+</ul>
+<p>The WEC (Wind Energy Converter) status data corresponds to status messages directly
+related to the turbine itself, whereas RTU data corresponds to power control data
+at the point of connection to the grid, i.e., active and reactive power set points.</p>
+<p>Each time the WEC or RTU status changes, a new timestamped status message is generated.
+Thus, the turbine or RTU is assumed to be operating in that state until the next status
+message is generated. Each turbine/RTU status has a “main status” and “sub-status” code
+associated with it.</p>
+<p>Any main WEC status code above zero indicates abnormal or faulty behaviour, however
+many of these are not associated with a fault, e.g., status code 2 - “lack of wind”.</p>
+<p>The RTU status data almost exclusively deals with active or reactive power set-points. For example, status 100 : 82 corresponds to limiting the active power output to 82% of
+its actual current output.</p>
+</div>
+<div class="section" id="warning-data">
+<h2>Warning Data<a class="headerlink" href="#warning-data" title="Permalink to this headline">¶</a></h2>
+<p>The “Warning” data on the turbine mostly corresponds to general information about
+the turbine, and usually isn’t directly related to turbine operation or safety.
+These “warning” messages, also called “information messages” in some of the turbine documentation, are timestamped in the same way as the status messages, and also
+have a &#8220;main warning&#8221; and &#8220;sub-warning&#8221; code associated with them.</p>
+<p>Sometimes, warning messages correspond to a potentially developing fault on the
+turbine; if the warning persists for a set amount of time and is not cleared by
+the turbine operator or control system, a fault is raised and a new status message
+is generated.</p>
+<p>The warning data is also split into WEC and RTU warning data:</p>
+<ul class="simple">
+<li>WEC warning data (&#8220;Source Data\warning_data_wec.csv&#8221;)</li>
+<li>RTU warning data (&#8220;Source Data\warning_data_rtu.csv&#8221;)</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="winfault.html" class="btn btn-neutral float-right" title="winfault module">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="WinFault documentation"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Kevin Leahy.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

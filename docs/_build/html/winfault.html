@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>winfault module &mdash; WinFault 1.0 documentation</title>
+  
+
+  
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic|Roboto+Slab:400,700|Inconsolata:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="WinFault 1.0 documentation" href="index.html"/>
+        <link rel="next" title="wt-fdd" href="modules.html"/>
+        <link rel="prev" title="WinFault documentation" href="index.html"/> 
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-nav-search">
+        
+          <a href="index.html" class="fa fa-home"> WinFault</a>
+        
+        
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        
+          
+          
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">winfault module</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">wt-fdd</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="example.html">example module</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">winfault module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">example module</a></li>
+</ul>
+
+          
+        
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">WinFault</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>winfault module</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          <a href="_sources/winfault.txt" rel="nofollow"> View page source</a>
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document">
+            
+  <div class="section" id="module-winfault">
+<span id="winfault-module"></span><h1>winfault module<a class="headerlink" href="#module-winfault" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="winfault.WT_data">
+<em class="property">class </em><code class="descclassname">winfault.</code><code class="descname">WT_data</code><span class="sig-paren">(</span><em>scada_data_file='Source Data/SCADA_data.csv'</em>, <em>status_data_wec_file='Source Data/status_data_wec.csv'</em>, <em>status_data_rtu_file='Source Data/status_data_rtu.csv'</em>, <em>warning_data_wec_file='Source Data/warning_data_wec.csv'</em>, <em>warning_data_rtu_file='Source Data/warning_data_rtu.csv'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/winfault.html#WT_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#winfault.WT_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Import and manipulate wind turbine data.</p>
+<dl class="method">
+<dt id="winfault.WT_data.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>scada_data_file='Source Data/SCADA_data.csv'</em>, <em>status_data_wec_file='Source Data/status_data_wec.csv'</em>, <em>status_data_rtu_file='Source Data/status_data_rtu.csv'</em>, <em>warning_data_wec_file='Source Data/warning_data_wec.csv'</em>, <em>warning_data_rtu_file='Source Data/warning_data_rtu.csv'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/winfault.html#WT_data.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#winfault.WT_data.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialises the class instance.</p>
+<p>Imports the data and returns arrays of SCADA &amp; status data by
+calling <cite>import_data()</cite>.</p>
+<p>Returns an array of fault-free SCADA data by calling
+<cite>fault_free_scada_data()</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>scada_data_file</strong> (<em>str, optional</em>) &#8211; The raw SCADA data csv file.</li>
+<li><strong>status_data_wec_file</strong> (<em>str, optional</em>) &#8211; The status/fault csv file for the WEC</li>
+<li><strong>status_data_rtu_file</strong> (<em>str, optional</em>) &#8211; The status/fault csv file for the RTU</li>
+<li><strong>warning_data_wec_file</strong> (<em>str, optional</em>) &#8211; The warning/information csv file for the WEC</li>
+<li><strong>warning_data_rtu_file</strong> (<em>str, optional</em>) &#8211; The warning/information csv file for the RTU</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>scada_data</strong> (<em>ndarray</em>) &#8211; The imported and correctly formatted SCADA data</li>
+<li><strong>status_data_wec</strong> (<em>ndarray</em>) &#8211; The imported and correctly formatted WEC status data</li>
+<li><strong>status_data_rtu</strong> (<em>ndarray</em>) &#8211; The imported and correctly formatted RTU status data</li>
+<li><strong>warning_data_wec</strong> (<em>ndarray</em>) &#8211; The imported and correctly formatted WEC warning data</li>
+<li><strong>warning_data_rtu</strong> (<em>ndarray</em>) &#8211; The imported and correctly formatted RTU warning data</li>
+<li><strong>fault_free_scada_data</strong> (<em>ndarray</em>) &#8211; The fault free scada data. Filtered according to the
+following rules:<ul>
+<li>selects only data according to certain &#8220;good&#8221; wec statuses
+(shown below). Note it selects only data 1800s after a
+change to a &#8220;good&#8221; wec status, and 7200s before a change
+to any other wec status</li>
+<li>selects only data according to a single &#8220;good&#8221; rtu status.
+Note it selects only data 600s after a change to the
+&#8220;good&#8221; rtu status, and 600s before a change to any other
+rtu status</li>
+<li>Finally, it filters out the 10h warning data. This is an
+rtu_warning with a &#8216;Main_Warning&#8217; of 230. It&#8217;s an
+ambiguous warning which I estimate to mean that there may
+or may not be curtailment (for a variety of reasons) in
+the 10 hours following when this status comes into play.</li>
+</ul>
+</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Notes</p>
+<p>Both status_data_wec.csv &amp; status_data_rtu.csv originally come from
+pes_extrainfo.csv, filtered according to their plant number.</p>
+<p>SCADA_data.csv contains the wsd, 03d and 04d data files all
+combined together.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="winfault.WT_data.filter">
+<code class="descname">filter</code><span class="sig-paren">(</span><em>scada_data</em>, <em>sw_data</em>, <em>sw_column_name</em>, <em>filter_type='fault_free'</em>, <em>return_inverse=False</em>, <em>time_delta_1=3600</em>, <em>time_delta_2=7200</em>, <em>*sw_codes</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/winfault.html#WT_data.filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#winfault.WT_data.filter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns SCADA data which correspond to certain times around
+when certain statuses or warnings came into effect on the
+turbine.</p>
+<p>This function takes the scada data obtained in import_data,
+or a subset of that data, and filters it corresponding to
+certain status or warning codes in the status or warning data.</p>
+<p>Depending on <cite>filter_type</cite>, indices returned may refer to times of
+fault-free or faulty operation, or times leading up to faulty
+operation. See the <cite>filter_type</cite> parameter description for
+details.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>scada_data</strong> (<em>ndarray</em>) &#8211; SCADA data to be filtered. Must be the scada data obtained
+from <cite>import_data()</cite>, or a subset of that data.</li>
+<li><strong>sw_data</strong> (<em>ndarray</em>) &#8211; Status/Warning data to be used for reference timestamps.
+One of: <cite>warning_data_rtu</cite>, <cite>warning_data_wec</cite>, <cite>status_data_rtu</cite>,
+<cite>status_data_wec</cite>.</li>
+<li><strong>sw_column_name</strong> (<em>string</em>) &#8211; Refers to the column being filtered. Must be one of
+&#8216;Main_Status&#8217;, &#8216;Main_warning&#8217;, &#8216;Full_Status&#8217; or
+&#8216;Full_Warning&#8217;</li>
+<li><strong>filter_type</strong> (<em>string, optional (default='fault_free')</em>) &#8211; <p>Must be one of &#8216;fault_free&#8217;, &#8216;fault_case_1&#8217;, &#8216;fault_case_2&#8217;
+or &#8216;fault_case_3&#8217;</p>
+<ul>
+<li>If &#8216;fault_free&#8217;, the function will return indices of
+<cite>scada_data</cite> which fall between <cite>time_delta_1</cite> after the
+start of each passed <cite>sw_code</cite> when it appears in the
+<cite>sw_data</cite>, and <cite>time_delta_2</cite> before it ends.</li>
+<li>If &#8216;fault_case_1&#8217;, the function gets a timestamp of
+<cite>time_delta_1</cite> before the start of a certain status/warning
+which corresponds to faulty operation, and <cite>time_delta_2</cite>
+after the status/warning ends. It returns indices of
+scada_data which fall between these time stamps.</li>
+<li>If &#8216;fault_case_2&#8217;, the function gets timestamps for the
+times between <cite>time_delta_1</cite> and <cite>time_delta_2</cite> before the
+start of a certain status/warning which corresponds to the
+start of faulty operation. It returns indices of
+<cite>scada_data</cite> which fall between these time stamps.</li>
+<li>If &#8216;fault_case_3&#8217; The function gets timestamps for the
+times between <cite>time_delta_1</cite> and <cite>time_delta_2</cite> before a
+certain fault starts. It returns indices of <cite>scada_data</cite>
+which fall between these time stamps, but ONLY IF no other
+instance of the same fault occured during this period.
+Therefore, it contains only data which led up to the
+fault. Used for fault prediction purposes.</li>
+</ul>
+</li>
+<li><strong>return_inverse</strong> (<em>boolean, optional (default=False)</em>) &#8211; If True, the function will return the indices of filtered
+SCADA data which DON&#8217;T correspond to what this function
+would normally return. I.e. the function would select all
+the indices of SCADA data as normal, and then instead return
+all OTHER indices. E.g. the function could find indices of
+when the turbine was in fault-free operation, and then
+return all OTHER indices instead.</li>
+<li><strong>time_delta_1</strong> (<em>integer, optional (default=3600)</em>) &#8211; <ul>
+<li>If <cite>filter_type</cite> = &#8216;fault_free&#8217;, it&#8217;s the time AFTER normal
+operation begins from which to include <cite>scada_data</cite> indices</li>
+<li>If <cite>filter_type</cite> = &#8216;fault_case_1&#8217;, this is the amount of
+time before the fault from which to include the returned
+scada fault data.</li>
+<li>If <cite>filter_type</cite> = &#8216;fault_case_2&#8217; or &#8216;fault_case_3&#8217;, this
+refers to the time BEFORE faulty operation begins from
+which to include scada_data indices. Must be greater than
+or equal to <cite>time_delta_2</cite>.</li>
+</ul>
+</li>
+<li><strong>time_delta_2</strong> (<em>integer, optional (default=7200)</em>) &#8211; <ul>
+<li>If <cite>filter_type</cite> = &#8216;fault_free&#8217;, it&#8217;s the time BEFORE normal
+operation ENDS from which to include <cite>scada_data</cite> indices</li>
+<li>If <cite>filter_type</cite> = &#8216;fault_case_1&#8217;, AFTER faulty operation
+ends from which to include <cite>scada_data</cite> indices</li>
+<li>If <cite>filter_type</cite> = &#8216;fault_case_2&#8217; or &#8216;fault_case_3&#8217;, this
+refers to the time AFTER faulty operation begins from
+which to stop including <cite>scada_data</cite> indices. Must be less
+than <cite>time_delta_1</cite></li>
+</ul>
+</li>
+<li><strong>*sw_codes</strong> (<em>array of str or int</em>) &#8211; <p>The set of codes to be filtered. Can be a single value or an
+array.</p>
+<p>If <cite>sw_column_name</cite> is &#8216;Full_Status&#8217; or
+&#8216;Full_Warning&#8217;, then it must be a set of strings referring
+to the statuses/warnings (e.g. full status &#8216;0 : 0&#8217; for
+nominal operation).</p>
+<p>If <cite>sw_column_name</cite> is &#8216;Main_Status&#8217; or
+&#8216;Main_Warning&#8217;, then it must be a set of integers referring
+to the statuses/warnings (e.g. main status 62 for feeding
+faults)</p>
+</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>filtered_scada_data</strong> &#8211; If <cite>filter_type</cite> = &#8216;fault_free&#8217;, <cite>filtered_scada_data</cite>
+should be data strictly corresponding to fault-free data.
+If <cite>filter_type</cite> is &#8216;fault_case_1&#8217;, &#8216;fault_case_2&#8217; or
+&#8216;fault_case_3&#8217;, <cite>filtered_scada_data</cite> is data strictly
+corresponding to fault data.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">ndarray</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="winfault.WT_data.get_all_fault_data">
+<code class="descname">get_all_fault_data</code><span class="sig-paren">(</span><em>filter_type='fault_case_1'</em>, <em>time_delta_1=600</em>, <em>time_delta_2=600</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/winfault.html#WT_data.get_all_fault_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#winfault.WT_data.get_all_fault_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is a shortcut to get a list of faults using the
+<cite>filter()</cite> function. The faults that are included are the
+most frequently occuring faults in the enercon Ringaskiddy data
+up to end March 2015.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>filter_type</strong> (<em>string, optional (default='fault_case_1')</em>) &#8211; The <cite>filter_type</cite> to be passed to the <cite>filter()</cite>
+function. Must be one of &#8216;fault_case_1&#8217;, &#8216;fault_case_2&#8217; or
+&#8216;fault_case_3&#8217;. See the <cite>filter()</cite> function for
+details</li>
+<li><strong>time_delta_1</strong> (<em>integer</em>) &#8211; The <cite>time_delta_1</cite> to be passed to the <cite>filter()</cite>
+function. If <cite>filter_type</cite> = &#8216;fault_case_2&#8217; or &#8216;fault_case_3&#8217;,
+<cite>time_delta_1</cite> must be greater than or equal to <cite>time_delta_2</cite>.
+See the <cite>filter()</cite> function for details</li>
+<li><strong>time_delta_2</strong> (<em>integer</em>) &#8211; The <cite>time_delta_2</cite> to be passed to the <cite>filter()</cite>
+function. If <cite>filter_type</cite> = &#8216;fault_case_2&#8217; or &#8216;fault_case_3&#8217;,
+<cite>time_delta_2</cite> must be less than time_delta_1. See the
+<cite>filter()</cite> function for details</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>all_faults_scada_data</strong> (<em>ndarray</em>) &#8211; An array of all SCADA data corresponding to fault times</li>
+<li><strong>feeding_fault_scada_data</strong> (<em>ndarray</em>) &#8211; An array of SCADA data corresponding to feeding faults</li>
+<li><strong>aircooling_fault_scada_data</strong> (<em>ndarray</em>) &#8211; An array of SCADA data corresponding to aircooling faults</li>
+<li><strong>excitation_fault_scada_data</strong> (<em>ndarray</em>) &#8211; An array of SCADA data corresponding to excitation faults</li>
+<li><strong>generator_heating_fault_scada_data</strong> (<em>ndarray</em>) &#8211; An array of SCADA data corresponding to generator heating
+faults</li>
+<li><strong>mains_failure_fault_scada_data</strong> (<em>ndarray</em>) &#8211; An array of SCADA data corresponding to mains failure faults</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="winfault.WT_data.get_test_train_data">
+<code class="descname">get_test_train_data</code><span class="sig-paren">(</span><em>features</em>, <em>fault_data_sets</em>, <em>fault_free_scada_data_set=None</em>, <em>normalize=True</em>, <em>split=0.2</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/winfault.html#WT_data.get_test_train_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#winfault.WT_data.get_test_train_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate labels for the SCADA data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>features</strong> (<em>list of strings</em>) &#8211; A list of <cite>scada_data</cite> column names to be included in the
+test and training data as features, e.g. &#8216;WEC_ava_power&#8217;,
+&#8216;CS101__Ambient_temp&#8217;, etc.</li>
+<li><strong>fault_data_sets</strong> (<em>list of ndarrays</em>) &#8211; <p>list of  arrays of subsets of fault data obtained using the
+<cite>filter()</cite> function.
+Example 1:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fault_data_sets</span> <span class="o">=</span> <span class="p">[</span><span class="n">feeding_fault_scada_data</span><span class="p">,</span>
+<span class="go">                       aircooling_fault_scada_data,</span>
+<span class="go">                       excitation_fault_scada_data]</span>
+</pre></div>
+</div>
+<p>Example 2:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">fault_data_sets</span> <span class="o">=</span> <span class="p">[</span><span class="n">feeding_fault_scada_data</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+<li><strong>fault_free_scada_data_set</strong> (<em>ndarray (default=None)</em>) &#8211; Array of fault-free data obtained using the <cite>filter()</cite>
+function. If the default <cite>None</cite> is selected, this value will
+be set to <cite>self.fault_free_scada_data</cite> (obtained during
+initialisation).</li>
+<li><strong>normalize</strong> (<em>Boolean, optional (default=True)</em>) &#8211; Whether or not to normalize the training data.</li>
+<li><strong>split</strong> (<em>float, optional (default=0.2)</em>) &#8211; The ratio of testing : training data to use.</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first last"><ul class="simple">
+<li><strong>X_train</strong> (<em>ndarray</em>) &#8211; Training data samples</li>
+<li><strong>y_train</strong> (<em>ndarray</em>) &#8211; Training data labels</li>
+<li><strong>X_test</strong> (<em>ndarray</em>) &#8211; Testing data samples</li>
+<li><strong>y_test</strong> (<em>ndarray</em>) &#8211; Testing data labels</li>
+<li><strong>X_train_bal</strong> (<em>ndarray</em>) &#8211; Balanced training data samples (i.e. no. of fault-free
+samples = sum of no. of each fault class samples)</li>
+<li><strong>y_train_bal</strong> (<em>ndarray</em>) &#8211; Balanced training data labels (i.e. no. of fault-free
+samples = sum of no. of each fault class samples)</li>
+</ul>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules.html" class="btn btn-neutral float-right" title="wt-fdd">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="WinFault documentation"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Kevin Leahy.
+    </p>
+  </div>
+
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+  
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
