@@ -31,8 +31,8 @@
 
   
     <link rel="top" title="WinFault 1.0 documentation" href="index.html"/>
-        <link rel="next" title="wt-fdd" href="modules.html"/>
-        <link rel="prev" title="WinFault documentation" href="index.html"/> 
+        <link rel="next" title="Usage Example" href="example.html"/>
+        <link rel="prev" title="Note on the SCADA, Status and Warning Data" href="Note.html"/> 
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -64,13 +64,14 @@
           
           
               <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">winfault module</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">wt-fdd</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="example.html">example module</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">winfault module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Note.html">Note on the SCADA, Status and Warning Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Note.html#scada-data">SCADA Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Note.html#status-data">Status Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Note.html#warning-data">Warning Data</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="example.html">example module</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">winfault module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">Usage Example</a></li>
 </ul>
 
           
@@ -143,9 +144,9 @@ calling <cite>import_data()</cite>.</p>
 <li><strong>fault_free_scada_data</strong> (<em>ndarray</em>) &#8211; The fault free scada data. Filtered according to the
 following rules:<ul>
 <li>selects only data according to certain &#8220;good&#8221; wec statuses
-(shown below). Note it selects only data 1800s after a
-change to a &#8220;good&#8221; wec status, and 7200s before a change
-to any other wec status</li>
+(&#8216;0 : 0&#8217;, &#8216;2 : 1&#8217;, &#8216;2 : 2&#8217; and &#8216;3 : 12&#8217;). Note it selects
+only data 1800s after a change to a &#8220;good&#8221; wec status, and
+7200s before a change to any other wec status</li>
 <li>selects only data according to a single &#8220;good&#8221; rtu status.
 Note it selects only data 600s after a change to the
 &#8220;good&#8221; rtu status, and 600s before a change to any other
@@ -384,10 +385,10 @@ samples = sum of no. of each fault class samples)</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="modules.html" class="btn btn-neutral float-right" title="wt-fdd">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="example.html" class="btn btn-neutral float-right" title="Usage Example">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="WinFault documentation"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Note.html" class="btn btn-neutral" title="Note on the SCADA, Status and Warning Data"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

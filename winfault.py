@@ -55,9 +55,9 @@ class WT_data(object):
             following rules:
 
             - selects only data according to certain "good" wec statuses
-              (shown below). Note it selects only data 1800s after a
-              change to a "good" wec status, and 7200s before a change
-              to any other wec status
+              ('0 : 0', '2 : 1', '2 : 2' and '3 : 12'). Note it selects
+              only data 1800s after a change to a "good" wec status, and
+              7200s before a change to any other wec status
 
             - selects only data according to a single "good" rtu status.
               Note it selects only data 600s after a change to the
