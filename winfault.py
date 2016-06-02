@@ -245,7 +245,12 @@ class WT_data(object):
               `time_delta_1` before the start of a certain status/warning
               which corresponds to faulty operation, and `time_delta_2`
               after the status/warning ends. It returns indices of
-              scada_data which fall between these time stamps.
+              scada_data which fall between these time stamps. However,
+              if the last status/warning being looked at is also the
+              last status/warning in `sw_data` overall, then the last
+              entry of scada_data['Time'] is used as the upper limit of
+              time. This is because the status/warning is still in
+              effect up to the end of the available scada data.
 
             - If 'fault_case_2', the function gets timestamps for the
               times between `time_delta_1` and `time_delta_2` before the
@@ -474,11 +479,11 @@ class WT_data(object):
                     (scada_data['Time'] <
                         sw_data['Time'][sw_data_index + 1] + time_delta_2))
             # However, if the current sw_data_index represents sw_data[
-            # -1], then we use time_delta_2 before scada_data['Time'][-1]
-            # as the upper time limit for finding
-            # fault_scada_indices. This is because sw_data[
-            # sw_data_index + 1] does not exist, and we don't know if
-            # the sw_code will change after scada_data['Time'][-1]:
+            # -1], then we use scada_data['Time'][-1] as the upper time
+            # limit for finding fault_scada_indices. This is because
+            # sw_data[sw_data_index + 1] does not exist, and we don't
+            # know if the sw_code will change after
+            # scada_data['Time'][-1]:
             else:
                 sf = np.where(
                     (scada_data['Time'] >=
