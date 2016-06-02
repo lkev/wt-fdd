@@ -165,8 +165,8 @@ the 10 hours following when this status comes into play.</li>
 </tbody>
 </table>
 <p class="rubric">Notes</p>
-<p>Both status_data_wec.csv &amp; status_data_rtu.csv originally come from
-pes_extrainfo.csv, filtered according to their plant number.</p>
+<p>Both status_data_wec.csv &amp; status_data_rtu.csv originally come
+from pes_extrainfo.csv, filtered according to their plant number.</p>
 <p>SCADA_data.csv contains the wsd, 03d and 04d data files all
 combined together.</p>
 </dd></dl>
@@ -198,7 +198,7 @@ One of: <cite>warning_data_rtu</cite>, <cite>warning_data_wec</cite>, <cite>stat
 &#8216;Main_Status&#8217;, &#8216;Main_warning&#8217;, &#8216;Full_Status&#8217; or
 &#8216;Full_Warning&#8217;</li>
 <li><strong>filter_type</strong> (<em>string, optional (default='fault_free')</em>) &#8211; <p>Must be one of &#8216;fault_free&#8217;, &#8216;fault_case_1&#8217;, &#8216;fault_case_2&#8217;
-or &#8216;fault_case_3&#8217;</p>
+or &#8216;fault_case_3&#8217;:</p>
 <ul>
 <li>If &#8216;fault_free&#8217;, the function will return indices of
 <cite>scada_data</cite> which fall between <cite>time_delta_1</cite> after the
@@ -253,17 +253,16 @@ which to stop including <cite>scada_data</cite> indices. Must be less
 than <cite>time_delta_1</cite></li>
 </ul>
 </li>
-<li><strong>*sw_codes</strong> (<em>array of str or int</em>) &#8211; <p>The set of codes to be filtered. Can be a single value or an
-array.</p>
-<p>If <cite>sw_column_name</cite> is &#8216;Full_Status&#8217; or
+<li><strong>*sw_codes</strong> (<em>array of str or int</em>) &#8211; The set of codes to be filtered. Can be a single value or an
+array.
+If <cite>sw_column_name</cite> is &#8216;Full_Status&#8217; or
 &#8216;Full_Warning&#8217;, then it must be a set of strings referring
 to the statuses/warnings (e.g. full status &#8216;0 : 0&#8217; for
-nominal operation).</p>
-<p>If <cite>sw_column_name</cite> is &#8216;Main_Status&#8217; or
+nominal operation).
+If <cite>sw_column_name</cite> is &#8216;Main_Status&#8217; or
 &#8216;Main_Warning&#8217;, then it must be a set of integers referring
 to the statuses/warnings (e.g. main status 62 for feeding
-faults)</p>
-</li>
+faults)</li>
 </ul>
 </td>
 </tr>
