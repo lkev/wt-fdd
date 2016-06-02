@@ -62,8 +62,17 @@
         
           
           
-              <!-- Local TOC -->
-              <div class="local-toc"></div>
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../Note.html">Note on the SCADA, status and warning data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Note.html#scada-data">SCADA Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Note.html#status-data">Status Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Note.html#warning-data">Warning Data</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../winfault.html">winfault module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../example.html">Usage Example</a></li>
+</ul>
+
           
         
       </div>
@@ -107,11 +116,11 @@
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">utils</span>
 
 
-<div class="viewcode-block" id="WT_data"><a class="viewcode-back" href="../index.html#winfault.WT_data">[docs]</a><span class="k">class</span> <span class="nc">WT_data</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+<div class="viewcode-block" id="WT_data"><a class="viewcode-back" href="../winfault.html#winfault.WT_data">[docs]</a><span class="k">class</span> <span class="nc">WT_data</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Import and manipulate wind turbine data.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="WT_data.__init__"><a class="viewcode-back" href="../index.html#winfault.WT_data.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
+<div class="viewcode-block" id="WT_data.__init__"><a class="viewcode-back" href="../winfault.html#winfault.WT_data.__init__">[docs]</a>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">scada_data_file</span><span class="o">=</span><span class="s1">&#39;Source Data/SCADA_data.csv&#39;</span><span class="p">,</span>
             <span class="n">status_data_wec_file</span><span class="o">=</span><span class="s1">&#39;Source Data/status_data_wec.csv&#39;</span><span class="p">,</span>
             <span class="n">status_data_rtu_file</span><span class="o">=</span><span class="s1">&#39;Source Data/status_data_rtu.csv&#39;</span><span class="p">,</span>
@@ -302,7 +311,7 @@
             <span class="s1">&#39;Inverter_averages&#39;</span><span class="p">,</span> <span class="s1">&#39;Inverter_std_dev&#39;</span><span class="p">],</span>
             <span class="n">data</span><span class="o">=</span><span class="p">[</span><span class="n">means</span><span class="p">,</span> <span class="n">stds</span><span class="p">],</span> <span class="n">usemask</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 
-<div class="viewcode-block" id="WT_data.filter"><a class="viewcode-back" href="../index.html#winfault.WT_data.filter">[docs]</a>    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span>
+<div class="viewcode-block" id="WT_data.filter"><a class="viewcode-back" href="../winfault.html#winfault.WT_data.filter">[docs]</a>    <span class="k">def</span> <span class="nf">filter</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">scada_data</span><span class="p">,</span> <span class="n">sw_data</span><span class="p">,</span> <span class="n">sw_column_name</span><span class="p">,</span>
             <span class="n">filter_type</span><span class="o">=</span><span class="s1">&#39;fault_free&#39;</span><span class="p">,</span> <span class="n">return_inverse</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
             <span class="n">time_delta_1</span><span class="o">=</span><span class="mi">3600</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="o">=</span><span class="mi">7200</span><span class="p">,</span> <span class="o">*</span><span class="n">sw_codes</span><span class="p">):</span>
@@ -776,7 +785,7 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">fault_free_scada_data</span> <span class="o">=</span> <span class="n">scada_good_status_10h</span>
 
-<div class="viewcode-block" id="WT_data.get_all_fault_data"><a class="viewcode-back" href="../index.html#winfault.WT_data.get_all_fault_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_fault_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_type</span><span class="o">=</span><span class="s1">&#39;fault_case_1&#39;</span><span class="p">,</span>
+<div class="viewcode-block" id="WT_data.get_all_fault_data"><a class="viewcode-back" href="../winfault.html#winfault.WT_data.get_all_fault_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_all_fault_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filter_type</span><span class="o">=</span><span class="s1">&#39;fault_case_1&#39;</span><span class="p">,</span>
                            <span class="n">time_delta_1</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span> <span class="n">time_delta_2</span><span class="o">=</span><span class="mi">600</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;This function is a shortcut to get a list of faults using the</span>
 <span class="sd">        `filter()` function. The faults that are included are the</span>
@@ -848,7 +857,7 @@
             <span class="n">mains_failure_fault_scada_data</span><span class="p">,</span> <span class="n">aircooling_fault_scada_data</span><span class="p">,</span> \
             <span class="n">excitation_fault_scada_data</span><span class="p">,</span> <span class="n">generator_heating_fault_scada_data</span></div>
 
-<div class="viewcode-block" id="WT_data.get_test_train_data"><a class="viewcode-back" href="../index.html#winfault.WT_data.get_test_train_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_test_train_data</span><span class="p">(</span>
+<div class="viewcode-block" id="WT_data.get_test_train_data"><a class="viewcode-back" href="../winfault.html#winfault.WT_data.get_test_train_data">[docs]</a>    <span class="k">def</span> <span class="nf">get_test_train_data</span><span class="p">(</span>
             <span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">fault_data_sets</span><span class="p">,</span> <span class="n">fault_free_scada_data_set</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span>
             <span class="n">normalize</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">split</span><span class="o">=</span><span class="mf">0.2</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Generate labels for the SCADA data.</span>
