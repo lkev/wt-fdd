@@ -5,9 +5,9 @@ Import using ``import winfault``.
 
 Create the class, and access correctly formatted SCADA data::
 
-	Turbine = winfault.WT_data()
-	scada_data = Turbine.scada_data
-	fault_free_data = Turbine.fault_free_scada_data
+    Turbine = winfault.WT_data()
+    scada_data = Turbine.scada_data
+    fault_free_data = Turbine.fault_free_scada_data
 
 Access columns by typing ``data['column name']``. The following gets the first 100 windspeeds of the fault_free_data::
 

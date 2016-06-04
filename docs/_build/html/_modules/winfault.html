@@ -64,6 +64,7 @@
           
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../Note.html">Note on the SCADA, Status and Warning Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Note.html#general-notes">General Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Note.html#scada-data">SCADA Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Note.html#status-data">Status Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../Note.html#warning-data">Warning Data</a></li>
@@ -114,6 +115,10 @@
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span> <span class="k">as</span> <span class="n">prep</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">cross_validation</span> <span class="k">as</span> <span class="n">cval</span>
 <span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">utils</span>
+<span class="kn">from</span> <span class="nn">sklearn.grid_search</span> <span class="kn">import</span> <span class="n">GridSearchCV</span><span class="p">,</span> <span class="n">RandomizedSearchCV</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span>
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 
 
 <div class="viewcode-block" id="WT_data"><a class="viewcode-back" href="../winfault.html#winfault.WT_data">[docs]</a><span class="k">class</span> <span class="nc">WT_data</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
@@ -354,7 +359,12 @@
 <span class="sd">              `time_delta_1` before the start of a certain status/warning</span>
 <span class="sd">              which corresponds to faulty operation, and `time_delta_2`</span>
 <span class="sd">              after the status/warning ends. It returns indices of</span>
-<span class="sd">              scada_data which fall between these time stamps.</span>
+<span class="sd">              scada_data which fall between these time stamps. However,</span>
+<span class="sd">              if the last status/warning being looked at is also the</span>
+<span class="sd">              last status/warning in `sw_data` overall, then the last</span>
+<span class="sd">              entry of scada_data[&#39;Time&#39;] is used as the upper limit of</span>
+<span class="sd">              time. This is because the status/warning is still in</span>
+<span class="sd">              effect up to the end of the available scada data.</span>
 
 <span class="sd">            - If &#39;fault_case_2&#39;, the function gets timestamps for the</span>
 <span class="sd">              times between `time_delta_1` and `time_delta_2` before the</span>
@@ -583,11 +593,11 @@
                     <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&lt;</span>
                         <span class="n">sw_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">][</span><span class="n">sw_data_index</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">time_delta_2</span><span class="p">))</span>
             <span class="c1"># However, if the current sw_data_index represents sw_data[</span>
-            <span class="c1"># -1], then we use time_delta_2 before scada_data[&#39;Time&#39;][-1]</span>
-            <span class="c1"># as the upper time limit for finding</span>
-            <span class="c1"># fault_scada_indices. This is because sw_data[</span>
-            <span class="c1"># sw_data_index + 1] does not exist, and we don&#39;t know if</span>
-            <span class="c1"># the sw_code will change after scada_data[&#39;Time&#39;][-1]:</span>
+            <span class="c1"># -1], then we use scada_data[&#39;Time&#39;][-1] as the upper time</span>
+            <span class="c1"># limit for finding fault_scada_indices. This is because</span>
+            <span class="c1"># sw_data[sw_data_index + 1] does not exist, and we don&#39;t</span>
+            <span class="c1"># know if the sw_code will change after</span>
+            <span class="c1"># scada_data[&#39;Time&#39;][-1]:</span>
             <span class="k">else</span><span class="p">:</span>
                 <span class="n">sf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span>
                     <span class="p">(</span><span class="n">scada_data</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">&gt;=</span>
@@ -982,6 +992,69 @@
         <span class="n">X_train_bal</span><span class="p">,</span> <span class="n">y_train_bal</span> <span class="o">=</span> <span class="n">utils</span><span class="o">.</span><span class="n">shuffle</span><span class="p">(</span><span class="n">X_train_bal</span><span class="p">,</span> <span class="n">y_train_bal</span><span class="p">)</span>
 
         <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">X_train_bal</span><span class="p">,</span> <span class="n">y_train_bal</span></div></div>
+
+
+<div class="viewcode-block" id="plot_confusion_matrix"><a class="viewcode-back" href="../winfault.html#winfault.plot_confusion_matrix">[docs]</a><span class="k">def</span> <span class="nf">plot_confusion_matrix</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Confusion matrix&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="o">.</span><span class="n">cm</span><span class="o">.</span><span class="n">Blues</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;nearest&#39;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">cmap</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">()</span>
+    <span class="n">tick_marks</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">tick_marks</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;No-Fault&#39;</span><span class="p">,</span> <span class="s1">&#39;Fault&#39;</span><span class="p">],</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="n">tick_marks</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;No-Fault&#39;</span><span class="p">,</span> <span class="s1">&#39;Fault&#39;</span><span class="p">])</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;True label&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Predicted label&#39;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="svm_class_and_score"><a class="viewcode-back" href="../winfault.html#winfault.svm_class_and_score">[docs]</a><span class="k">def</span> <span class="nf">svm_class_and_score</span><span class="p">(</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">search_type</span><span class="o">=</span><span class="n">RandomizedSearchCV</span><span class="p">,</span>
+    <span class="n">tuned_parameters</span><span class="o">=</span><span class="p">{</span>
+        <span class="s1">&#39;kernel&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;linear&#39;</span><span class="p">],</span> <span class="s1">&#39;gamma&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;auto&#39;</span><span class="p">,</span> <span class="mf">1e-3</span><span class="p">,</span> <span class="mf">1e-4</span><span class="p">],</span>
+        <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">0.01</span><span class="p">,</span> <span class="o">.</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1000</span><span class="p">],</span>
+        <span class="s1">&#39;class_weight&#39;</span><span class="p">:</span> <span class="p">[{</span><span class="mi">0</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">1</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">2</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">10</span><span class="p">},</span> <span class="p">{</span><span class="mi">1</span><span class="p">:</span> <span class="mi">50</span><span class="p">}]},</span>
+        <span class="n">scores</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;precision&#39;</span><span class="p">,</span> <span class="s1">&#39;recall&#39;</span><span class="p">],</span> <span class="n">iid</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+
+    <span class="k">for</span> <span class="n">score</span> <span class="ow">in</span> <span class="n">scores</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;# Tuning hyper-parameters for </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">score</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+
+        <span class="c1"># Find the Hyperparameters</span>
+        <span class="n">clf</span> <span class="o">=</span> <span class="n">search_type</span><span class="p">(</span><span class="n">SVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">1</span><span class="p">),</span> <span class="n">tuned_parameters</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+                          <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%s</span><span class="s1">_weighted&#39;</span> <span class="o">%</span> <span class="n">score</span><span class="p">,</span> <span class="n">iid</span><span class="o">=</span><span class="n">iid</span><span class="p">)</span>
+        <span class="c1"># Build the SVM</span>
+        <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Best parameters set found on development set:&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">clf</span><span class="o">.</span><span class="n">best_params_</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Grid scores on development set:&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">params</span><span class="p">,</span> <span class="n">mean_score</span><span class="p">,</span> <span class="n">scores</span> <span class="ow">in</span> <span class="n">clf</span><span class="o">.</span><span class="n">grid_scores_</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%0.3f</span><span class="s2"> (+/-</span><span class="si">%0.03f</span><span class="s2">) for </span><span class="si">%r</span><span class="s2">&quot;</span>
+                  <span class="o">%</span> <span class="p">(</span><span class="n">mean_score</span><span class="p">,</span> <span class="n">scores</span><span class="o">.</span><span class="n">std</span><span class="p">()</span> <span class="o">*</span> <span class="mi">2</span><span class="p">,</span> <span class="n">params</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">()</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Detailed classification report:&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">()</span>
+
+        <span class="c1"># Make the predictions</span>
+        <span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span> <span class="o">=</span> <span class="n">y_test</span><span class="p">,</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+
+        <span class="k">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">))</span>
+        <span class="k">print</span><span class="p">()</span>
+
+        <span class="c1"># Evaluate the SVM using Confusion Matrix</span>
+        <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+        <span class="n">cm_normalized</span> <span class="o">=</span> <span class="n">cm</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;float&#39;</span><span class="p">)</span> <span class="o">/</span> <span class="n">cm</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)[:,</span> <span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]</span>
+
+        <span class="c1"># Also print specificity metric</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Specificity:&quot;</span><span class="p">,</span> <span class="n">cm</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">/</span> <span class="p">(</span><span class="n">cm</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">cm</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]))</span>
+
+        <span class="c1"># plot the confusion matrices</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+        <span class="n">plot_confusion_matrix</span><span class="p">(</span><span class="n">cm_normalized</span><span class="p">)</span>
+        <span class="n">cm</span></div>
 </pre></div>
 
           </div>

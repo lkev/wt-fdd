@@ -65,6 +65,7 @@
           
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Note on the SCADA, Status and Warning Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-notes">General Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#scada-data">SCADA Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#status-data">Status Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#warning-data">Warning Data</a></li>
@@ -109,46 +110,31 @@
             
   <div class="section" id="note-on-the-scada-status-and-warning-data">
 <h1>Note on the SCADA, Status and Warning Data<a class="headerlink" href="#note-on-the-scada-status-and-warning-data" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="general-notes">
+<h2>General Notes<a class="headerlink" href="#general-notes" title="Permalink to this headline">¶</a></h2>
+<p>Make sure the status, warning and SCADA data all cover the same time period. If this is not the case, some SCADA data could be labelled as having a fault/fault-free status that it does not actually have.</p>
+</div>
 <div class="section" id="scada-data">
 <h2>SCADA Data<a class="headerlink" href="#scada-data" title="Permalink to this headline">¶</a></h2>
-<p>The CSV file for this data is located at &#8220;Source Data\SCADA_data.csv&#8221;. It
-contains time-stamped operational data for the turbine. The timestamps are at 10
-minute intervals which represent the average of the sensor readings over that
-period.</p>
+<p>The CSV file for this data is located at &#8220;Source Data\SCADA_data.csv&#8221;. It contains time-stamped operational data for the turbine. The timestamps are at 10 minute intervals which represent the average of the sensor readings over that period.</p>
 </div>
 <div class="section" id="status-data">
 <h2>Status Data<a class="headerlink" href="#status-data" title="Permalink to this headline">¶</a></h2>
-<p>There are a number of normal operating states for the turbine. For example, when
-the turbine is producing power normally, when the wind speed is below cut-in, or when the turbine is in “storm” mode, i.e., when the wind speeds are too high for normal generation.</p>
-<p>There are also a large number of statuses for when the turbine is in abnormal or
-faulty operation. These are all tracked by status messages, contained within the “Status”
-data. This is split into two different sets:</p>
+<p>There are a number of normal operating states for the turbine. For example, when the turbine is producing power normally, when the wind speed is below cut-in, or when the turbine is in “storm” mode, i.e., when the wind speeds are too high for normal generation.</p>
+<p>There are also a large number of statuses for when the turbine is in abnormal or faulty operation. These are all tracked by status messages, contained within the “Status” data. This is split into two different sets:</p>
 <ul class="simple">
 <li>WEC status data (&#8220;Source Data\status_data_wec.csv&#8221;)</li>
 <li>RTU status data (&#8220;Source Data\status_data_rtu.csv&#8221;)</li>
 </ul>
-<p>The WEC (Wind Energy Converter) status data corresponds to status messages directly
-related to the turbine itself, whereas RTU data corresponds to power control data
-at the point of connection to the grid, i.e., active and reactive power set points.</p>
-<p>Each time the WEC or RTU status changes, a new timestamped status message is generated.
-Thus, the turbine or RTU is assumed to be operating in that state until the next status
-message is generated. Each turbine/RTU status has a “main status” and “sub-status” code
-associated with it.</p>
-<p>Any main WEC status code above zero indicates abnormal or faulty behaviour, however
-many of these are not associated with a fault, e.g., status code 2 - “lack of wind”.</p>
-<p>The RTU status data almost exclusively deals with active or reactive power set-points. For example, status 100 : 82 corresponds to limiting the active power output to 82% of
-its actual current output.</p>
+<p>The WEC (Wind Energy Converter) status data corresponds to status messages directly related to the turbine itself, whereas RTU data corresponds to power control data at the point of connection to the grid, i.e., active and reactive power set points.</p>
+<p>Each time the WEC or RTU status changes, a new timestamped status message is generated. Thus, the turbine or RTU is assumed to be operating in that state until the next status message is generated. Each turbine/RTU status has a “main status” and “sub-status” code associated with it.</p>
+<p>Any main WEC status code above zero indicates abnormal or faulty behaviour, however many of these are not associated with a fault, e.g., status code 2 - “lack of wind”.</p>
+<p>The RTU status data almost exclusively deals with active or reactive power set-points. For example, status 100 : 82 corresponds to limiting the active power output to 82% of its actual current output.</p>
 </div>
 <div class="section" id="warning-data">
 <h2>Warning Data<a class="headerlink" href="#warning-data" title="Permalink to this headline">¶</a></h2>
-<p>The “Warning” data on the turbine mostly corresponds to general information about
-the turbine, and usually isn’t directly related to turbine operation or safety.
-These “warning” messages, also called “information messages” in some of the turbine documentation, are timestamped in the same way as the status messages, and also
-have a &#8220;main warning&#8221; and &#8220;sub-warning&#8221; code associated with them.</p>
-<p>Sometimes, warning messages correspond to a potentially developing fault on the
-turbine; if the warning persists for a set amount of time and is not cleared by
-the turbine operator or control system, a fault is raised and a new status message
-is generated.</p>
+<p>The “Warning” data on the turbine mostly corresponds to general information about the turbine, and usually isn’t directly related to turbine operation or safety. These “warning” messages, also called “information messages” in some of the turbine documentation, are timestamped in the same way as the status messages, and also have a &#8220;main warning&#8221; and &#8220;sub-warning&#8221; code associated with them.</p>
+<p>Sometimes, warning messages correspond to a potentially developing fault on the turbine; if the warning persists for a set amount of time and is not cleared by the turbine operator or control system, a fault is raised and a new status message is generated.</p>
 <p>The warning data is also split into WEC and RTU warning data:</p>
 <ul class="simple">
 <li>WEC warning data (&#8220;Source Data\warning_data_wec.csv&#8221;)</li>
