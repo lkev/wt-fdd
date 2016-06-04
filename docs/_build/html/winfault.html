@@ -65,6 +65,7 @@
           
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="Note.html">Note on the SCADA, Status and Warning Data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Note.html#general-notes">General Notes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Note.html#scada-data">SCADA Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Note.html#status-data">Status Data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Note.html#warning-data">Warning Data</a></li>
@@ -208,7 +209,12 @@ start of each passed <cite>sw_code</cite> when it appears in the
 <cite>time_delta_1</cite> before the start of a certain status/warning
 which corresponds to faulty operation, and <cite>time_delta_2</cite>
 after the status/warning ends. It returns indices of
-scada_data which fall between these time stamps.</li>
+scada_data which fall between these time stamps. However,
+if the last status/warning being looked at is also the
+last status/warning in <cite>sw_data</cite> overall, then the last
+entry of scada_data[&#8216;Time&#8217;] is used as the upper limit of
+time. This is because the status/warning is still in
+effect up to the end of the available scada data.</li>
 <li>If &#8216;fault_case_2&#8217;, the function gets timestamps for the
 times between <cite>time_delta_1</cite> and <cite>time_delta_2</cite> before the
 start of a certain status/warning which corresponds to the
@@ -375,6 +381,16 @@ samples = sum of no. of each fault class samples)</li>
 </dd></dl>
 
 </dd></dl>
+
+<dl class="function">
+<dt id="winfault.plot_confusion_matrix">
+<code class="descclassname">winfault.</code><code class="descname">plot_confusion_matrix</code><span class="sig-paren">(</span><em>cm</em>, <em>title='Confusion matrix'</em>, <em>cmap=&lt;matplotlib.colors.LinearSegmentedColormap object at 0x0000025B0B64E278&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/winfault.html#plot_confusion_matrix"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#winfault.plot_confusion_matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="winfault.svm_class_and_score">
+<code class="descclassname">winfault.</code><code class="descname">svm_class_and_score</code><span class="sig-paren">(</span><em>X_train, y_train, X_test, y_test, search_type=&lt;class 'sklearn.grid_search.RandomizedSearchCV'&gt;, tuned_parameters={'gamma': ['auto', 0.001, 0.0001], 'class_weight': [{0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}], 'C': [0.01, 0.1, 1, 10, 100, 1000], 'kernel': ['linear']}, scores=['precision', 'recall'], iid=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/winfault.html#svm_class_and_score"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#winfault.svm_class_and_score" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
 
 </div>
 
