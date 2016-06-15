@@ -54,7 +54,7 @@ faults = [ff, mf]
 # Also remember to update what faults are to be taken out for the "no-fault"
 # data set:
 # nf = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
-#                     'fault_case_1', True, 600,600,[62,60])
+#                     'fault_case_1', True, 600,600,[62])
 
 # label and split into train, test and balanced training data
 xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = Turbine.get_test_train_data(features, faults, nf)
