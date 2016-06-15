@@ -506,7 +506,7 @@ class WT_data(object):
             self, scada_data, sw_data, sw_data_indices, time_delta_1,
             time_delta_2):
         """Returns indices of SCADA data leading up to a certain fault,
-        according to 'case_2' option of the `filter_type` parameter in
+        according to 'fault_case_2' option of the `filter_type` parameter in
         `filter()`.
 
         See `filter()` for details.
