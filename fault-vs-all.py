@@ -52,8 +52,15 @@ features = ['WEC_ava_windspeed',
             'CS101__Tower_temp',
             'CS101__Control_cabinet_temp',
             'CS101__Transformer_temp']
-# select the faults to include
+# select the faults to include.
 faults = [ff, mf]
+
+# with basic SVM, faults are found better in a 1v1 basis. For feature
+# selection paper, this might be a better way to go:
+# faults = [ff]
+# If done this way, remember to update the labels for the confusion
+# matrix as well!
+
 # label and split into train, test and balanced training data
 xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = Turbine.get_test_train_data(features, faults, nf)
 # labels for confusion matrix
