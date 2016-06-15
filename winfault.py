@@ -795,10 +795,10 @@ class WT_data(object):
         -------
         X_train: ndarray
             Training data samples
-        y_train: ndarray
-            Training data labels
         X_test: ndarray
             Testing data samples
+        y_train: ndarray
+            Training data labels
         y_test: ndarray
             Testing data labels
         X_train_bal: ndarray
@@ -884,20 +884,22 @@ class WT_data(object):
         return X_train, X_test, y_train, y_test, X_train_bal, y_train_bal
 
 
-def plot_confusion_matrix(cm, title='Confusion matrix', cmap=plt.cm.Blues):
-    plt.imshow(cm, interpolation='nearest', cmap=cmap)
+def plot_confusion_matrix(cm, labels, title='Confusion matrix',
+                          cmap=plt.cm.Blues):
+    plot = plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
-    tick_marks = np.arange(2)
-    plt.xticks(tick_marks, ['No-Fault', 'Fault'], rotation=45)
-    plt.yticks(tick_marks, ['No-Fault', 'Fault'])
-    plt.tight_layout()
+    tick_marks = np.arange(len(labels))
+    plt.xticks(tick_marks, labels, rotation=45)
+    plt.yticks(tick_marks, labels)
+    # plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
+    return plot
 
 
 def svm_class_and_score(
-    X_train, y_train, X_test, y_test, search_type=RandomizedSearchCV,
+    X_train, y_train, X_test, y_test, labels, search_type=RandomizedSearchCV,
     tuned_parameters={
         'kernel': ['linear'], 'gamma': ['auto', 1e-3, 1e-4],
         'C': [0.01, .1, 1, 10, 100, 1000],
@@ -943,5 +945,5 @@ def svm_class_and_score(
         print(cm)
 
         # plot the confusion matrices
-        plt.figure()
-        plot_confusion_matrix(cm_normalized)
+        plot = plot_confusion_matrix(cm_normalized, labels)
+        return plot
