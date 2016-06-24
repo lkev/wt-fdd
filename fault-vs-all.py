@@ -6,7 +6,7 @@ scada = Turbine.scada_data
 
 # This gets all the data EXCEPT the faults listed. Labels as nf for "no-fault"
 nf = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
-                     'fault_case_1', True, 600,600,[62,60])
+                     'fault_case_1', True, 600,600,[62])
 # feeding fault
 ff = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600,600,62)
@@ -44,7 +44,7 @@ features = ['WEC_ava_windspeed',
             'CS101__Control_cabinet_temp',
             'CS101__Transformer_temp']
 # select the faults to include.
-faults = [ff, mf]
+faults = [ff]
 
 # with basic SVM, faults are found better in a 1v1 basis. For feature
 # selection paper, this might be a better way to go:
@@ -59,6 +59,6 @@ faults = [ff, mf]
 # label and split into train, test and balanced training data
 xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = Turbine.get_test_train_data(features, faults, nf)
 # labels for confusion matrix
-labels = ['no-fault', 'feeding fault', 'mains fault']
+labels = ['no-fault', 'feeding fault']
 # train and test svm
 winfault.svm_class_and_score(xbaltrain, ybaltrain, xtest, ytest, labels)
