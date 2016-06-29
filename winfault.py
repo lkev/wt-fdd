@@ -933,7 +933,7 @@ def svm_class_and_score(
         # Make the predictions
         y_true, y_pred = y_test, clf.predict(X_test)
 
-        print(classification_report(y_true, y_pred))
+        print(classification_report(y_true, y_pred, labels))
         print()
 
         # Evaluate the SVM using Confusion Matrix
