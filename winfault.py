@@ -8,6 +8,7 @@ from sklearn import utils
 from sklearn.grid_search import GridSearchCV, RandomizedSearchCV
 from sklearn.metrics import classification_report, confusion_matrix
 from sklearn.svm import SVC
+from sklearn.ensemble import BaggingClassifier
 import matplotlib.pyplot as plt
 
 
@@ -884,66 +885,73 @@ class WT_data(object):
         return X_train, X_test, y_train, y_test, X_train_bal, y_train_bal
 
 
+def svm_class_and_score(
+    X_train, y_train, X_test, y_test, labels, search_type=RandomizedSearchCV,
+    parameter_space={
+        'kernel': ['linear'], 'gamma': ['auto', 1e-3, 1e-4],
+        'C': [0.01, .1, 1, 10, 100, 1000],
+        'class_weight': [{0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}]},
+    score='recall_weighted', iid=True, bagged=False):
+    """Build an SVM and return its scoring metrics
+    """
+    print("# Tuning hyper-parameters for %s" % score)
+    print()
+
+    # Find the Hyperparameters
+    clf = search_type(SVC(C=1), parameter_space, cv=10,
+                      scoring=score, iid=iid)
+    if bagged is True:
+        clf = BaggingClassifier(base_estimator = clf)
+
+    # Build the SVM
+    clf.fit(X_train, y_train)
+
+    # Make the predictions
+    y_pred = clf.predict(X_test)
+
+    clf_scoring(y_test, y_pred, labels)
+
+    return clf
+
+def clf_scoring(y_test, y_pred, labels):
+    print("Detailed classification report:")
+    print()
+    print(classification_report(y_test, y_pred, target_names=labels))
+    print()
+
+    # Evaluate the SVM using Confusion Matrix
+    cm = confusion_matrix(y_test, y_pred)
+    cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+
+    # Also print specificity metric
+    print("Specificity:", cm[0, 0] / (cm[0, 1] + cm[0, 0]))
+    print(cm)
+
+    # plot the confusion matrices
+    plot_confusion_matrix(cm_normalized, labels)
+
 def plot_confusion_matrix(cm, labels, title='Confusion matrix',
                           cmap=plt.cm.Blues):
+    """Plots colour-mapped confusion matrix
+    Parameters
+    ----------
+    cm: ndarray
+        Confusion matrix object returned by sklearn.metrics.confusion_matrix()
+    labels: list
+        list of class names for the confusion matrix
+    title: string (default: Confusion Matrix)
+    cmap: matplotlib colourmap scheme to be used
+
+    Returns
+    -------
+    plot: matplotlib.pyplot.imshow object
+        colour-mapped confusion matrix plot
+    """
     plot = plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
     tick_marks = np.arange(len(labels))
     plt.xticks(tick_marks, labels, rotation=45)
     plt.yticks(tick_marks, labels)
-    # plt.tight_layout()
     plt.ylabel('True label')
     plt.xlabel('Predicted label')
-    return plot
-
-
-def svm_class_and_score(
-    X_train, y_train, X_test, y_test, labels, search_type=RandomizedSearchCV,
-    tuned_parameters={
-        'kernel': ['linear'], 'gamma': ['auto', 1e-3, 1e-4],
-        'C': [0.01, .1, 1, 10, 100, 1000],
-        'class_weight': [{0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}]},
-        scores=['precision', 'recall'], iid=True):
-
-    for score in scores:
-        print("# Tuning hyper-parameters for %s" % score)
-        print()
-
-        # Find the Hyperparameters
-        clf = search_type(SVC(C=1), tuned_parameters, cv=10,
-                          scoring='%s_weighted' % score, iid=iid)
-        # Build the SVM
-        clf.fit(X_train, y_train)
-
-        print("Best parameters set found on development set:")
-        print()
-        print(clf.best_params_)
-        print()
-        print("Grid scores on development set:")
-        print()
-        for params, mean_score, scores in clf.grid_scores_:
-            print("%0.3f (+/-%0.03f) for %r"
-                  % (mean_score, scores.std() * 2, params))
-        print()
-
-        print("Detailed classification report:")
-        print()
-
-        # Make the predictions
-        y_true, y_pred = y_test, clf.predict(X_test)
-
-        print(classification_report(y_true, y_pred, labels))
-        print()
-
-        # Evaluate the SVM using Confusion Matrix
-        cm = confusion_matrix(y_test, y_pred)
-        cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
-
-        # Also print specificity metric
-        print("Specificity:", cm[0, 0] / (cm[0, 1] + cm[0, 0]))
-        print(cm)
-
-        # plot the confusion matrices
-        plot = plot_confusion_matrix(cm_normalized, labels)
-        return plot
