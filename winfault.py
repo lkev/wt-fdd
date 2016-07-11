@@ -891,7 +891,7 @@ def svm_class_and_score(
         'kernel': ['linear'], 'gamma': ['auto', 1e-3, 1e-4],
         'C': [0.01, .1, 1, 10, 100, 1000],
         'class_weight': [{0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}]},
-    score='recall_weighted', iid=True, bagged=False):
+        score='recall_weighted', iid=True, bagged=False):
     """Build an SVM and return its scoring metrics
     """
     print("# Tuning hyper-parameters for %s" % score)
@@ -901,7 +901,7 @@ def svm_class_and_score(
     clf = search_type(SVC(C=1), parameter_space, cv=10,
                       scoring=score, iid=iid)
     if bagged is True:
-        clf = BaggingClassifier(base_estimator = clf)
+        clf = BaggingClassifier(base_estimator=clf)
 
     # Build the SVM
     clf.fit(X_train, y_train)
@@ -912,6 +912,7 @@ def svm_class_and_score(
     clf_scoring(y_test, y_pred, labels)
 
     return clf
+
 
 def clf_scoring(y_test, y_pred, labels):
     print("Detailed classification report:")
@@ -929,6 +930,7 @@ def clf_scoring(y_test, y_pred, labels):
 
     # plot the confusion matrices
     plot_confusion_matrix(cm_normalized, labels)
+
 
 def plot_confusion_matrix(cm, labels, title='Confusion matrix',
                           cmap=plt.cm.Blues):

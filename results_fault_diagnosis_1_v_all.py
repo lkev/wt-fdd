@@ -5,16 +5,16 @@ Turbine = winfault.WT_data()
 scada = Turbine.scada_data
 
 # This gets all the data EXCEPT the faults listed. Labels as nf for "no-fault"
-nf = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
-                     'fault_case_1', True, 600, 600, [62, 9, 80])
+nf = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
+                    'fault_case_1', True, 600, 600, [62, 9, 80])
 # feeding fault
-ff = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
+ff = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 62)
 # generator heating fault
-gf = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
+gf = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 9)
 # excitation fault
-ef = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
+ef = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 80)
 
 features = ['WEC_ava_windspeed',
@@ -50,7 +50,8 @@ features = ['WEC_ava_windspeed',
 faults = [ff, ef, gf]
 
 # label and split into train, test and balanced training data
-xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = Turbine.get_test_train_data(features, faults, nf)
+xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = \
+    Turbine.get_test_train_data(features, faults, nf)
 # labels for confusion matrix
 labels = ['no-fault', 'feeding fault', 'excitation fault', 'generator fault']
 # train and test svm
@@ -58,4 +59,4 @@ print("results for basic SVM")
 winfault.svm_class_and_score(xbaltrain, ybaltrain, xtest, ytest, labels)
 print("results for bagging SVM")
 winfault.svm_class_and_score(xbaltrain, ybaltrain, xtest, ytest, labels,
-    bagged=True)
+                             bagged=True)
