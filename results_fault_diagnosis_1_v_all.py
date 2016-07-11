@@ -1,4 +1,6 @@
 import winfault
+import warnings
+from sklearn.grid_search import GridSearchCV, RandomizedSearchCV
 
 Turbine = winfault.WT_data()
 
@@ -49,14 +51,24 @@ features = ['WEC_ava_windspeed',
 # select the faults to include.
 faults = [ff, ef, gf]
 
+# warnings suppressed because there's loads of UndefinedMetricWarning's
+warnings.filterwarnings("ignore")
+
 # label and split into train, test and balanced training data
 xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = \
     Turbine.get_test_train_data(features, faults, nf)
+
 # labels for confusion matrix
 labels = ['no-fault', 'feeding fault', 'excitation fault', 'generator fault']
+
+# set the parameter space (class_weight is None for the balanced training data)
+parameter_space = {
+    'kernel': ['linear', 'rbf', 'poly'], 'gamma': ['auto', 1e-3, 1e-4],
+    'C': [0.01, .1, 1, 10, 100, 1000],
+    'class_weight': [{0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}, 'balanced']}
+
 # train and test svm
-print("results for basic SVM")
-winfault.svm_class_and_score(xbaltrain, ybaltrain, xtest, ytest, labels)
-print("results for bagging SVM")
-winfault.svm_class_and_score(xbaltrain, ybaltrain, xtest, ytest, labels,
-                             bagged=True)
+clf, bgg = winfault.svm_class_and_score(
+    xbaltrain, ybaltrain, xtest, ytest, labels,
+    parameter_space=parameter_space, bagged=True, score='precision_weighted',
+    search_type=GridSearchCV)
