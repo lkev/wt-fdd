@@ -888,10 +888,11 @@ class WT_data(object):
 def svm_class_and_score(
     X_train, y_train, X_test, y_test, labels, search_type=RandomizedSearchCV,
     parameter_space={
-        'kernel': ['linear'], 'gamma': ['auto', 1e-3, 1e-4],
+        'kernel': ['linear', 'rbf', 'poly'], 'gamma': ['auto', 1e-3, 1e-4],
         'C': [0.01, .1, 1, 10, 100, 1000],
-        'class_weight': [{0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}]},
-        score='recall_weighted', iid=True, bagged=False):
+        'class_weight': [
+            {0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}, 'balanced']},
+        score='recall_weighted', iid=True, bagged=False, svm_results=True):
     """Build an SVM and return its scoring metrics
     """
     print("# Tuning hyper-parameters for %s" % score)
@@ -900,18 +901,30 @@ def svm_class_and_score(
     # Find the Hyperparameters
     clf = search_type(SVC(C=1), parameter_space, cv=10,
                       scoring=score, iid=iid)
-    if bagged is True:
-        clf = BaggingClassifier(base_estimator=clf)
 
     # Build the SVM
     clf.fit(X_train, y_train)
+    print("Hyperparameters found:")
+    print(clf.best_params_)
 
     # Make the predictions
     y_pred = clf.predict(X_test)
-
+    print()
+    print()
+    print("Results for basic SVM")
     clf_scoring(y_test, y_pred, labels)
 
-    return clf
+    if bagged is True:
+        bgg = BaggingClassifier(base_estimator=clf)
+        bgg.fit(X_train, y_train)
+        y_pred = bgg.predict(X_test)
+        print()
+        print()
+        print("Results for bagging:")
+        clf_scoring(y_test, y_pred, labels)
+        return clf, bgg
+    else:
+        return clf
 
 
 def clf_scoring(y_test, y_pred, labels):
@@ -925,7 +938,7 @@ def clf_scoring(y_test, y_pred, labels):
     cm_normalized = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
 
     # Also print specificity metric
-    print("Specificity:", cm[0, 0] / (cm[0, 1] + cm[0, 0]))
+    # print("Specificity:", cm[0, 0] / (cm[0, 1] + cm[0, 0]))
     print(cm)
 
     # plot the confusion matrices
