@@ -5,25 +5,25 @@ Turbine = winfault.WT_data()
 scada = Turbine.scada_data
 
 # This gets all the data EXCEPT the faults listed. Labels as nf for "no-fault"
-nf = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
-                     'fault_case_1', True, 600, 600, [62, 9, 80])
+nf = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
+                    'fault_case_1', True, 600, 600, [62, 9, 80])
 # feeding fault
-ff = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
+ff = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 62)
 # mains failure fault
-mf = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
+mf = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 60)
 
 # generator heating fault
-gf = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
+gf = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 9)
 
 # aircooling fault
-af = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
+af = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 228)
 
 # excitation fault
-ef = Turbine.filter(scada,Turbine.status_data_wec, "Main_Status",
+ef = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 80)
 
 features = ['WEC_ava_windspeed',
@@ -69,7 +69,8 @@ faults = [ff, ef, gf]
 #                     'fault_case_1', True, 600,600,[62])
 
 # label and split into train, test and balanced training data
-xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = Turbine.get_test_train_data(features, faults, nf)
+xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = \
+    Turbine.get_test_train_data(features, faults, nf)
 # labels for confusion matrix
 labels = ['no-fault', 'feeding fault', 'excitation fault', 'generator fault']
 # train and test svm
