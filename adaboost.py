@@ -1,7 +1,9 @@
 import winfault
 import warnings
 import numpy as np
+import sklearn
 from sklearn.grid_search import GridSearchCV, RandomizedSearchCV
+from sklearn.svm import SVC
 
 %matplotlib inline
 
@@ -74,76 +76,68 @@ print("========================================================")
 print("------Building models using balanced training data------")
 print("========================================================")
 
-# set the parameter space (class_weight is None for the balanced training data)
+# train and test the SVM
+
 parameter_space_bal = {
     'kernel': ['linear', 'rbf', 'poly'], 'gamma': ['auto', 1e-3, 1e-4],
     'C': [0.01, .1, 1, 10, 100, 1000], 'class_weight': [None]}
 
-# train and test svm
-clf_bal, bgg_bal = winfault.svm_class_and_score(
-    xbaltrain, ybaltrain, xtest, ytest, labels,
-    parameter_space=parameter_space_bal, bagged=True, score='recall_weighted',
-    search_type=GridSearchCV)
+print("Building balanced SVM")
+SVM_bal = RandomizedSearchCV(SVC(C=1), parameter_space_bal, cv=10,
+        scoring='recall_weighted', iid=True)
+print("fitting balanced SVM")
+SVM_bal.fit(xbaltrain, ybaltrain)
 
-print("==========================================================")
-print("------Building models using imbalanced training data------")
-print("==========================================================")
-# set the parameter space (class_weight is None for the balanced training data)
+print("Hyperparameters for balanced SVM found:")
+print(SVM_bal.best_params_)
+
+print("getting predictions for balanced SVM")
+y_pred_svm_bal = SVM_bal.predict(xtest)
+
+print("\n\n results for SVM")
+winfault.clf_scoring(ytest, y_pred_svm_bal, labels)
+
+print("========================================================")
+print("------Building models using Imbalanced training data------")
+print("========================================================")
 parameter_space = {
     'kernel': ['linear', 'rbf', 'poly'], 'gamma': ['auto', 1e-3, 1e-4],
     'C': [0.01, .1, 1, 10, 100, 1000],
     'class_weight': [
         {0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}, 'balanced']}
 
-# train and test svm
-clf, bgg = winfault.svm_class_and_score(
-    xtrain, ytrain, xtest, ytest, labels,
-    parameter_space=parameter_space, bagged=True, score='recall_weighted',
-    search_type=RandomizedSearchCV)
+print("Building Imbalanced SVM")
+SVM = RandomizedSearchCV(SVC(C=1), parameter_space, cv=10,
+                         scoring='recall_weighted', iid=True)
+print("fitting Imbalanced SVM")
+SVM.fit(xtrain, ytrain)
 
-print("============================================================")
-print("----------Training for detection of general faults----------")
-print("============================================================")
-print("============================================================", "\n\n")
+print("Hyperparameters for Imbalanced SVM found:")
+print(SVM.best_params_)
 
-# need to change this to the original way it was done!!!
+print("getting predictions for Imbalanced SVM")
+y_pred_svm = SVM.predict(xtest)
 
-# af = np.append(ff, ef)
-# af = np.append(af, gf)
+print("\n\n results for SVM")
+winfault.clf_scoring(ytest, y_pred_svm, labels)
 
-# xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = \
-#     Turbine.get_test_train_data(features, [af], nf)
+# train and test adaboost svm
 
-# # labels for confusion matrix
-# labels = ['no-fault', 'fault']
+print("Building AdaBoost Classifier")
+adaboost = sklearn.ensemble.AdaBoostClassifier(
+    base_estimator=SVC(**SVM.best_params_), algorithm='SAMME')
 
-# print("========================================================")
-# print("------Building models using balanced training data------")
-# print("========================================================")
+print("fitting AdaBoost Classifier")
+adaboost.fit(xbaltrain, ybaltrain)
 
-# set the parameter space (class_weight is None for the balanced training data)
-# parameter_space_bal = {
-#     'kernel': ['linear', 'rbf', 'poly'], 'gamma': ['auto', 1e-3, 1e-4],
-#     'C': [0.01, .1, 1, 10, 100, 1000], 'class_weight': [None]}
+print("getting predictions")
+y_pred_ada = adaboost.predict(xtest)
+
+print("\n\nResults for AdaBoosted SVM:")
+winfault.clf_scoring(ytest, y_pred_ada, labels)
 
 # train and test svm
 # clf_bal, bgg_bal = winfault.svm_class_and_score(
 #     xbaltrain, ybaltrain, xtest, ytest, labels,
-#     parameter_space=parameter_space_bal, bagged=True, score='recall_weighted',
+#    parameter_space=parameter_space_bal, bagged=True, score='recall_weighted',
 #     search_type=GridSearchCV)
-
-# print("==========================================================")
-# print("------Building models using imbalanced training data------")
-# print("==========================================================")
-# set the parameter space (class_weight is None for the balanced training data)
-# parameter_space = {
-#     'kernel': ['linear', 'rbf', 'poly'], 'gamma': ['auto', 1e-3, 1e-4],
-#     'C': [0.01, .1, 1, 10, 100, 1000],
-#     'class_weight': [
-#         {0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}, 'balanced']}
-
-# # train and test svm
-# clf, bgg = winfault.svm_class_and_score(
-#     xtrain, ytrain, xtest, ytest, labels,
-#     parameter_space=parameter_space, bagged=True, score='recall_weighted',
-#     search_type=RandomizedSearchCV)
