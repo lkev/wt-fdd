@@ -830,7 +830,7 @@ class WT_data(object):
         fault_free_labels = np.zeros(len(fault_free_scada_data_set), dtype=int)
 
         # we create the final_data_set array which will eventually
-        # contain both fault and fault-free data, anbd their labels. We
+        # contain both fault and fault-free data, and their labels. We
         # need them with their labels in the same array because when we
         # shuffle it all up we want the labels to remain correct
         final_data_set = rec.append_fields(
@@ -848,8 +848,8 @@ class WT_data(object):
         # shuffle it all up to make it totez random lolz
         np.random.shuffle(final_data_set)
 
-        # here we're just separating out the labels from the data for,
-        # cos that's what sklearn wants from us.
+        # here we're just separating out the labels from the data, cos that's
+        # what sklearn wants from us.
         y = final_data_set['label']
         # drop that extra field since it's no longer needed
         X = rec.drop_fields(final_data_set, ['label'], False).view(
@@ -962,7 +962,7 @@ def plot_confusion_matrix(cm, labels, title='Confusion matrix',
     plot: matplotlib.pyplot.imshow object
         colour-mapped confusion matrix plot
     """
-    plot = plt.imshow(cm, interpolation='nearest', cmap=cmap)
+    plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
     tick_marks = np.arange(len(labels))
