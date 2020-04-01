@@ -45,14 +45,21 @@ features = ['WEC_ava_windspeed',
             'CS101__Transformer_temp']
 
 # This gets all the data EXCEPT the faults listed. Labels as nf for "no-fault"
+# This gets all the data EXCEPT the faults listed. Labels as nf for "no-fault"
 nf = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
-                    'fault_case_1', True, 600, 600, [62, 9, 80])
+                    'fault_case_1', True, 600, 600, [62, 9, 228, 80])
 # feeding fault
 ff = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 62)
+# mains failure fault
+# mf = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
+#                     'fault_case_1', False, 600, 600, 60)
 # generator heating fault
 gf = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 9)
+# aircooling fault
+af = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
+                    'fault_case_1', False, 600, 600, 228)
 # excitation fault
 ef = Turbine.filter(scada, Turbine.status_data_wec, "Main_Status",
                     'fault_case_1', False, 600, 600, 80)
@@ -63,81 +70,80 @@ print("=============================================================")
 print("=============================================================", "\n")
 
 # select the faults to include.
-faults = [ff, ef, gf]
+faults = [ff, gf, af, ef]
 
 # label and split into train, test and balanced training data
-xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = \
+X_train, X_test, y_train, y_test, X_train_bal, y_train_bal = \
     Turbine.get_test_train_data(features, faults, nf)
 
 # labels for confusion matrix
-labels = ['no-fault', 'feeding fault', 'excitation fault', 'generator fault']
+labels = ['no-fault', 'feeding fault', 'generator fault',
+          'aircooling fault', 'excitation fault']
 
-print("========================================================")
-print("------Building models using balanced training data------")
-print("========================================================")
+print("Building models using balanced training data")
 
 # train and test the SVM
 
 parameter_space_bal = {
     'kernel': ['linear', 'rbf', 'poly'], 'gamma': ['auto', 1e-3, 1e-4],
-    'C': [0.01, .1, 1, 10, 100, 1000], 'class_weight': [None]}
+    'C': [0.01, .1, 1, 10, 100, 1000]}
 
 print("Building balanced SVM")
 SVM_bal = RandomizedSearchCV(SVC(C=1), parameter_space_bal, cv=10,
-        scoring='recall_weighted', iid=True)
+                             scoring='recall_weighted', iid=True)
 print("fitting balanced SVM")
-SVM_bal.fit(xbaltrain, ybaltrain)
+SVM_bal.fit(X_train_bal, y_train_bal)
 
 print("Hyperparameters for balanced SVM found:")
 print(SVM_bal.best_params_)
 
 print("getting predictions for balanced SVM")
-y_pred_svm_bal = SVM_bal.predict(xtest)
+y_pred_svm_bal = SVM_bal.predict(X_test)
 
 print("\n\n results for SVM")
-winfault.clf_scoring(ytest, y_pred_svm_bal, labels)
+winfault.clf_scoring(y_test, y_pred_svm_bal, labels)
 
-print("========================================================")
-print("------Building models using Imbalanced training data------")
-print("========================================================")
-parameter_space = {
-    'kernel': ['linear', 'rbf', 'poly'], 'gamma': ['auto', 1e-3, 1e-4],
-    'C': [0.01, .1, 1, 10, 100, 1000],
-    'class_weight': [
-        {0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}, 'balanced']}
+# print("========================================================")
+# print("------Building models using Imbalanced training data------")
+# print("========================================================")
+# parameter_space = {
+#     'kernel': ['linear', 'rbf', 'poly'], 'gamma': ['auto', 1e-3, 1e-4],
+#     'C': [0.01, .1, 1, 10, 100, 1000],
+#     'class_weight': [
+#         {0: 0.01}, {1: 1}, {1: 2}, {1: 10}, {1: 50}, 'balanced']}
 
-print("Building Imbalanced SVM")
-SVM = RandomizedSearchCV(SVC(C=1), parameter_space, cv=10,
-                         scoring='recall_weighted', iid=True)
-print("fitting Imbalanced SVM")
-SVM.fit(xtrain, ytrain)
+# print("Building Imbalanced SVM")
+# SVM = RandomizedSearchCV(SVC(C=1), parameter_space, cv=10,
+#                          scoring='recall_weighted', iid=True)
+# print("fitting Imbalanced SVM")
+# SVM.fit(X_train, y_train)
 
-print("Hyperparameters for Imbalanced SVM found:")
-print(SVM.best_params_)
+# print("Hyperparameters for Imbalanced SVM found:")
+# print(SVM.best_params_)
 
-print("getting predictions for Imbalanced SVM")
-y_pred_svm = SVM.predict(xtest)
+# print("getting predictions for Imbalanced SVM")
+# y_pred_svm = SVM.predict(X_test)
 
-print("\n\n results for SVM")
-winfault.clf_scoring(ytest, y_pred_svm, labels)
+# print("\n\n results for SVM")
+# winfault.clf_scoring(y_test, y_pred_svm, labels)
 
 # train and test adaboost svm
 
 print("Building AdaBoost Classifier")
 adaboost = sklearn.ensemble.AdaBoostClassifier(
-    base_estimator=SVC(**SVM.best_params_), algorithm='SAMME')
+    base_estimator=SVC(**SVM_bal.best_params_), algorithm='SAMME')
 
 print("fitting AdaBoost Classifier")
-adaboost.fit(xbaltrain, ybaltrain)
+adaboost.fit(X_train_bal, y_train_bal)
 
 print("getting predictions")
-y_pred_ada = adaboost.predict(xtest)
+y_pred_ada = adaboost.predict(X_test)
 
 print("\n\nResults for AdaBoosted SVM:")
-winfault.clf_scoring(ytest, y_pred_ada, labels)
+winfault.clf_scoring(y_test, y_pred_ada, labels)
 
 # train and test svm
 # clf_bal, bgg_bal = winfault.svm_class_and_score(
-#     xbaltrain, ybaltrain, xtest, ytest, labels,
+#     X_train_bal, y_train_bal, X_test, y_test, labels,
 #    parameter_space=parameter_space_bal, bagged=True, score='recall_weighted',
 #     search_type=GridSearchCV)

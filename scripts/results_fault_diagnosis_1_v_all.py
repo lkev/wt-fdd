@@ -64,7 +64,7 @@ print("=============================================================", "\n")
 faults = [ff, ef, gf]
 
 # label and split into train, test and balanced training data
-xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = \
+X_train, X_test, y_train, y_test, X_train_bal, y_train_bal = \
     Turbine.get_test_train_data(features, faults, nf)
 
 # labels for confusion matrix
@@ -81,7 +81,7 @@ parameter_space_bal = {
 
 # train and test svm
 clf_bal, bgg_bal = winfault.svm_class_and_score(
-    xbaltrain, ybaltrain, xtest, ytest, labels,
+    X_train_bal, y_train_bal, X_test, y_test, labels,
     parameter_space=parameter_space_bal, bagged=True, score='recall_weighted',
     search_type=GridSearchCV)
 
@@ -97,7 +97,7 @@ parameter_space = {
 
 # train and test svm
 clf, bgg = winfault.svm_class_and_score(
-    xtrain, ytrain, xtest, ytest, labels,
+    X_train, y_train, X_test, y_test, labels,
     parameter_space=parameter_space, bagged=True, score='recall_weighted',
     search_type=RandomizedSearchCV)
 
@@ -111,7 +111,7 @@ print("============================================================", "\n\n")
 # af = np.append(ff, ef)
 # af = np.append(af, gf)
 
-# xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = \
+# X_train, X_test, y_train, y_test, X_train_bal, y_train_bal = \
 #     Turbine.get_test_train_data(features, [af], nf)
 
 # # labels for confusion matrix
@@ -128,7 +128,7 @@ print("============================================================", "\n\n")
 
 # train and test svm
 # clf_bal, bgg_bal = winfault.svm_class_and_score(
-#     xbaltrain, ybaltrain, xtest, ytest, labels,
+#     X_train_bal, y_train_bal, X_test, y_test, labels,
 #     parameter_space=parameter_space_bal, bagged=True, score='recall_weighted',
 #     search_type=GridSearchCV)
 
@@ -144,6 +144,6 @@ print("============================================================", "\n\n")
 
 # # train and test svm
 # clf, bgg = winfault.svm_class_and_score(
-#     xtrain, ytrain, xtest, ytest, labels,
+#     X_train, y_train, X_test, y_test, labels,
 #     parameter_space=parameter_space, bagged=True, score='recall_weighted',
 #     search_type=RandomizedSearchCV)

@@ -69,9 +69,9 @@ faults = [ff, ef, gf]
 #                     'fault_case_1', True, 600,600,[62])
 
 # label and split into train, test and balanced training data
-xtrain, xtest, ytrain, ytest, xbaltrain, ybaltrain = \
+X_train, X_test, y_train, y_test, X_train_bal, y_train_bal = \
     Turbine.get_test_train_data(features, faults, nf)
 # labels for confusion matrix
 labels = ['no-fault', 'feeding fault', 'excitation fault', 'generator fault']
 # train and test svm
-winfault.svm_class_and_score(xbaltrain, ybaltrain, xtest, ytest, labels)
+winfault.svm_class_and_score(X_train_bal, y_train_bal, X_test, y_test, labels)

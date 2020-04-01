@@ -157,7 +157,7 @@ class WT_data(object):
             time = data_file['Time']
             for i in range(0, len(time)):
                 t = dt.datetime.strptime(time[i], "%d/%m/%Y %H:%M:%S")
-                t = (t - dt.datetime.fromtimestamp(3600)).total_seconds()
+                t = (t - dt.datetime.utcfromtimestamp(3600)).total_seconds()
                 time[i] = t
 
         # convert Unix timestamp string to float (for some reason this
@@ -266,10 +266,11 @@ class WT_data(object):
             - If 'fault_case_3' The function gets timestamps for the
               times between `time_delta_1` and `time_delta_2` before a
               certain fault starts. It returns indices of `scada_data`
-              which fall between these time stamps, but ONLY IF no other
+              which fall between these time stamps in the same way as
+              'fault_case_2', BUT ONLY IF no other
               instance of the same fault occured during this period.
               Therefore, it contains only data which led up to the
-              fault. Used for fault prediction purposes.
+              fault.
         return_inverse: boolean, optional (default=False)
             If True, the function will return the indices of filtered
             SCADA data which DON'T correspond to what this function
@@ -297,7 +298,7 @@ class WT_data(object):
             - If `filter_type` = 'fault_case_1', AFTER faulty operation
               ends from which to include `scada_data` indices
             - If `filter_type` = 'fault_case_2' or 'fault_case_3', this
-              refers to the time AFTER faulty operation begins from
+              refers to the time BEFORE faulty operation begins from
               which to stop including `scada_data` indices. Must be less
               than `time_delta_1`
 
