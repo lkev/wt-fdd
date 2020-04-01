@@ -1,3 +1,8 @@
+# Important!
+This library represents early work I did in my PhD. Please feel free to use, edit and browse the code, but I feel it is lacking in certain aspects. For one, it does not use Pandas, which would have made the entire library much, MUCH easier to build and use.
+
+I am actively developing a different library, [wtphm](https://github.com/lkev/wtphm), which tries to streamline the preprocessing of wind turbine data for machine learning.
+
 # Wind Turbine Fault Detection
 
 This module includes the `WT_data` class, which enables you to import wind
@@ -82,7 +87,7 @@ at the point of connection to the grid, i.e., active and reactive power set poin
 Each time the WEC or RTU status changes, a new timestamped status message is generated.
 Thus, the turbine or RTU is assumed to be operating in that state until the next status
 message is generated. Each turbine/RTU status has a “main status” and “sub-status” code
-associated with it. 
+associated with it.
 
 Any main WEC status code above zero indicates abnormal or faulty behaviour, however
 many of these are not associated with a fault, e.g., status code 2 - “lack of wind”.
