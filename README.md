@@ -11,8 +11,8 @@ well as various types of faults, according to separate status and warning data.
 This is then labelled as such and split into training and testing data for fault
 classification and prediction.
 
-## API
-API can be found at: http://wt-fdd.readthedocs.io/en/latest/
+## Documentation
+The docs can be viewed locally in docs/\_build/html/index.html.
 
 ## Usage Example
 
