@@ -1,7 +1,7 @@
 # Important!
 This library represents early work I did in my PhD. Please feel free to use, edit and browse the code, but I feel it is lacking in certain aspects. For one, it does not use Pandas, which would have made the entire library much, MUCH easier to build and use.
 
-I am actively developing a different library, [wtphm](https://github.com/lkev/wtphm), which streamlines the preprocessing of wind turbine data for machine learning.
+**I am actively developing a different library, [wtphm](https://github.com/lkev/wtphm), which streamlines the preprocessing of wind turbine data for machine learning.**
 
 # Wind Turbine Fault Detection
 
